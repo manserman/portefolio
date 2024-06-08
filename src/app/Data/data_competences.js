@@ -1,7 +1,7 @@
 export default function data_comp() {
   var comp_BA_1 = {
     titre: "Innovation",
-    color: "bg-upjv-2",
+    color: "bg-gray-800",
     competences: [
       "Envisage des solutions créatives pour élaborer de nouveaux concepts.",
       "Fait preuve d'un mode de pensée ouvert et innovant",
@@ -11,7 +11,7 @@ export default function data_comp() {
 
   var comp_BA_2 = {
     titre: "Conception et développement d'applications",
-    color: "bg-upjv-2",
+    color: "bg-gray-800",
     competences: [
       "Analyser et interpréter les besoins du client.",
       "Utiliser des méthodes de conception pour créer une application adaptée",
@@ -47,7 +47,7 @@ export default function data_comp() {
   };
   var comp_BA_3 = {
     titre: "Production de la documentation",
-    color: "bg-upjv-2",
+    color: "bg-gray-800",
     competences: [
       "Produit des documents en intégrant des informations et en maintenant la conformité aux exigences importantes",
       " Choisit lestyle et le format appropriés en déterminant le type de support et le mode de présentation de la documentation.",
@@ -66,7 +66,7 @@ export default function data_comp() {
 
   var comp_BA_4 = {
     titre: "Intégration des composants",
-    color: "bg-upjv-2",
+    color: "bg-gray-800",
     competences: [
       "Intègre des composants matériels, logiciels ou de sous-systèmes dans un système existant ou totalement nouveau",
       " Respecte les procédures et processus établis comme la gestion de configurations et la maintenance de packages",
@@ -77,7 +77,7 @@ export default function data_comp() {
 
   var comp_AMOA_1 = {
     titre: "Tests",
-    color: "bg-upjv-2",
+    color: "bg-gray-800",
     competences: [
       "Met au point et exécute des procédures d'essai systématiques pour les systèmes informatiques ou les exigences d'utilisabilité du client afin d'établir la conformité avec les spécifications de conception",
       "S'assure que les composants ou systèmes, nouveaux ou mis à jour, fonctionnent comme prévu",
@@ -95,7 +95,7 @@ export default function data_comp() {
   };
   var comp_BA_5 = {
     titre: "Identification des besoins",
-    color: "bg-upjv-2",
+    color: "bg-gray-800",
     competences: [
       "Écoute attentivement les clients internes et externes, formule et clarifie leurs besoins.",
       "Gère les relations avec toutes les parties prenantes pour garantir que les solutions et les services sont conformes aux exigences métier",

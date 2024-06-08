@@ -219,7 +219,7 @@ export default function Home() {
           </div>
 
           <table className="mt-5 text-center h-[80%] w-[85%] overflow-y-auto text-xs">
-            <tr className="bg-upjv-2 text-xs text-white font-normal">
+            <tr className="bg-gray-800 text-xs text-white font-normal">
               <th>Savoir être</th>
               <th>Description</th>
             </tr>
@@ -250,7 +250,7 @@ export default function Home() {
           <span
             id="previous"
             onClick={formation_carousel}
-            className="absolute top-[50%] text-6xl text-upjv-2 hover:cursor-pointer hover:scale-[130%]"
+            className="absolute top-[50%] text-6xl text-gray-800 hover:cursor-pointer hover:scale-[130%]"
           >
             &#10216;
           </span>
@@ -258,7 +258,7 @@ export default function Home() {
           <span
             id="next"
             onClick={formation_carousel}
-            className="absolute top-[50%] right-[10%] hover:cursor-pointer text-upjv-2 text-6xl hover:scale-[130%]"
+            className="absolute top-[50%] right-[10%] hover:cursor-pointer text-gray-800 text-6xl hover:scale-[130%]"
           >
             &#10217;
           </span>
