@@ -100,7 +100,7 @@ export default function Home() {
             <a href="#formations">Formations</a>
           </div>
           <div className={s_nav}>
-            <a href="#projets">Projets</a>
+            <a href="#projets">Projets Universitaires</a>
           </div>
         </div>
       </div>
@@ -273,7 +273,7 @@ export default function Home() {
         <div className={s_hr}></div>
 
         <div id="projets" className="relative w-full h-[14%] pt-10  pl-12 ">
-          <span className=" text-black font-serif text-3xl">PROJETS</span>
+          <span className=" text-black font-serif text-3xl">PROJETS Universitaires</span>
 
           <div className="flex flex-row items-center justify-center space-x-10 h-[15%] mt-10  w-[100%] ">
             {projets.map((item, index) => {
