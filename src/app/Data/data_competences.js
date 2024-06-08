@@ -117,15 +117,11 @@ export default function data_comp() {
   };
   var competences = [
     {
-      poste: "Developpeur Java",
-      color: "bg-upjv-2",
+      poste: "Métier: Concepteur et Développeur d'application",
+      color: "bg-gray-800",
       comp: [comp_BA_1, comp_BA_2, comp_BA_3, comp_BA_4,comp_BA_5,comp_AMOA_1],
     },
-    {
-      poste: "Developpeur web ",
-      color: "bg-gray-800",
-      comp: [comp_BA_51,comp_BA_31,comp_BA_21  ],
-    },
+    
   ];
   return competences;
 }
