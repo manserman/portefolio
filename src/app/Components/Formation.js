@@ -8,7 +8,7 @@ export default function Formation({ form }) {
           className="w-18 h-20"
           height={200}
           width={100}
-          src={".img/" + form.logo}
+          src={"./img/" + form.logo}
         />
 
         <div className="flex flex-col w-30 space-y-1 mt-2">
