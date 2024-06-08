@@ -2,7 +2,7 @@ export default function data_form() {
   var formation1 = {
     intitule_s: "MASTER MIAGE",
     institut: "UPJV",
-    logo: "logo.png",
+    logo: "./logo.png",
     lieu: "Amiens, France",
     intitule_l: "Méthode informatique appliqué à la gestion d'entreprise",
     detail:
@@ -25,7 +25,7 @@ export default function data_form() {
   var formation2 = {
     intitule_s: "LICENCE INFORMATIQUE",
     institut: "UPJV",
-    logo: "logoUpjv.png",
+    logo: "./logoUpjv.png",
     lieu: "Amiens, France",
     intitule_l: "Licence informatique mention MIAGE",
     detail:
