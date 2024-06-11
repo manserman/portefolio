@@ -9,7 +9,6 @@ export default function data_form() {
       "Diplôme universitaire français de niveau Bac+5, alliant une double compétence en informatique et en gestion, destiné à former des cadres d’entreprise experts en ingénierie des systèmes d’information ",
     acquis: [
       "Gérer un changement métier suite à une évolution informatique",
-      "Gérer un changement métier suite à une évolution informatique",
       "Planifier et gérer un projet informatique",
       "Gérer un portefeuille de projets",
       "Gérer une relation client ou une relation fournisseur",
