@@ -68,6 +68,12 @@ export default function Home() {
   const s_hr = "w-full h-[0.1em] mt-20 bg-black";
 
   return (
+    <div>
+    <Head>
+      <title>Portefolio Mohamdou Mansour</title>
+      <meta name="description" content="Description de ma page" />
+      <link rel="icon" href="/favicon.ico" />
+    </Head>
     <main className="h-full bg-inherit flex flex-row">
       {/********************* SIDE BAR **********************/}
       <motion.div
@@ -297,5 +303,6 @@ export default function Home() {
         </div>
       </motion.div>
     </main>
+    </div>
   );
 }
