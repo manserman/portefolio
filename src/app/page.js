@@ -12,6 +12,7 @@ import data_form from "./Data/data_formations";
 import data_savoir from "./Data/data_savoir";
 import data_exp from "./Data/data_experience";
 import data_projet from "./Data/data_projet";
+import Head from 'next/head';
 
 export default function Home() {
   /********************* DONNEES  **************************/
