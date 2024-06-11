@@ -72,7 +72,7 @@ export default function Home() {
     <Head>
       <title>Portefolio Mohamdou Mansour</title>
       <meta name="description" content="Description de ma page" />
-      <link rel="icon" href="/favicon.ico" />
+      <link rel="icon" href="favicon.ico" />
     </Head>
     <main className="h-full bg-inherit flex flex-row">
       {/********************* SIDE BAR **********************/}
