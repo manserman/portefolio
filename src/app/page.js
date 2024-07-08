@@ -58,7 +58,7 @@ export default function Home() {
         animate={{ x: 0 }}
         transition={{ type: "spring", stiffness: 100 }}
       >
-        <Image className={s_logo} height={100} width={100} src="/img/photo.png" alt="Logo" />
+        <Image className={s_logo} height={100} width={100} src="./img/photo.png" alt="Photo" />
         <div className={s_nav_section}>
           <a href="#accueil" className={s_nav}>Accueil</a>
           <a href="#competences" className={s_nav}>Competences</a>
@@ -76,8 +76,11 @@ export default function Home() {
       >
         <section id="accueil" className="space-y-4">
           <h1 className="text-4xl font-serif text-black">Mohamadou Mansour HABIBOU HAMANI</h1>
-          <h2 className="italic font-serif text-black text-2xl">Développeur Java</h2>
-          <p className="text-justify tracking-wide text-base font-serif">
+          <div className="flex items-center mt-4">
+            <Image src="./img/photo.png" alt="Photo" height={100} width={100} className="rounded-full mr-4" />
+            <h2 className="italic font-serif text-black text-2xl">Développeur Java</h2>
+          </div>
+          <p className="text-justify tracking-wide text-base font-serif mt-4">
             Fort d'une expérience de 2 ans en développement Java en alternance, j'ai contribué à la mise à jour du système
             de traçabilité d'Autoliv, passant de Java 6 à Java 11. J'ai assuré le bon fonctionnement des webservices REST
             et des outils d'administration et reporting, en mettant l'accent sur les tests unitaires pour garantir la 
@@ -91,7 +94,7 @@ export default function Home() {
             <span>&#128664; : Ile de france / Hauts de france</span>
           </div>
           <div className="flex justify-center mt-4">
-            <a href="/files/cv.pdf" target="blank" className="hover:underline">Mon CV</a>
+            <a href="./files/cv.pdf" target="blank" className="hover:underline">Mon CV</a>
           </div>
         </section>
         <div className={s_hr}></div>
