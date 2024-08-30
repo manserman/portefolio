@@ -413,7 +413,7 @@ export default function Home() {
                     key={index}
                     id={index}
                     onClick={display_project}
-                    className="bg-slate-100 border-2 border-black w-[150px] h-[150px] flex items-center text-center justify-center hover:scale-110 text-black text-base" // Taille fixe de 150x150 pixels
+                    className="bg-slate-100 border-2 border-black w-[250px] h-[250px] flex items-center text-center justify-center hover:scale-110 text-black text-base" // Taille fixe de 150x150 pixels
                     whileHover={{ scale: 1.1 }}
                   >
                     {item.titre}
@@ -425,6 +425,10 @@ export default function Home() {
             <div className="w-full h-full mt-5">
               <Projet projet={projets[ind_projet]}></Projet>
             </div>
+            <br></br>
+            <br></br>
+            <br></br>
+            <br></br>
           </div>
         </motion.div>
       </main>
