@@ -70,7 +70,7 @@ export default function Home() {
   const s_hr = "w-full h-[0.1em] mt-20 bg-black";
 
   return (
-    <div>
+    <div className= "mb-5" >
       <main className="h-full bg-inherit flex flex-row mb-5">
         {/********************* SIDE BAR **********************/}
         <motion.div
@@ -118,24 +118,23 @@ export default function Home() {
           {/********************* PRESENTATION **********************/}
 
           <div className="h-[7%] w-[100%] pt-10 pl-10" id="accueil">
-            <span className="text-5xl font-serif text-black"> 
+            <span className="text-5xl font-serif text-black">
               Mohamadou Mansour HABIBOU HAMANI
             </span>
             <div className="flex flex-row mt-4">
-              <span className="italic font-serif text-xl text-black"> 
-                Ingénieur logiciel 
+              <span className="italic font-serif text-xl text-black">
+                Ingénieur logiciel
               </span>
             </div>
             <br></br>
-           
 
-            <div className="text-justify tracking-wide text-base font-serif w-[85%]"> 
+            <div className="text-justify tracking-wide text-base font-serif w-[85%]">
               Fort d'une expérience de 2 ans en développement Java backend en
               alternance, j'ai contribué à la mise à jour du système de
-              traçabilité d'Autoliv, passant de Java 6 à Java 8 puis java  11. J'ai assuré le
-              bon fonctionnement des webservices REST et des outils
-              d'administration et reporting, en mettant l'accent sur les tests
-              unitaires pour garantir la qualité du code. Mes compétences
+              traçabilité d'Autoliv, passant de Java 6 à Java 8 puis java 11.
+              J'ai assuré le bon fonctionnement des webservices REST et des
+              outils d'administration et reporting, en mettant l'accent sur les
+              tests unitaires pour garantir la qualité du code. Mes compétences
               incluent WildFly, Jersey, Spring Boot, Maven,... Parallèlement, ma
               formation universitaire m'a doté d'une connaissance approfondie
               des systèmes d'information web et des design patterns, avec une
@@ -144,15 +143,15 @@ export default function Home() {
 
             <div className="w-[70%] h-[20%] justify-center mt-4 border-black grid grid-cols-8">
               <span>&#128233;</span>
-              <span className="-ml-[75%] mt-1.5 text-base"> 
+              <span className="-ml-[75%] mt-1.5 text-base">
                 : mansourh923@gmail.com
               </span>
               <span>&#128241;</span>
-              <span className="-ml-[75%] mt-1.5 text-base"> 
+              <span className="-ml-[75%] mt-1.5 text-base">
                 : 06 65 15 40 90
               </span>
               <span>&#128664;</span>
-              <span className="-ml-[75%] mt-1.5 text-base"> 
+              <span className="-ml-[75%] mt-1.5 text-base">
                 : Ile de france / Hauts de france
               </span>
             </div>
@@ -170,129 +169,135 @@ export default function Home() {
 
           <div className={s_hr}></div>
           {/********************* Stack technique **********************/}
-           {/********************* STACK TECHNIQUE **********************/}
+          {/********************* STACK TECHNIQUE **********************/}
 
-           <div id="stack" className="w-full h-[15%] relative pl-12 pt-10 ">
-              <span className="text-black font-serif text-4xl"> 
-                STACK TECHNIQUE
-              </span>
-              <br />
-              <div className="flex items-center bg-gray-200 p-2 rounded">
-                  <Image
-                    src="./img/java.png"
-                    alt="Java"
-                    width={40}
-                    height={40}
-                  />
-                  <span className="ml-2 text-lg">Java</span> 
-                </div>
-              
-              <div className="flex flex-wrap space-x-4 space-y-4 mt-6">
-                <div className="flex items-center bg-gray-200 p-2 rounded">
-                  <Image
-                    src="./img/spring.png"
-                    alt="Spring Boot"
-                    width={40}
-                    height={40}
-                  />
-                  <span className="ml-2 text-lg">Spring Boot</span> 
-                </div>
-              
-                <div className="flex items-center bg-gray-200 p-2 rounded">
-                  <Image
-                    src="./img/hibernate.png"
-                    alt="Hibernate"
-                    width={20}
-                    height={20}
-                  />
-                  <span className="ml-2 text-lg">Hibernate</span> 
-                </div>
-                <div className="flex items-center bg-gray-200 p-2 rounded">
-                  <Image
-                    src="./img/data_jpa.png"
-                    alt="Spring Data JPA"
-                    width={20}
-                    height={20}
-                  />
-                  <span className="ml-2 text-lg">Spring Data JPA</span> 
-                </div>
-                <div className="flex items-center bg-gray-200 p-2 rounded">
-                  <Image
-                    src="./img/spring_mvc.png"
-                    alt="Spring MVC"
-                    width={20}
-                    height={20}
-                  />
-                  <span className="ml-2 text-lg">Spring MVC</span> 
-                </div>
-                <div className="flex items-center bg-gray-200 p-2 rounded">
-                  <Image
-                    src="./img/mockito.png"
-                    alt="Mockito"
-                    width={20}
-                    height={20}
-                  />
-                  <span className="ml-2 text-lg">Mockito</span> 
-                </div>
-                <div className="flex items-center bg-gray-200 p-2 rounded">
-                  <Image
-                    src="./img/JUnit.png"
-                    alt="JUnit"
-                    width={20}
-                    height={20}
-                  />
-                  <span className="ml-2 text-lg">JUnit</span> 
-                </div>
-                <div className="flex items-center bg-gray-200 p-2 rounded">
-                  <Image
-                    src="./img/csharp.png"
-                    alt="C#"
-                    width={20}
-                    height={20}
-                  />
-                  <span className="ml-2 text-lg">C#</span> 
-                </div>
-                <div className="flex items-center bg-gray-200 p-2 rounded">
-                  <Image
-                    src="./img/NET_Core.png"
-                    alt="ASP .NET Core"
-                    width={20}
-                    height={20}
-                  />
-                  <span className="ml-2 text-lg">ASP .NET Core</span> 
-                </div>
-                <div className="flex items-center bg-gray-200 p-2 rounded">
-                  <Image
-                    src="./img/angular.png"
-                    alt="Angular"
-                    width={20}
-                    height={20}
-                  />
-                  <span className="ml-2 text-lg">Angular</span> 
-                </div>
-                <div className="flex items-center bg-gray-200 p-2 rounded">
-                  <Image
-                    src="./img/react.png"
-                    alt="React"
-                    width={20}
-                    height={20}
-                  />
-                  <span className="ml-2 text-lg">React</span> 
-                </div>
+          <div id="stack" className="w-full h-[15%] relative pl-12 pt-10">
+            <span className="text-black font-serif text-4xl">
+              STACK TECHNIQUE
+            </span>
+            <br />
+            <div className="flex flex-wrap space-x-4 space-y-4 mt-6">
+              <div className="flex flex-col items-center justify-center bg-gray-200 p-4 rounded w-[150px] h-[150px]">
+                {" "}
+                {/* Conteneur de 150x150 pixels */}
+                <Image
+                  src="./img/java.png"
+                  alt="Java"
+                  width={60}
+                  height={60}
+                />{" "}
+                {/* Taille de l'image augmentée */}
+                <span className="mt-2 text-lg">Java</span>{" "}
+                {/* Texte en dessous de l'image */}
+              </div>
+
+              <div className="flex flex-col items-center justify-center bg-gray-200 p-4 rounded w-[150px] h-[150px]">
+                <Image
+                  src="./img/spring.png"
+                  alt="Spring Boot"
+                  width={60}
+                  height={60}
+                />
+                <span className="mt-2 text-lg">Spring Boot</span>
+              </div>
+
+              <div className="flex flex-col items-center justify-center bg-gray-200 p-4 rounded w-[150px] h-[150px]">
+                <Image
+                  src="./img/hibernate.png"
+                  alt="Hibernate"
+                  width={60}
+                  height={60}
+                />
+                <span className="mt-2 text-lg">Hibernate</span>
+              </div>
+
+              <div className="flex flex-col items-center justify-center bg-gray-200 p-4 rounded w-[150px] h-[150px]">
+                <Image
+                  src="./img/data_jpa.png"
+                  alt="Spring Data JPA"
+                  width={60}
+                  height={60}
+                />
+                <span className="mt-2 text-lg">Spring Data JPA</span>
+              </div>
+
+              <div className="flex flex-col items-center justify-center bg-gray-200 p-4 rounded w-[150px] h-[150px]">
+                <Image
+                  src="./img/spring_mvc.png"
+                  alt="Spring MVC"
+                  width={60}
+                  height={60}
+                />
+                <span className="mt-2 text-lg">Spring MVC</span>
+              </div>
+
+              <div className="flex flex-col items-center justify-center bg-gray-200 p-4 rounded w-[150px] h-[150px]">
+                <Image
+                  src="./img/mockito.png"
+                  alt="Mockito"
+                  width={60}
+                  height={60}
+                />
+                <span className="mt-2 text-lg">Mockito</span>
+              </div>
+
+              <div className="flex flex-col items-center justify-center bg-gray-200 p-4 rounded w-[150px] h-[150px]">
+                <Image
+                  src="./img/JUnit.png"
+                  alt="JUnit"
+                  width={60}
+                  height={60}
+                />
+                <span className="mt-2 text-lg">JUnit</span>
+              </div>
+
+              <div className="flex flex-col items-center justify-center bg-gray-200 p-4 rounded w-[150px] h-[150px]">
+                <Image src="./img/csharp.png" alt="C#" width={60} height={60} />
+                <span className="mt-2 text-lg">C#</span>
+              </div>
+
+              <div className="flex flex-col items-center justify-center bg-gray-200 p-4 rounded w-[150px] h-[150px]">
+                <Image
+                  src="./img/NET_Core.png"
+                  alt="ASP .NET Core"
+                  width={60}
+                  height={60}
+                />
+                <span className="mt-2 text-lg">ASP .NET Core</span>
+              </div>
+
+              <div className="flex flex-col items-center justify-center bg-gray-200 p-4 rounded w-[150px] h-[150px]">
+                <Image
+                  src="./img/angular.png"
+                  alt="Angular"
+                  width={60}
+                  height={60}
+                />
+                <span className="mt-2 text-lg">Angular</span>
+              </div>
+
+              <div className="flex flex-col items-center justify-center bg-gray-200 p-4 rounded w-[150px] h-[150px]">
+                <Image
+                  src="./img/react.png"
+                  alt="React"
+                  width={60}
+                  height={60}
+                />
+                <span className="mt-2 text-lg">React</span>
               </div>
             </div>
+          </div>
 
           {/********************* COMPETENCES **********************/}
+          <div className={s_hr}></div>
 
           <div
             id="competences"
             className="w-full h-[15%] relative pl-12 pt-10 "
           >
-            <span className="text-black font-serif text-4xl"> 
-              COMPETENCES
-            </span>
+            <span className="text-black font-serif text-4xl">COMPETENCES</span>
             <br />
-            <div className="text-slate-600 text-base italic mt-2"> 
+            <div className="text-slate-600 text-base italic mt-2">
               Compétences issues du référentiel présent sur le site du CIGREF
               (version 2022)
             </div>
@@ -330,9 +335,7 @@ export default function Home() {
             id="experiences"
             className="w-full h-[22%] pt-10 space-y-6 pl-12"
           >
-            <span className="text-black font-serif text-4xl"> 
-              EXPERIENCES
-            </span>
+            <span className="text-black font-serif text-4xl">EXPERIENCES</span>
             <div className="flex flex-col h-[90%] space-y-4 overflow-y-auto">
               {experiences.map((item, index) => {
                 return <Experience key={index} exp={item}></Experience>;
@@ -345,17 +348,15 @@ export default function Home() {
           {/********************* SAVOIR ETRE **********************/}
 
           <div id="savoirs" className="w-full h-[15%] relative pl-12 pt-10">
-            <span className="text-black font-serif text-4xl"> 
-              SAVOIR ETRE
-            </span>
+            <span className="text-black font-serif text-4xl">SAVOIR ETRE</span>
             <br />
-            <div className="text-slate-600 text-base italic mt-2"> 
+            <div className="text-slate-600 text-base italic mt-2">
               Savoir être issue du référentiel présent sur le site de pôle
               emploi (ROME 4.0)
             </div>
 
-            <table className="mt-5 text-center h-[80%] w-[85%] overflow-y-auto text-base"> 
-              <tr className="bg-gray-800 text-base text-white font-normal"> 
+            <table className="mt-5 text-center h-[80%] w-[85%] overflow-y-auto text-base">
+              <tr className="bg-gray-800 text-base text-white font-normal">
                 <th>Savoir être</th>
                 <th>Description</th>
               </tr>
@@ -377,18 +378,16 @@ export default function Home() {
             id="formations"
             className="relative w-full h-[14%] pt-10 space-y-6 pl-12"
           >
-            <span className="text-black font-serif text-4xl"> 
-              FORMATIONS
-            </span>
+            <span className="text-black font-serif text-4xl">FORMATIONS</span>
 
-            <div className="text-slate-600 text-base italic mt-2"> 
+            <div className="text-slate-600 text-base italic mt-2">
               Liste des acquis des formations selon le site France competences
             </div>
 
             <span
               id="previous"
               onClick={formation_carousel}
-              className="absolute top-[50%] text-7xl text-gray-800 hover:cursor-pointer hover:scale-[130%]" 
+              className="absolute top-[50%] text-7xl text-gray-800 hover:cursor-pointer hover:scale-[130%]"
             >
               &#10216;
             </span>
@@ -396,7 +395,7 @@ export default function Home() {
             <span
               id="next"
               onClick={formation_carousel}
-              className="absolute top-[50%] right-[10%] hover:cursor-pointer text-gray-800 text-7xl hover:scale-[130%]" 
+              className="absolute top-[50%] right-[10%] hover:cursor-pointer text-gray-800 text-7xl hover:scale-[130%]"
             >
               &#10217;
             </span>
@@ -409,18 +408,18 @@ export default function Home() {
           <div className={s_hr}></div>
 
           <div id="projets" className="relative w-full h-[14%] pt-10 pl-12">
-            <span className="text-black font-serif text-4xl"> 
+            <span className="text-black font-serif text-4xl">
               Projets Universitaires
             </span>
 
-            <div className="flex flex-row items-center justify-center space-x-10 h-[15%] mt-10 w-[100%]">
+            <div className="flex flex-row items-center justify-center space-x-10 mt-10 w-full">
               {projets.map((item, index) => {
                 return (
                   <motion.div
                     key={index}
                     id={index}
                     onClick={display_project}
-                    className="bg-slate-100 border-2 border-black w-[20%] flex items-center text-center justify-center h-full hover:scale-110 text-black text-base" 
+                    className="bg-slate-100 border-2 border-black w-[150px] h-[150px] flex items-center text-center justify-center hover:scale-110 text-black text-base" // Taille fixe de 150x150 pixels
                     whileHover={{ scale: 1.1 }}
                   >
                     {item.titre}
@@ -429,7 +428,7 @@ export default function Home() {
               })}
             </div>
 
-            <div className="w-[100%] h-[100%]">
+            <div className="w-full h-full mt-5">
               <Projet projet={projets[ind_projet]}></Projet>
             </div>
           </div>
