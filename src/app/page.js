@@ -70,7 +70,7 @@ export default function Home() {
   const s_hr = "w-full h-[0.1em] mt-20 bg-black";
 
   return (
-    <div className= "mb-5" >
+    <div className="mb-5">
       <main className="h-full bg-inherit flex flex-row mb-5">
         {/********************* SIDE BAR **********************/}
         <motion.div
@@ -89,6 +89,9 @@ export default function Home() {
           <div className={s_nav_section}>
             <div className={s_nav}>
               <a href="#accueil">Accueil</a>
+            </div>
+            <div className={s_nav}>
+              <a href="#stack">Stack technique</a>
             </div>
             <div className={s_nav}>
               <a href="#competences">Competences</a>
@@ -173,25 +176,16 @@ export default function Home() {
 
           <div id="stack" className="w-full h-[15%] relative pl-12 pt-10">
             <span className="text-black font-serif text-4xl">
-              STACK TECHNIQUE
+              Stack technique principale
             </span>
             <br />
-            <div className="flex flex-wrap space-x-4 space-y-4 mt-6">
-              <div className="flex flex-col items-center justify-center bg-gray-200 p-4 rounded w-[150px] h-[150px]">
-                {" "}
-                {/* Conteneur de 150x150 pixels */}
-                <Image
-                  src="./img/java.png"
-                  alt="Java"
-                  width={60}
-                  height={60}
-                />{" "}
-                {/* Taille de l'image augmentée */}
-                <span className="mt-2 text-lg">Java</span>{" "}
-                {/* Texte en dessous de l'image */}
+            <div className="flex flex-nowrap overflow-x-auto space-x-4 mt-6">
+              <div className="flex flex-col items-center justify-center bg-gray-200 p-4 rounded w-[150px] h-[150px] flex-shrink-0">
+                <Image src="./img/java.png" alt="Java" width={60} height={60} />
+                <span className="mt-2 text-lg">Java</span>
               </div>
 
-              <div className="flex flex-col items-center justify-center bg-gray-200 p-4 rounded w-[150px] h-[150px]">
+              <div className="flex flex-col items-center justify-center bg-gray-200 p-4 rounded w-[150px] h-[150px] flex-shrink-0">
                 <Image
                   src="./img/spring.png"
                   alt="Spring Boot"
@@ -201,7 +195,7 @@ export default function Home() {
                 <span className="mt-2 text-lg">Spring Boot</span>
               </div>
 
-              <div className="flex flex-col items-center justify-center bg-gray-200 p-4 rounded w-[150px] h-[150px]">
+              <div className="flex flex-col items-center justify-center bg-gray-200 p-4 rounded w-[150px] h-[150px] flex-shrink-0">
                 <Image
                   src="./img/hibernate.png"
                   alt="Hibernate"
@@ -211,7 +205,7 @@ export default function Home() {
                 <span className="mt-2 text-lg">Hibernate</span>
               </div>
 
-              <div className="flex flex-col items-center justify-center bg-gray-200 p-4 rounded w-[150px] h-[150px]">
+              <div className="flex flex-col items-center justify-center bg-gray-200 p-4 rounded w-[150px] h-[150px] flex-shrink-0">
                 <Image
                   src="./img/data_jpa.png"
                   alt="Spring Data JPA"
@@ -221,7 +215,7 @@ export default function Home() {
                 <span className="mt-2 text-lg">Spring Data JPA</span>
               </div>
 
-              <div className="flex flex-col items-center justify-center bg-gray-200 p-4 rounded w-[150px] h-[150px]">
+              <div className="flex flex-col items-center justify-center bg-gray-200 p-4 rounded w-[150px] h-[150px] flex-shrink-0">
                 <Image
                   src="./img/spring_mvc.png"
                   alt="Spring MVC"
@@ -231,7 +225,7 @@ export default function Home() {
                 <span className="mt-2 text-lg">Spring MVC</span>
               </div>
 
-              <div className="flex flex-col items-center justify-center bg-gray-200 p-4 rounded w-[150px] h-[150px]">
+              <div className="flex flex-col items-center justify-center bg-gray-200 p-4 rounded w-[150px] h-[150px] flex-shrink-0">
                 <Image
                   src="./img/mockito.png"
                   alt="Mockito"
@@ -241,7 +235,7 @@ export default function Home() {
                 <span className="mt-2 text-lg">Mockito</span>
               </div>
 
-              <div className="flex flex-col items-center justify-center bg-gray-200 p-4 rounded w-[150px] h-[150px]">
+              <div className="flex flex-col items-center justify-center bg-gray-200 p-4 rounded w-[150px] h-[150px] flex-shrink-0">
                 <Image
                   src="./img/JUnit.png"
                   alt="JUnit"
@@ -251,12 +245,12 @@ export default function Home() {
                 <span className="mt-2 text-lg">JUnit</span>
               </div>
 
-              <div className="flex flex-col items-center justify-center bg-gray-200 p-4 rounded w-[150px] h-[150px]">
+              <div className="flex flex-col items-center justify-center bg-gray-200 p-4 rounded w-[150px] h-[150px] flex-shrink-0">
                 <Image src="./img/csharp.png" alt="C#" width={60} height={60} />
                 <span className="mt-2 text-lg">C#</span>
               </div>
 
-              <div className="flex flex-col items-center justify-center bg-gray-200 p-4 rounded w-[150px] h-[150px]">
+              <div className="flex flex-col items-center justify-center bg-gray-200 p-4 rounded w-[150px] h-[150px] flex-shrink-0">
                 <Image
                   src="./img/NET_Core.png"
                   alt="ASP .NET Core"
@@ -266,7 +260,7 @@ export default function Home() {
                 <span className="mt-2 text-lg">ASP .NET Core</span>
               </div>
 
-              <div className="flex flex-col items-center justify-center bg-gray-200 p-4 rounded w-[150px] h-[150px]">
+              <div className="flex flex-col items-center justify-center bg-gray-200 p-4 rounded w-[150px] h-[150px] flex-shrink-0">
                 <Image
                   src="./img/angular.png"
                   alt="Angular"
@@ -276,7 +270,7 @@ export default function Home() {
                 <span className="mt-2 text-lg">Angular</span>
               </div>
 
-              <div className="flex flex-col items-center justify-center bg-gray-200 p-4 rounded w-[150px] h-[150px]">
+              <div className="flex flex-col items-center justify-center bg-gray-200 p-4 rounded w-[150px] h-[150px] flex-shrink-0">
                 <Image
                   src="./img/react.png"
                   alt="React"
