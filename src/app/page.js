@@ -59,19 +59,18 @@ export default function Home() {
   const savoirs = data_savoir();
 
   /********************* CONSTANTES DE STYLE  **************************/
-  const s_sideBar = "h-[100%] w-[17%] fixed fixed bg-gray-800 flex flex-col";
+  const s_sideBar = "h-[100%] w-[17%] fixed bg-gray-800 flex flex-col";
   const s_photo =
     "mx-auto h-[8em] w-[8em] mt-10 rounded-full flex items-center justify-center font-semibold";
   const s_logo = "mx-auto mt-20 scale-[115%] rounded-full overflow-hidden";
   const s_nav =
-    "text-white text-lg p-3 w-full text-center hover:bg-gray-700 mt-1"; // Augmenté de text-sm à text-lg
+    "text-white text-lg p-3 w-full text-center hover:bg-gray-700 mt-1";
   const s_nav_section = "flex flex-col items-center justify-start mt-4";
-  const s_main = "flex flex-col h-[400%] w-[83%] ml-[17%]";
-  const s_hr = "w-full h-[0.1em] mt-20 bg-black";
+  const s_main = "flex flex-col w-[83%] ml-[17%]";
 
   return (
-    <div className="mb-5">
-      <main className="h-full bg-inherit flex flex-row mb-5">
+    <div className="h-screen overflow-y-auto">
+      <main className="h-full bg-inherit flex flex-row">
         {/********************* SIDE BAR **********************/}
         <motion.div
           className={s_sideBar}
@@ -94,13 +93,13 @@ export default function Home() {
               <a href="#stack">Stack technique</a>
             </div>
             <div className={s_nav}>
-              <a href="#competences">Competences</a>
+              <a href="#competences">Compétences</a>
             </div>
             <div className={s_nav}>
-              <a href="#experiences">Experiences</a>
+              <a href="#experiences">Expériences</a>
             </div>
             <div className={s_nav}>
-              <a href="#savoirs">Savoir Etre</a>
+              <a href="#savoirs">Savoir-être</a>
             </div>
             <div className={s_nav}>
               <a href="#formations">Formations</a>
@@ -119,186 +118,175 @@ export default function Home() {
           transition={{ duration: 1 }}
         >
           {/********************* PRESENTATION **********************/}
-
-          <div className="h-[7%] w-[100%] pt-10 pl-10" id="accueil">
-            <span className="text-5xl font-serif text-black">
-              Mohamadou Mansour HABIBOU HAMANI
-            </span>
-            <div className="flex flex-row mt-4">
-              <span className="italic font-serif text-xl text-black">
-                Ingénieur logiciel
+          <section
+            id="accueil"
+            className="min-h-screen flex flex-col justify-center items-start pl-10 pt-10"
+          >
+            <motion.div
+              initial={{ opacity: 0, y: 50 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8 }}
+            >
+              <span className="text-5xl font-serif text-black">
+                Mohamadou Mansour HABIBOU HAMANI
               </span>
-            </div>
-            <br></br>
+              <div className="flex flex-row mt-4">
+                <span className="italic font-serif text-xl text-black">
+                  Ingénieur logiciel
+                </span>
+              </div>
+              <div className="text-justify tracking-wide text-base font-serif w-[85%] mt-4">
+                Fort d'une expérience de 2 ans en développement Java backend en
+                alternance, j'ai contribué à la mise à jour du système de
+                traçabilité d'Autoliv, passant de Java 6 à Java 11. J'ai assuré
+                le bon fonctionnement des webservices REST et des outils
+                d'administration et reporting, en mettant l'accent sur les tests
+                unitaires pour garantir la qualité du code. Mes compétences
+                incluent WildFly, Jersey, Spring Boot, Maven,... Parallèlement,
+                ma formation universitaire m'a doté d'une connaissance
+                approfondie des systèmes d'information web et des design
+                patterns, avec une expérience pratique en Node.js, Angular,
+                React,.Net et C#.
+              </div>
+            </motion.div>
+          </section>
 
-            <div className="text-justify tracking-wide text-base font-serif w-[85%]">
-              Fort d'une expérience de 2 ans en développement Java backend en
-              alternance, j'ai contribué à la mise à jour du système de
-              traçabilité d'Autoliv, passant de Java 6 à Java 8 puis java 11.
-              J'ai assuré le bon fonctionnement des webservices REST et des
-              outils d'administration et reporting, en mettant l'accent sur les
-              tests unitaires pour garantir la qualité du code. Mes compétences
-              incluent WildFly, Jersey, Spring Boot, Maven,... Parallèlement, ma
-              formation universitaire m'a doté d'une connaissance approfondie
-              des systèmes d'information web et des design patterns, avec une
-              expérience pratique en Node.js, Angular, React,.Net et C#.
-            </div>
-
-            <div className="w-[70%] h-[20%] justify-center mt-4 border-black grid grid-cols-8">
-              <span>&#128233;</span>
-              <span className="-ml-[75%] mt-1.5 text-base">
-                : mansourh923@gmail.com
-              </span>
-              <span>&#128241;</span>
-              <span className="-ml-[75%] mt-1.5 text-base">
-                : 06 65 15 40 90
-              </span>
-              <span>&#128664;</span>
-              <span className="-ml-[75%] mt-1.5 text-base">
-                : Ile de france / Hauts de france
-              </span>
-            </div>
-
-            <div className="flex flex-row font-serif justify-center space-x-4 text-base h-10 w-[20%] absolute top-12 right-10">
-              <a
-                href="./files/cv.pdf"
-                target="blank"
-                className="hover:underline hover:cursor-pointer"
-              >
-                Mon CV
-              </a>
-            </div>
-          </div>
-
-          <div className={s_hr}></div>
-          {/********************* Stack technique **********************/}
           {/********************* STACK TECHNIQUE **********************/}
-
-          <div id="stack" className="w-full h-[15%] relative pl-12 pt-10">
-            <span className="text-black font-serif text-4xl">
-              Stack technique principale
-            </span>
-            <br />
-            <div className="flex flex-nowrap overflow-x-auto space-x-4 mt-6">
-              <div className="flex flex-col items-center justify-center bg-gray-200 p-4 rounded w-[150px] h-[150px] flex-shrink-0">
-                <Image src="./img/java.png" alt="Java" width={60} height={60} />
-                <span className="mt-2 text-lg">Java</span>
+          <section
+            id="stack"
+            className="min-h-screen flex flex-col justify-center pl-12"
+          >
+            <motion.div
+              initial={{ opacity: 0, y: 50 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8 }}
+            >
+              <span className="text-black font-serif text-4xl">
+                Stack technique principale
+              </span>
+              <br />
+              <div className="flex flex-nowrap overflow-x-auto space-x-4 mt-6">
+                <div className="flex flex-col items-center justify-center bg-gray-200 p-4 rounded w-[150px] h-[150px] flex-shrink-0">
+                  <Image
+                    src="./img/java.png"
+                    alt="Java"
+                    width={60}
+                    height={60}
+                  />
+                  <span className="mt-2 text-lg">Java</span>
+                </div>
+                <div className="flex flex-col items-center justify-center bg-gray-200 p-4 rounded w-[150px] h-[150px] flex-shrink-0">
+                  <Image
+                    src="./img/spring.png"
+                    alt="Spring Boot"
+                    width={60}
+                    height={60}
+                  />
+                  <span className="mt-2 text-lg">Spring Boot</span>
+                </div>
+                <div className="flex flex-col items-center justify-center bg-gray-200 p-4 rounded w-[150px] h-[150px] flex-shrink-0">
+                  <Image
+                    src="./img/hibernate.png"
+                    alt="Hibernate"
+                    width={60}
+                    height={60}
+                  />
+                  <span className="mt-2 text-lg">Hibernate</span>
+                </div>
+                <div className="flex flex-col items-center justify-center bg-gray-200 p-4 rounded w-[150px] h-[150px] flex-shrink-0">
+                  <Image
+                    src="./img/data_jpa.png"
+                    alt="Spring Data JPA"
+                    width={60}
+                    height={60}
+                  />
+                  <span className="mt-2 text-lg">Spring Data JPA</span>
+                </div>
+                <div className="flex flex-col items-center justify-center bg-gray-200 p-4 rounded w-[150px] h-[150px] flex-shrink-0">
+                  <Image
+                    src="./img/spring_mvc.png"
+                    alt="Spring MVC"
+                    width={60}
+                    height={60}
+                  />
+                  <span className="mt-2 text-lg">Spring MVC</span>
+                </div>
+                <div className="flex flex-col items-center justify-center bg-gray-200 p-4 rounded w-[150px] h-[150px] flex-shrink-0">
+                  <Image
+                    src="./img/mockito.png"
+                    alt="Mockito"
+                    width={60}
+                    height={60}
+                  />
+                  <span className="mt-2 text-lg">Mockito</span>
+                </div>
+                <div className="flex flex-col items-center justify-center bg-gray-200 p-4 rounded w-[150px] h-[150px] flex-shrink-0">
+                  <Image
+                    src="./img/JUnit.png"
+                    alt="JUnit"
+                    width={60}
+                    height={60}
+                  />
+                  <span className="mt-2 text-lg">JUnit</span>
+                </div>
+                <div className="flex flex-col items-center justify-center bg-gray-200 p-4 rounded w-[150px] h-[150px] flex-shrink-0">
+                  <Image
+                    src="./img/csharp.png"
+                    alt="C#"
+                    width={60}
+                    height={60}
+                  />
+                  <span className="mt-2 text-lg">C#</span>
+                </div>
+                <div className="flex flex-col items-center justify-center bg-gray-200 p-4 rounded w-[150px] h-[150px] flex-shrink-0">
+                  <Image
+                    src="./img/NET_Core.png"
+                    alt="ASP .NET Core"
+                    width={60}
+                    height={60}
+                  />
+                  <span className="mt-2 text-lg">ASP .NET Core</span>
+                </div>
+                <div className="flex flex-col items-center justify-center bg-gray-200 p-4 rounded w-[150px] h-[150px] flex-shrink-0">
+                  <Image
+                    src="./img/angular.png"
+                    alt="Angular"
+                    width={60}
+                    height={60}
+                  />
+                  <span className="mt-2 text-lg">Angular</span>
+                </div>
+                <div className="flex flex-col items-center justify-center bg-gray-200 p-4 rounded w-[150px] h-[150px] flex-shrink-0">
+                  <Image
+                    src="./img/react.png"
+                    alt="React"
+                    width={60}
+                    height={60}
+                  />
+                  <span className="mt-2 text-lg">React</span>
+                </div>
               </div>
-
-              <div className="flex flex-col items-center justify-center bg-gray-200 p-4 rounded w-[150px] h-[150px] flex-shrink-0">
-                <Image
-                  src="./img/spring.png"
-                  alt="Spring Boot"
-                  width={60}
-                  height={60}
-                />
-                <span className="mt-2 text-lg">Spring Boot</span>
-              </div>
-
-              <div className="flex flex-col items-center justify-center bg-gray-200 p-4 rounded w-[150px] h-[150px] flex-shrink-0">
-                <Image
-                  src="./img/hibernate.png"
-                  alt="Hibernate"
-                  width={60}
-                  height={60}
-                />
-                <span className="mt-2 text-lg">Hibernate</span>
-              </div>
-
-              <div className="flex flex-col items-center justify-center bg-gray-200 p-4 rounded w-[150px] h-[150px] flex-shrink-0">
-                <Image
-                  src="./img/data_jpa.png"
-                  alt="Spring Data JPA"
-                  width={60}
-                  height={60}
-                />
-                <span className="mt-2 text-lg">Spring Data JPA</span>
-              </div>
-
-              <div className="flex flex-col items-center justify-center bg-gray-200 p-4 rounded w-[150px] h-[150px] flex-shrink-0">
-                <Image
-                  src="./img/spring_mvc.png"
-                  alt="Spring MVC"
-                  width={60}
-                  height={60}
-                />
-                <span className="mt-2 text-lg">Spring MVC</span>
-              </div>
-
-              <div className="flex flex-col items-center justify-center bg-gray-200 p-4 rounded w-[150px] h-[150px] flex-shrink-0">
-                <Image
-                  src="./img/mockito.png"
-                  alt="Mockito"
-                  width={60}
-                  height={60}
-                />
-                <span className="mt-2 text-lg">Mockito</span>
-              </div>
-
-              <div className="flex flex-col items-center justify-center bg-gray-200 p-4 rounded w-[150px] h-[150px] flex-shrink-0">
-                <Image
-                  src="./img/JUnit.png"
-                  alt="JUnit"
-                  width={60}
-                  height={60}
-                />
-                <span className="mt-2 text-lg">JUnit</span>
-              </div>
-
-              <div className="flex flex-col items-center justify-center bg-gray-200 p-4 rounded w-[150px] h-[150px] flex-shrink-0">
-                <Image src="./img/csharp.png" alt="C#" width={60} height={60} />
-                <span className="mt-2 text-lg">C#</span>
-              </div>
-
-              <div className="flex flex-col items-center justify-center bg-gray-200 p-4 rounded w-[150px] h-[150px] flex-shrink-0">
-                <Image
-                  src="./img/NET_Core.png"
-                  alt="ASP .NET Core"
-                  width={60}
-                  height={60}
-                />
-                <span className="mt-2 text-lg">ASP .NET Core</span>
-              </div>
-
-              <div className="flex flex-col items-center justify-center bg-gray-200 p-4 rounded w-[150px] h-[150px] flex-shrink-0">
-                <Image
-                  src="./img/angular.png"
-                  alt="Angular"
-                  width={60}
-                  height={60}
-                />
-                <span className="mt-2 text-lg">Angular</span>
-              </div>
-
-              <div className="flex flex-col items-center justify-center bg-gray-200 p-4 rounded w-[150px] h-[150px] flex-shrink-0">
-                <Image
-                  src="./img/react.png"
-                  alt="React"
-                  width={60}
-                  height={60}
-                />
-                <span className="mt-2 text-lg">React</span>
-              </div>
-            </div>
-          </div>
+            </motion.div>
+          </section>
 
           {/********************* COMPETENCES **********************/}
-          <div className={s_hr}></div>
-
-          <div
+          <section
             id="competences"
-            className="w-full h-[15%] relative pl-12 pt-10 "
+            className="min-h-screen flex flex-col justify-center pl-12 pt-10"
           >
-            <span className="text-black font-serif text-4xl">COMPETENCES</span>
-            <br />
-            <div className="text-slate-600 text-base italic mt-2">
-              Compétences issues du référentiel présent sur le site du CIGREF
-              (version 2022)
-            </div>
-
-            <div className="flex flex-row mx-auto space-x-7 mt-6 h-[17%] w-[70%]">
-              {competences.map((item, index) => {
-                return (
+            <motion.div
+              initial={{ opacity: 0, y: 50 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8 }}
+            >
+              <span className="text-black font-serif text-4xl">COMPETENCES</span>
+              <br />
+              <div className="text-slate-600 text-base italic mt-2">
+                Compétences issues du référentiel présent sur le site du CIGREF
+                (version 2022)
+              </div>
+              <div className="flex flex-row mx-auto space-x-7 mt-6 h-[17%] w-[70%]">
+                {competences.map((item, index) => (
                   <motion.div
                     id={index}
                     key={index}
@@ -311,125 +299,139 @@ export default function Home() {
                   >
                     {item.poste}
                   </motion.div>
-                );
-              })}
-            </div>
-
-            <div className="no-scrollbar mt-10 overflow-y-auto h-[60%]">
-              {competences[ind_tab_comp].comp.map((item, index) => {
-                return <Competence key={index} comp={item}></Competence>;
-              })}
-            </div>
-          </div>
-
-          <div className={s_hr}></div>
+                ))}
+              </div>
+              <div className="no-scrollbar mt-10 overflow-y-auto h-[60%]">
+                {competences[ind_tab_comp].comp.map((item, index) => (
+                  <Competence key={index} comp={item}></Competence>
+                ))}
+              </div>
+            </motion.div>
+          </section>
 
           {/********************* EXPERIENCES **********************/}
-          <div
+          <section
             id="experiences"
-            className="w-full h-[22%] pt-10 space-y-6 pl-12"
+            className="min-h-screen flex flex-col justify-center pl-12"
           >
-            <span className="text-black font-serif text-4xl">EXPERIENCES</span>
-            <div className="flex flex-col h-[90%] space-y-4 overflow-y-auto">
-              {experiences.map((item, index) => {
-                return <Experience key={index} exp={item}></Experience>;
-              })}
-            </div>
-          </div>
-
-          <div className={s_hr}></div>
+            <motion.div
+              initial={{ opacity: 0, y: 50 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8 }}
+            >
+              <span className="text-black font-serif text-4xl">EXPERIENCES</span>
+              <div className="flex flex-col h-[90%] space-y-4 overflow-y-auto mt-4">
+                {experiences.map((item, index) => (
+                  <Experience key={index} exp={item}></Experience>
+                ))}
+              </div>
+            </motion.div>
+          </section>
 
           {/********************* SAVOIR ETRE **********************/}
-
-          <div id="savoirs" className="w-full h-[15%] relative pl-12 pt-10">
-            <span className="text-black font-serif text-4xl">SAVOIR ETRE</span>
-            <br />
-            <div className="text-slate-600 text-base italic mt-2">
-              Savoir être issue du référentiel présent sur le site de pôle
-              emploi (ROME 4.0)
-            </div>
-
-            <table className="mt-5 text-center h-[80%] w-[85%] overflow-y-auto text-base">
-              <tr className="bg-gray-800 text-base text-white font-normal">
-                <th>Savoir être</th>
-                <th>Description</th>
-              </tr>
-              {savoirs.map((item, index) => {
-                return (
+          <section
+            id="savoirs"
+            className="min-h-screen flex flex-col justify-center pl-12"
+          >
+            <motion.div
+              initial={{ opacity: 0, y: 50 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8 }}
+            >
+              <span className="text-black font-serif text-4xl">
+                SAVOIR ETRE
+              </span>
+              <br />
+              <div className="text-slate-600 text-base italic mt-2">
+                Savoir-être issus du référentiel présent sur le site de pôle
+                emploi (ROME 4.0)
+              </div>
+              <table className="mt-5 text-center w-[85%] overflow-y-auto text-base">
+                <tr className="bg-gray-800 text-base text-white font-normal">
+                  <th>Savoir-être</th>
+                  <th>Description</th>
+                </tr>
+                {savoirs.map((item, index) => (
                   <tr key={index}>
                     <td>{item.nom}</td>
                     <td>{item.description}</td>
                   </tr>
-                );
-              })}
-            </table>
-          </div>
-
-          <div className={s_hr}></div>
+                ))}
+              </table>
+            </motion.div>
+          </section>
 
           {/********************* FORMATIONS **********************/}
-          <div
+          <section
             id="formations"
-            className="relative w-full h-[14%] pt-10 space-y-6 pl-12"
+            className="min-h-screen flex flex-col justify-center pl-12"
           >
-            <span className="text-black font-serif text-4xl">FORMATIONS</span>
-
-            <div className="text-slate-600 text-base italic mt-2">
-              Liste des acquis des formations selon le site France competences
-            </div>
-
-            <span
-              id="previous"
-              onClick={formation_carousel}
-              className="absolute top-[50%] text-7xl text-gray-800 hover:cursor-pointer hover:scale-[130%]"
+            <motion.div
+              initial={{ opacity: 0, y: 50 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8 }}
             >
-              &#10216;
-            </span>
+              <span className="text-black font-serif text-4xl">FORMATIONS</span>
+              <div className="text-slate-600 text-base italic mt-2">
+                Liste des acquis des formations selon le site France
+                competences
+              </div>
+              <div className="relative w-full mt-6">
+                <span
+                  id="previous"
+                  onClick={formation_carousel}
+                  className="absolute top-[50%] text-7xl text-gray-800 hover:cursor-pointer hover:scale-[130%]"
+                >
+                  &#10216;
+                </span>
 
-            <span
-              id="next"
-              onClick={formation_carousel}
-              className="absolute top-[50%] right-[10%] hover:cursor-pointer text-gray-800 text-7xl hover:scale-[130%]"
+                <span
+                  id="next"
+                  onClick={formation_carousel}
+                  className="absolute top-[50%] right-[10%] hover:cursor-pointer text-gray-800 text-7xl hover:scale-[130%]"
+                >
+                  &#10217;
+                </span>
+                <div className="ml-28">
+                  <Formation form={formations[ind_formation]}></Formation>
+                </div>
+              </div>
+            </motion.div>
+          </section>
+
+          {/********************* PROJETS **********************/}
+          <section
+            id="projets"
+            className="min-h-screen flex flex-col justify-center pl-12"
+          >
+            <motion.div
+              initial={{ opacity: 0, y: 50 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8 }}
             >
-              &#10217;
-            </span>
+              <span className="text-black font-serif text-4xl">
+                Projets Universitaires
+              </span>
 
-            <div className="ml-28">
-              <Formation form={formations[ind_formation]}></Formation>
-            </div>
-          </div>
-
-          <div className={s_hr}></div>
-
-          <div id="projets" className="relative w-full h-[14%] pt-10 pl-12">
-            <span className="text-black font-serif text-4xl">
-              Projets Universitaires
-            </span>
-
-            <div className="flex flex-row items-center justify-center space-x-10 mt-10 w-full">
-              {projets.map((item, index) => {
-                return (
+              <div className="flex flex-row items-center justify-center space-x-10 mt-10 w-full">
+                {projets.map((item, index) => (
                   <motion.div
                     key={index}
                     id={index}
                     onClick={display_project}
-                    className="bg-slate-100 border-2 border-black w-[250px] h-[250px] flex items-center text-center justify-center hover:scale-110 text-black text-base" // Taille fixe de 150x150 pixels
+                    className="bg-slate-100 border-2 border-black w-[250px] h-[250px] flex items-center text-center justify-center hover:scale-110 text-black text-base"
                     whileHover={{ scale: 1.1 }}
                   >
                     {item.titre}
                   </motion.div>
-                );
-              })}
-            </div>
+                ))}
+              </div>
 
-            <div className="w-full h-full mt-5">
-              <Projet projet={projets[ind_projet]}></Projet>
-            </div>
-            <br></br>
-            <br></br>
-            <br></br>
-            <br></br>
-          </div>
+              <div className="w-full h-full mt-5">
+                <Projet projet={projets[ind_projet]}></Projet>
+              </div>
+            </motion.div>
+          </section>
         </motion.div>
       </main>
     </div>
