@@ -26,13 +26,13 @@ export default function Home() {
 
   /********************* NAVIGATION  **************************/
   const sections = [
-    { id: "accueil", label: "Accueil", content: <Accueil /> },
-    { id: "stack", label: "Stack technique", content: <Stack /> },
-    { id: "competences", label: "Compétences", content: <Competences /> },
-    { id: "experiences", label: "Expériences", content: <Experiences /> },
-    { id: "savoirs", label: "Savoir-être", content: <Savoirs /> },
-    { id: "formations", label: "Formations", content: <Formations /> },
-    { id: "projets", label: "Projets Universitaires", content: <Projets /> },
+    "accueil",
+    "stack",
+    "competences",
+    "experiences",
+    "savoirs",
+    "formations",
+    "projets",
   ];
 
   const nextSection = () => {
@@ -75,34 +75,361 @@ export default function Home() {
             src="./img/photo.png"
           />
           <div className="flex flex-col items-center justify-start mt-4">
-            {sections.map((section, index) => (
-              <div
-                key={index}
-                className="text-white text-lg p-3 w-full text-center hover:bg-gray-700 mt-1 cursor-pointer"
-                onClick={() => setActiveSection(index)}
-              >
-                {section.label}
-              </div>
-            ))}
+            <div
+              className="text-white text-lg p-3 w-full text-center hover:bg-gray-700 mt-1 cursor-pointer"
+              onClick={() => setActiveSection(0)}
+            >
+              Accueil
+            </div>
+            <div
+              className="text-white text-lg p-3 w-full text-center hover:bg-gray-700 mt-1 cursor-pointer"
+              onClick={() => setActiveSection(1)}
+            >
+              Stack technique
+            </div>
+            <div
+              className="text-white text-lg p-3 w-full text-center hover:bg-gray-700 mt-1 cursor-pointer"
+              onClick={() => setActiveSection(2)}
+            >
+              Compétences
+            </div>
+            <div
+              className="text-white text-lg p-3 w-full text-center hover:bg-gray-700 mt-1 cursor-pointer"
+              onClick={() => setActiveSection(3)}
+            >
+              Expériences
+            </div>
+            <div
+              className="text-white text-lg p-3 w-full text-center hover:bg-gray-700 mt-1 cursor-pointer"
+              onClick={() => setActiveSection(4)}
+            >
+              Savoir-être
+            </div>
+            <div
+              className="text-white text-lg p-3 w-full text-center hover:bg-gray-700 mt-1 cursor-pointer"
+              onClick={() => setActiveSection(5)}
+            >
+              Formations
+            </div>
+            <div
+              className="text-white text-lg p-3 w-full text-center hover:bg-gray-700 mt-1 cursor-pointer"
+              onClick={() => setActiveSection(6)}
+            >
+              Projets Universitaires
+            </div>
           </div>
         </div>
 
         {/********************* SECTION PRINCIPALE **********************/}
         <div className="flex flex-col w-[83%] ml-[17%]">
           <AnimatePresence>
-            {sections.map((section, index) =>
-              activeSection === index ? (
-                <motion.section
-                  key={section.id}
-                  className="h-screen flex flex-col justify-center pl-12"
-                  initial={{ opacity: 0, y: 50 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  exit={{ opacity: 0, y: -50 }}
-                  transition={{ duration: 1 }}
-                >
-                  {section.content}
-                </motion.section>
-              ) : null
+            {activeSection === 0 && (
+              <motion.section
+                key="accueil"
+                className="h-screen flex flex-col justify-center pl-12"
+                initial={{ opacity: 0, y: 50 }}
+                animate={{ opacity: 1, y: 0 }}
+                exit={{ opacity: 0, y: -50 }}
+                transition={{ duration: 1 }}
+              >
+                <span className="text-5xl font-serif text-black">
+                  Mohamadou Mansour HABIBOU HAMANI
+                </span>
+                <div className="flex flex-row mt-4">
+                  <span className="italic font-serif text-xl text-black">
+                    Ingénieur logiciel
+                  </span>
+                </div>
+                <div className="text-justify tracking-wide text-base font-serif w-[85%] mt-4">
+                  Fort d'une expérience de 2 ans en développement Java backend
+                  en alternance, j'ai contribué à la mise à jour du système de
+                  traçabilité d'Autoliv, passant de Java 6 à Java 11. J'ai
+                  assuré le bon fonctionnement des webservices REST et des
+                  outils d'administration et reporting, en mettant l'accent sur
+                  les tests unitaires pour garantir la qualité du code. Mes
+                  compétences incluent WildFly, Jersey, Spring Boot, Maven,...
+                  Parallèlement, ma formation universitaire m'a doté d'une
+                  connaissance approfondie des systèmes d'information web et des
+                  design patterns, avec une expérience pratique en Node.js,
+                  Angular, React,.Net et C#.
+                </div>
+              </motion.section>
+            )}
+
+            {activeSection === 1 && (
+              <motion.section
+                key="stack"
+                className="h-screen flex flex-col justify-center pl-12"
+                initial={{ opacity: 0, y: 50 }}
+                animate={{ opacity: 1, y: 0 }}
+                exit={{ opacity: 0, y: -50 }}
+                transition={{ duration: 1 }}
+              >
+                <span className="text-black font-serif text-4xl">
+                  Stack technique principale
+                </span>
+                <div className="flex flex-nowrap overflow-x-auto space-x-4 mt-6">
+                  <div className="flex flex-col items-center justify-center bg-gray-200 p-4 rounded w-[150px] h-[150px] flex-shrink-0">
+                    <Image
+                      src="./img/java.png"
+                      alt="Java"
+                      width={60}
+                      height={60}
+                    />
+                    <span className="mt-2 text-lg">Java</span>
+                  </div>
+                  <div className="flex flex-col items-center justify-center bg-gray-200 p-4 rounded w-[150px] h-[150px] flex-shrink-0">
+                    <Image
+                      src="./img/spring.png"
+                      alt="Spring Boot"
+                      width={60}
+                      height={60}
+                    />
+                    <span className="mt-2 text-lg">Spring Boot</span>
+                  </div>
+                  <div className="flex flex-col items-center justify-center bg-gray-200 p-4 rounded w-[150px] h-[150px] flex-shrink-0">
+                    <Image
+                      src="./img/hibernate.png"
+                      alt="Hibernate"
+                      width={60}
+                      height={60}
+                    />
+                    <span className="mt-2 text-lg">Hibernate</span>
+                  </div>
+                  <div className="flex flex-col items-center justify-center bg-gray-200 p-4 rounded w-[150px] h-[150px] flex-shrink-0">
+                    <Image
+                      src="./img/data_jpa.png"
+                      alt="Spring Data JPA"
+                      width={60}
+                      height={60}
+                    />
+                    <span className="mt-2 text-lg">Spring Data JPA</span>
+                  </div>
+                  <div className="flex flex-col items-center justify-center bg-gray-200 p-4 rounded w-[150px] h-[150px] flex-shrink-0">
+                    <Image
+                      src="./img/spring_mvc.png"
+                      alt="Spring MVC"
+                      width={60}
+                      height={60}
+                    />
+                    <span className="mt-2 text-lg">Spring MVC</span>
+                  </div>
+                  <div className="flex flex-col items-center justify-center bg-gray-200 p-4 rounded w-[150px] h-[150px] flex-shrink-0">
+                    <Image
+                      src="./img/mockito.png"
+                      alt="Mockito"
+                      width={60}
+                      height={60}
+                    />
+                    <span className="mt-2 text-lg">Mockito</span>
+                  </div>
+                  <div className="flex flex-col items-center justify-center bg-gray-200 p-4 rounded w-[150px] h-[150px] flex-shrink-0">
+                    <Image
+                      src="./img/JUnit.png"
+                      alt="JUnit"
+                      width={60}
+                      height={60}
+                    />
+                    <span className="mt-2 text-lg">JUnit</span>
+                  </div>
+                  <div className="flex flex-col items-center justify-center bg-gray-200 p-4 rounded w-[150px] h-[150px] flex-shrink-0">
+                    <Image
+                      src="./img/csharp.png"
+                      alt="C#"
+                      width={60}
+                      height={60}
+                    />
+                    <span className="mt-2 text-lg">C#</span>
+                  </div>
+                  <div className="flex flex-col items-center justify-center bg-gray-200 p-4 rounded w-[150px] h-[150px] flex-shrink-0">
+                    <Image
+                      src="./img/NET_Core.png"
+                      alt="ASP .NET Core"
+                      width={60}
+                      height={60}
+                    />
+                    <span className="mt-2 text-lg">ASP .NET Core</span>
+                  </div>
+                  <div className="flex flex-col items-center justify-center bg-gray-200 p-4 rounded w-[150px] h-[150px] flex-shrink-0">
+                    <Image
+                      src="./img/angular.png"
+                      alt="Angular"
+                      width={60}
+                      height={60}
+                    />
+                    <span className="mt-2 text-lg">Angular</span>
+                  </div>
+                  <div className="flex flex-col items-center justify-center bg-gray-200 p-4 rounded w-[150px] h-[150px] flex-shrink-0">
+                    <Image
+                      src="./img/react.png"
+                      alt="React"
+                      width={60}
+                      height={60}
+                    />
+                    <span className="mt-2 text-lg">React</span>
+                  </div>
+                </div>
+              </motion.section>
+            )}
+
+            {activeSection === 2 && (
+              <motion.section
+                key="competences"
+                className="h-screen flex flex-col justify-center pl-12 pt-10"
+                initial={{ opacity: 0, y: 50 }}
+                animate={{ opacity: 1, y: 0 }}
+                exit={{ opacity: 0, y: -50 }}
+                transition={{ duration: 1 }}
+              >
+                <span className="text-black font-serif text-4xl">
+                  COMPETENCES
+                </span>
+                <div className="text-slate-600 text-base italic mt-2">
+                  Compétences issues du référentiel présent sur le site du CIGREF
+                  (version 2022)
+                </div>
+                <div className="flex flex-row mx-auto space-x-7 mt-6 h-[17%] w-[70%]">
+                  {competences.map((item, index) => (
+                    <motion.div
+                      id={index}
+                      key={index}
+                      onClick={() => {}}
+                      className={
+                        "h-full w-[100%] flex items-center justify-center border border-black font-semibold text-white " +
+                        item.color
+                      }
+                      whileHover={{ scale: 1.1 }}
+                    >
+                      {item.poste}
+                    </motion.div>
+                  ))}
+                </div>
+                <div className="no-scrollbar mt-10 overflow-y-auto h-[60%]">
+                  {competences[0].comp.map((item, index) => (
+                    <Competence key={index} comp={item}></Competence>
+                  ))}
+                </div>
+              </motion.section>
+            )}
+
+            {activeSection === 3 && (
+              <motion.section
+                key="experiences"
+                className="h-screen flex flex-col justify-center pl-12"
+                initial={{ opacity: 0, y: 50 }}
+                animate={{ opacity: 1, y: 0 }}
+                exit={{ opacity: 0, y: -50 }}
+                transition={{ duration: 1 }}
+              >
+                <span className="text-black font-serif text-4xl">
+                  EXPERIENCES
+                </span>
+                <div className="flex flex-col h-[90%] space-y-4 overflow-y-auto mt-4">
+                  {experiences.map((item, index) => (
+                    <Experience key={index} exp={item}></Experience>
+                  ))}
+                </div>
+              </motion.section>
+            )}
+
+            {activeSection === 4 && (
+              <motion.section
+                key="savoirs"
+                className="h-screen flex flex-col justify-center pl-12"
+                initial={{ opacity: 0, y: 50 }}
+                animate={{ opacity: 1, y: 0 }}
+                exit={{ opacity: 0, y: -50 }}
+                transition={{ duration: 1 }}
+              >
+                <span className="text-black font-serif text-4xl">
+                  SAVOIR ETRE
+                </span>
+                <div className="text-slate-600 text-base italic mt-2">
+                  Savoir-être issus du référentiel présent sur le site de pôle
+                  emploi (ROME 4.0)
+                </div>
+                <table className="mt-5 text-center w-[85%] overflow-y-auto text-base">
+                  <tr className="bg-gray-800 text-base text-white font-normal">
+                    <th>Savoir-être</th>
+                    <th>Description</th>
+                  </tr>
+                  {savoirs.map((item, index) => (
+                    <tr key={index}>
+                      <td>{item.nom}</td>
+                      <td>{item.description}</td>
+                    </tr>
+                  ))}
+                </table>
+              </motion.section>
+            )}
+
+            {activeSection === 5 && (
+              <motion.section
+                key="formations"
+                className="h-screen flex flex-col justify-center pl-12"
+                initial={{ opacity: 0, y: 50 }}
+                animate={{ opacity: 1, y: 0 }}
+                exit={{ opacity: 0, y: -50 }}
+                transition={{ duration: 1 }}
+              >
+                <span className="text-black font-serif text-4xl">
+                  FORMATIONS
+                </span>
+                <div className="text-slate-600 text-base italic mt-2">
+                  Liste des acquis des formations selon le site France
+                  competences
+                </div>
+                <div className="relative w-full mt-6">
+                  <span
+                    id="previous"
+                    onClick={() => {}}
+                    className="absolute top-[50%] text-7xl text-gray-800 hover:cursor-pointer hover:scale-[130%]"
+                  >
+                    &#10216;
+                  </span>
+                  <span
+                    id="next"
+                    onClick={() => {}}
+                    className="absolute top-[50%] right-[10%] hover:cursor-pointer text-gray-800 text-7xl hover:scale-[130%]"
+                  >
+                    &#10217;
+                  </span>
+                  <div className="ml-28">
+                    <Formation form={formations[0]}></Formation>
+                  </div>
+                </div>
+              </motion.section>
+            )}
+
+            {activeSection === 6 && (
+              <motion.section
+                key="projets"
+                className="h-screen flex flex-col justify-center pl-12"
+                initial={{ opacity: 0, y: 50 }}
+                animate={{ opacity: 1, y: 0 }}
+                exit={{ opacity: 0, y: -50 }}
+                transition={{ duration: 1 }}
+              >
+                <span className="text-black font-serif text-4xl">
+                  Projets Universitaires
+                </span>
+                <div className="flex flex-row items-center justify-center space-x-10 mt-10 w-full">
+                  {projets.map((item, index) => (
+                    <motion.div
+                      key={index}
+                      id={index}
+                      onClick={() => {}}
+                      className="bg-slate-100 border-2 border-black w-[250px] h-[250px] flex items-center text-center justify-center hover:scale-110 text-black text-base"
+                      whileHover={{ scale: 1.1 }}
+                    >
+                      {item.titre}
+                    </motion.div>
+                  ))}
+                </div>
+                <div className="w-full h-full mt-5">
+                  <Projet projet={projets[0]}></Projet>
+                </div>
+              </motion.section>
             )}
           </AnimatePresence>
         </div>
@@ -110,97 +437,3 @@ export default function Home() {
     </div>
   );
 }
-
-/********************* CONTENT SECTIONS **********************/
-const Accueil = () => (
-  <>
-    <span className="text-5xl font-serif text-black">
-      Mohamadou Mansour HABIBOU HAMANI
-    </span>
-    <div className="flex flex-row mt-4">
-      <span className="italic font-serif text-xl text-black">
-        Ingénieur logiciel
-      </span>
-    </div>
-    <div className="text-justify tracking-wide text-base font-serif w-[85%] mt-4">
-      Fort d'une expérience de 2 ans en développement Java backend en
-      alternance, j'ai contribué à la mise à jour du système de traçabilité
-      d'Autoliv, passant de Java 6 à Java 11. J'ai assuré le bon fonctionnement
-      des webservices REST et des outils d'administration et reporting, en
-      mettant l'accent sur les tests unitaires pour garantir la qualité du code.
-      Mes compétences incluent WildFly, Jersey, Spring Boot, Maven,...
-      Parallèlement, ma formation universitaire m'a doté d'une connaissance
-      approfondie des systèmes d'information web et des design patterns, avec
-      une expérience pratique en Node.js, Angular, React,.Net et C#.
-    </div>
-  </>
-);
-
-const Stack = () => (
-  <>
-    <span className="text-black font-serif text-4xl">
-      Stack technique principale
-    </span>
-    <div className="flex flex-nowrap overflow-x-auto space-x-4 mt-6">
-      {/* Add your stack items here */}
-    </div>
-  </>
-);
-
-const Competences = () => (
-  <>
-    <span className="text-black font-serif text-4xl">COMPETENCES</span>
-    <div className="text-slate-600 text-base italic mt-2">
-      Compétences issues du référentiel présent sur le site du CIGREF (version
-      2022)
-    </div>
-    <div className="flex flex-row mx-auto space-x-7 mt-6 h-[17%] w-[70%]">
-      {/* Add your competences here */}
-    </div>
-  </>
-);
-
-const Experiences = () => (
-  <>
-    <span className="text-black font-serif text-4xl">EXPERIENCES</span>
-    <div className="flex flex-col h-[90%] space-y-4 overflow-y-auto mt-4">
-      {/* Add your experiences here */}
-    </div>
-  </>
-);
-
-const Savoirs = () => (
-  <>
-    <span className="text-black font-serif text-4xl">SAVOIR ETRE</span>
-    <div className="text-slate-600 text-base italic mt-2">
-      Savoir-être issus du référentiel présent sur le site de pôle emploi (ROME
-      4.0)
-    </div>
-    <table className="mt-5 text-center w-[85%] overflow-y-auto text-base">
-      {/* Add your savoirs here */}
-    </table>
-  </>
-);
-
-const Formations = () => (
-  <>
-    <span className="text-black font-serif text-4xl">FORMATIONS</span>
-    <div className="text-slate-600 text-base italic mt-2">
-      Liste des acquis des formations selon le site France competences
-    </div>
-    <div className="relative w-full mt-6">
-      {/* Add your formations here */}
-    </div>
-  </>
-);
-
-const Projets = () => (
-  <>
-    <span className="text-black font-serif text-4xl">
-      Projets Universitaires
-    </span>
-    <div className="flex flex-row items-center justify-center space-x-10 mt-10 w-full">
-      {/* Add your projects here */}
-    </div>
-  </>
-);
