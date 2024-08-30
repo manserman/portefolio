@@ -117,7 +117,7 @@ export default function data_comp() {
   };
   var competences = [
     {
-      poste: "Métier: Concepteur et Développeur d'application",
+      poste: "Métier: Ingénieur logiciel",
       color: "bg-gray-800",
       comp: [comp_BA_1, comp_BA_2, comp_BA_3, comp_BA_4,comp_BA_5,comp_AMOA_1],
     },
