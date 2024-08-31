@@ -49,33 +49,33 @@ export default function Home() {
             src="./img/photo.png"
           />
           <div className="flex flex-col items-center justify-start mt-4">
-            <div className="text-white text-lg p-3 w-full text-center hover:bg-gray-700 mt-1 cursor-pointer">
+            <a href="#accueil" className="text-white text-lg p-3 w-full text-center hover:bg-gray-700 mt-1 cursor-pointer">
               Accueil
-            </div>
-            <div className="text-white text-lg p-3 w-full text-center hover:bg-gray-700 mt-1 cursor-pointer">
+            </a>
+            <a href="#stack" className="text-white text-lg p-3 w-full text-center hover:bg-gray-700 mt-1 cursor-pointer">
               Stack technique
-            </div>
-            <div className="text-white text-lg p-3 w-full text-center hover:bg-gray-700 mt-1 cursor-pointer">
+            </a>
+            <a href="#competences" className="text-white text-lg p-3 w-full text-center hover:bg-gray-700 mt-1 cursor-pointer">
               Compétences
-            </div>
-            <div className="text-white text-lg p-3 w-full text-center hover:bg-gray-700 mt-1 cursor-pointer">
+            </a>
+            <a href="#experiences" className="text-white text-lg p-3 w-full text-center hover:bg-gray-700 mt-1 cursor-pointer">
               Expériences
-            </div>
-            <div className="text-white text-lg p-3 w-full text-center hover:bg-gray-700 mt-1 cursor-pointer">
+            </a>
+            <a href="#savoirs" className="text-white text-lg p-3 w-full text-center hover:bg-gray-700 mt-1 cursor-pointer">
               Savoir-être
-            </div>
-            <div className="text-white text-lg p-3 w-full text-center hover:bg-gray-700 mt-1 cursor-pointer">
+            </a>
+            <a href="#formations" className="text-white text-lg p-3 w-full text-center hover:bg-gray-700 mt-1 cursor-pointer">
               Formations
-            </div>
-            <div className="text-white text-lg p-3 w-full text-center hover:bg-gray-700 mt-1 cursor-pointer">
+            </a>
+            <a href="#projets" className="text-white text-lg p-3 w-full text-center hover:bg-gray-700 mt-1 cursor-pointer">
               Projets Universitaires
-            </div>
+            </a>
           </div>
         </div>
 
         {/********************* SECTION PRINCIPALE **********************/}
         <div className="flex flex-col w-[83%] ml-[17%]">
-          <section className="min-h-screen flex flex-col justify-center pl-12 pr-12">
+          <section id="accueil" className="min-h-screen flex flex-col justify-center pl-12 pr-12">
             <span className="text-5xl font-serif text-black">
               Mohamadou Mansour HABIBOU HAMANI
             </span>
@@ -97,7 +97,7 @@ export default function Home() {
               expérience pratique en Node.js, Angular, React,.Net et C#.
             </div>
 
-            <div className="flex flex-col mt-8 space-y-2">
+            <div className="flex justify-between mt-8 space-x-4">
               <div className="flex items-center">
                 <span>&#128233;</span>
                 <span className="ml-2">mansourh923@gmail.com</span>
@@ -124,7 +124,7 @@ export default function Home() {
             </div>
           </section>
 
-          <section className="min-h-screen flex flex-col justify-center pl-12">
+          <section id="stack" className="min-h-screen flex flex-col justify-center pl-12">
             <span className="text-black font-serif text-4xl">
               Stack technique principale
             </span>
@@ -211,7 +211,7 @@ export default function Home() {
             </div>
           </section>
 
-          <section className="min-h-screen flex flex-col justify-center pl-12 pt-10">
+          <section id="competences" className="min-h-screen flex flex-col justify-center pl-12 pt-10">
             <span className="text-black font-serif text-4xl">COMPETENCES</span>
             <div className="text-slate-600 text-base italic mt-2">
               Compétences issues du référentiel présent sur le site du CIGREF
@@ -237,7 +237,7 @@ export default function Home() {
             </div>
           </section>
 
-          <section className="min-h-screen flex flex-col justify-center pl-12">
+          <section id="experiences" className="min-h-screen flex flex-col justify-center pl-12">
             <span className="text-black font-serif text-4xl">EXPERIENCES</span>
             <div className="flex flex-col h-[90%] space-y-4 overflow-y-auto mt-4">
               {experiences.map((item, index) => (
@@ -246,7 +246,7 @@ export default function Home() {
             </div>
           </section>
 
-          <section className="min-h-screen flex flex-col justify-center pl-12">
+          <section id="savoirs" className="min-h-screen flex flex-col justify-center pl-12">
             <span className="text-black font-serif text-4xl">SAVOIR ETRE</span>
             <div className="text-slate-600 text-base italic mt-2">
               Savoir-être issus du référentiel présent sur le site de pôle emploi
@@ -266,7 +266,7 @@ export default function Home() {
             </table>
           </section>
 
-          <section className="min-h-screen flex flex-col justify-center pl-12">
+          <section id="formations" className="min-h-screen flex flex-col justify-center pl-12">
             <span className="text-black font-serif text-4xl">FORMATIONS</span>
             <div className="text-slate-600 text-base italic mt-2">
               Liste des acquis des formations selon le site France competences
@@ -290,7 +290,7 @@ export default function Home() {
             </div>
           </section>
 
-          <section className="min-h-screen flex flex-col justify-center pl-12">
+          <section id="projets" className="min-h-screen flex flex-col justify-center pl-12">
             <span className="text-black font-serif text-4xl">
               Projets Universitaires
             </span>
