@@ -22,6 +22,7 @@ export default function Home() {
 
   /********************* ETAT  **************************/
   const [activeSection, setActiveSection] = useState(0);
+  const [selectedProject, setSelectedProject] = useState(0);
 
   /********************* NAVIGATION  **************************/
   const sections = [
@@ -296,14 +297,15 @@ export default function Home() {
                 {projets.map((item, index) => (
                   <div
                     key={index}
-                    className="bg-slate-100 border-2 border-black w-[250px] h-[250px] flex items-center text-center justify-center hover:scale-110 text-black text-base"
+                    className="bg-slate-100 border-2 border-black w-[250px] h-[250px] flex items-center text-center justify-center hover:scale-110 text-black text-base cursor-pointer"
+                    onClick={() => setSelectedProject(index)}
                   >
                     {item.titre}
                   </div>
                 ))}
               </div>
               <div className="w-full h-full mt-5">
-                <Projet projet={projets[0]}></Projet>
+                <Projet projet={projets[selectedProject]}></Projet>
               </div>
             </section>
           )}
