@@ -23,6 +23,7 @@ export default function Home() {
   /********************* ETAT  **************************/
   const [activeSection, setActiveSection] = useState(0);
   const [selectedProject, setSelectedProject] = useState(0);
+  const [selectedFormation, setSelectedFormation] = useState(0);
 
   /********************* NAVIGATION  **************************/
   const sections = [
@@ -34,6 +35,18 @@ export default function Home() {
     "formations",
     "projets",
   ];
+
+  const handleNextFormation = () => {
+    setSelectedFormation((prevFormation) =>
+      prevFormation === formations.length - 1 ? 0 : prevFormation + 1
+    );
+  };
+
+  const handlePreviousFormation = () => {
+    setSelectedFormation((prevFormation) =>
+      prevFormation === 0 ? formations.length - 1 : prevFormation - 1
+    );
+  };
 
   return (
     <div className="h-screen w-screen overflow-hidden">
@@ -60,9 +73,9 @@ export default function Home() {
         </div>
 
         {/********************* SECTION PRINCIPALE **********************/}
-        <div className="flex flex-col w-[83%] ml-[17%]">
+        <div className="flex flex-col w-[83%] ml-[17%] overflow-y-auto">
           {activeSection === 0 && (
-            <section className="h-screen flex flex-col justify-center pl-12">
+            <section className="min-h-screen flex flex-col justify-center pl-12">
               <span className="text-5xl font-serif text-black">
                 Mohamadou Mansour HABIBOU HAMANI
               </span>
@@ -88,7 +101,7 @@ export default function Home() {
           )}
 
           {activeSection === 1 && (
-            <section className="h-screen flex flex-col justify-center pl-12">
+            <section className="min-h-screen flex flex-col justify-center pl-12">
               <span className="text-black font-serif text-4xl">
                 Stack technique principale
               </span>
@@ -197,7 +210,7 @@ export default function Home() {
           )}
 
           {activeSection === 2 && (
-            <section className="h-screen flex flex-col justify-center pl-12 pt-10">
+            <section className="min-h-screen flex flex-col justify-center pl-12 pt-10">
               <span className="text-black font-serif text-4xl">
                 COMPETENCES
               </span>
@@ -227,7 +240,7 @@ export default function Home() {
           )}
 
           {activeSection === 3 && (
-            <section className="h-screen flex flex-col justify-center pl-12">
+            <section className="min-h-screen flex flex-col justify-center pl-12">
               <span className="text-black font-serif text-4xl">EXPERIENCES</span>
               <div className="flex flex-col h-[90%] space-y-4 overflow-y-auto mt-4">
                 {experiences.map((item, index) => (
@@ -238,7 +251,7 @@ export default function Home() {
           )}
 
           {activeSection === 4 && (
-            <section className="h-screen flex flex-col justify-center pl-12">
+            <section className="min-h-screen flex flex-col justify-center pl-12">
               <span className="text-black font-serif text-4xl">SAVOIR ETRE</span>
               <div className="text-slate-600 text-base italic mt-2">
                 Savoir-être issus du référentiel présent sur le site de pôle
@@ -260,7 +273,7 @@ export default function Home() {
           )}
 
           {activeSection === 5 && (
-            <section className="h-screen flex flex-col justify-center pl-12">
+            <section className="min-h-screen flex flex-col justify-center pl-12">
               <span className="text-black font-serif text-4xl">FORMATIONS</span>
               <div className="text-slate-600 text-base italic mt-2">
                 Liste des acquis des formations selon le site France
@@ -268,28 +281,26 @@ export default function Home() {
               </div>
               <div className="relative w-full mt-6">
                 <span
-                  id="previous"
-                  onClick={() => {}}
+                  onClick={handlePreviousFormation}
                   className="absolute top-[50%] text-7xl text-gray-800 hover:cursor-pointer hover:scale-[130%]"
                 >
                   &#10216;
                 </span>
                 <span
-                  id="next"
-                  onClick={() => {}}
+                  onClick={handleNextFormation}
                   className="absolute top-[50%] right-[10%] hover:cursor-pointer text-gray-800 text-7xl hover:scale-[130%]"
                 >
                   &#10217;
                 </span>
                 <div className="ml-28">
-                  <Formation form={formations[0]}></Formation>
+                  <Formation form={formations[selectedFormation]}></Formation>
                 </div>
               </div>
             </section>
           )}
 
           {activeSection === 6 && (
-            <section className="h-screen flex flex-col justify-center pl-12">
+            <section className="min-h-screen flex flex-col justify-center pl-12">
               <span className="text-black font-serif text-4xl">
                 Projets Universitaires
               </span>
