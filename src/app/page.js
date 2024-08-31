@@ -75,54 +75,54 @@ export default function Home() {
 
         {/********************* SECTION PRINCIPALE **********************/}
         <div className="flex flex-col w-[83%] ml-[17%]">
-          <section id="accueil" className="min-h-screen flex flex-col justify-center pl-12 pr-12">
-            <span className="text-5xl font-serif text-black">
-              Mohamadou Mansour HABIBOU HAMANI
-            </span>
-            <div className="flex flex-row mt-4">
-              <span className="italic font-serif text-xl text-black">
-                Ingénieur logiciel
-              </span>
-            </div>
-            <div className="text-justify tracking-wide text-base font-serif w-[85%] mt-4">
-              Fort d'une expérience de 2 ans en développement Java backend en
-              alternance, j'ai contribué à la mise à jour du système de
-              traçabilité d'Autoliv, passant de Java 6 à Java 11. J'ai assuré le
-              bon fonctionnement des webservices REST et des outils
-              d'administration et reporting, en mettant l'accent sur les tests
-              unitaires pour garantir la qualité du code. Mes compétences
-              incluent WildFly, Jersey, Spring Boot, Maven,... Parallèlement, ma
-              formation universitaire m'a doté d'une connaissance approfondie
-              des systèmes d'information web et des design patterns, avec une
-              expérience pratique en Node.js, Angular, React,.Net et C#.
-            </div>
+        <section id="accueil" className="min-h-screen flex flex-col justify-center pl-12 pr-12">
+  <span className="text-5xl font-serif text-black">
+    Mohamadou Mansour HABIBOU HAMANI
+  </span>
+  <div className="flex flex-row mt-4">
+    <span className="italic font-serif text-xl text-black">
+      Ingénieur logiciel
+    </span>
+  </div>
+  <div className="text-justify tracking-wide text-base font-serif w-[85%] mt-4">
+    Fort d'une expérience de 2 ans en développement Java backend en
+    alternance, j'ai contribué à la mise à jour du système de
+    traçabilité d'Autoliv, passant de Java 6 à Java 11. J'ai assuré le
+    bon fonctionnement des webservices REST et des outils
+    d'administration et reporting, en mettant l'accent sur les tests
+    unitaires pour garantir la qualité du code. Mes compétences
+    incluent WildFly, Jersey, Spring Boot, Maven,... Parallèlement, ma
+    formation universitaire m'a doté d'une connaissance approfondie
+    des systèmes d'information web et des design patterns, avec une
+    expérience pratique en Node.js, Angular, React,.Net et C#.
+  </div>
 
-            <div className="flex justify-between mt-8 space-x-4">
-              <div className="flex items-center">
-                <span>&#128233;</span>
-                <span className="ml-2">mansourh923@gmail.com</span>
-              </div>
-              <div className="flex items-center">
-                <span>&#128241;</span>
-                <span className="ml-2">06 65 15 40 90</span>
-              </div>
-              <div className="flex items-center">
-                <span>&#128664;</span>
-                <span className="ml-2">Ile de France / Hauts de France</span>
-              </div>
-            </div>
+  <div className="flex justify-between items-center mt-8 space-x-4">
+    <div className="flex items-center">
+      <span>&#128233;</span>
+      <span className="ml-2">mansourh923@gmail.com</span>
+    </div>
+    <div className="flex items-center">
+      <span>&#128241;</span>
+      <span className="ml-2">06 65 15 40 90</span>
+    </div>
+    <div className="flex items-center">
+      <span>&#128664;</span>
+      <span className="ml-2">Ile de France / Hauts de France</span>
+    </div>
+    <div className="flex items-center">
+      <a
+        href="./files/cv.pdf"
+        target="_blank"
+        rel="noopener noreferrer"
+        className="hover:underline text-blue-600"
+      >
+        Mon CV
+      </a>
+    </div>
+  </div>
+</section>
 
-            <div className="flex justify-end mt-4">
-              <a
-                href="./files/cv.pdf"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="hover:underline text-blue-600"
-              >
-                Mon CV
-              </a>
-            </div>
-          </section>
 
           <section id="stack" className="min-h-screen flex flex-col justify-center pl-12">
             <span className="text-black font-serif text-4xl">
