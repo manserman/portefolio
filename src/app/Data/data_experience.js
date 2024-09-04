@@ -25,7 +25,7 @@ export default function data_exp() {
       "Innovation"
     ],
     debut: "Septembre 2022",
-    fin: "Actuellement",
+    fin: "Septembre 2024",
     isExperience: true,
   };
   var exp_2 = {
