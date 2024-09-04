@@ -49,25 +49,46 @@ export default function Home() {
             src="./img/photo.png"
           />
           <div className="flex flex-col items-center justify-start mt-4">
-            <a href="#accueil" className="text-white text-lg p-3 w-full text-center hover:bg-gray-700 mt-1 cursor-pointer">
+            <a
+              href="#accueil"
+              className="text-white text-lg p-3 w-full text-center hover:bg-gray-700 mt-1 cursor-pointer"
+            >
               Accueil
             </a>
-            <a href="#stack" className="text-white text-lg p-3 w-full text-center hover:bg-gray-700 mt-1 cursor-pointer">
+            <a
+              href="#stack"
+              className="text-white text-lg p-3 w-full text-center hover:bg-gray-700 mt-1 cursor-pointer"
+            >
               Stack technique
             </a>
-            <a href="#competences" className="text-white text-lg p-3 w-full text-center hover:bg-gray-700 mt-1 cursor-pointer">
+            <a
+              href="#competences"
+              className="text-white text-lg p-3 w-full text-center hover:bg-gray-700 mt-1 cursor-pointer"
+            >
               Compétences
             </a>
-            <a href="#experiences" className="text-white text-lg p-3 w-full text-center hover:bg-gray-700 mt-1 cursor-pointer">
+            <a
+              href="#experiences"
+              className="text-white text-lg p-3 w-full text-center hover:bg-gray-700 mt-1 cursor-pointer"
+            >
               Expériences
             </a>
-            <a href="#savoirs" className="text-white text-lg p-3 w-full text-center hover:bg-gray-700 mt-1 cursor-pointer">
+            <a
+              href="#savoirs"
+              className="text-white text-lg p-3 w-full text-center hover:bg-gray-700 mt-1 cursor-pointer"
+            >
               Savoir-être
             </a>
-            <a href="#formations" className="text-white text-lg p-3 w-full text-center hover:bg-gray-700 mt-1 cursor-pointer">
+            <a
+              href="#formations"
+              className="text-white text-lg p-3 w-full text-center hover:bg-gray-700 mt-1 cursor-pointer"
+            >
               Formations
             </a>
-            <a href="#projets" className="text-white text-lg p-3 w-full text-center hover:bg-gray-700 mt-1 cursor-pointer">
+            <a
+              href="#projets"
+              className="text-white text-lg p-3 w-full text-center hover:bg-gray-700 mt-1 cursor-pointer"
+            >
               Projets Universitaires
             </a>
           </div>
@@ -75,56 +96,84 @@ export default function Home() {
 
         {/********************* SECTION PRINCIPALE **********************/}
         <div className="flex flex-col w-[83%] ml-[17%]">
-        <section id="accueil" className="min-h-screen flex flex-col justify-center pl-12 pr-12">
-  <span className="text-5xl font-serif text-black">
-    Mohamadou Mansour HABIBOU HAMANI
-  </span>
-  <div className="flex flex-row mt-4">
-    <span className="italic font-serif text-xl text-black">
-      Ingénieur logiciel
-    </span>
-  </div>
-  <div className="text-justify tracking-wide text-base font-serif w-[85%] mt-4">
-    Fort d'une expérience de 2 ans en développement Java backend en
-    alternance, j'ai contribué à la mise à jour du système de
-    traçabilité d'Autoliv, passant de Java 6 à Java 11. J'ai assuré le
-    bon fonctionnement des webservices REST et des outils
-    d'administration et reporting, en mettant l'accent sur les tests
-    unitaires pour garantir la qualité du code. Mes compétences
-    incluent WildFly, Jersey, Spring Boot, Maven,... Parallèlement, ma
-    formation universitaire m'a doté d'une connaissance approfondie
-    des systèmes d'information web et des design patterns, avec une
-    expérience pratique en Node.js, Angular, React,.Net et C#.
-  </div>
+          <section
+            id="accueil"
+            className="min-h-screen flex flex-col justify-center pl-12 pr-12"
+          >
+            <span className="text-5xl font-serif text-black">
+              Mohamadou Mansour HABIBOU HAMANI
+            </span>
+            <div className="flex flex-row mt-4">
+              <span className="italic font-serif text-xl text-black">
+                Ingénieur logiciel
+              </span>
+            </div>
+            <div className="text-justify tracking-wide text-base font-serif w-[85%] mt-4">
+              Diplômé d'un Master MIAGE (Méthodes Informatiques Appliquées à la
+              Gestion des Entreprises) avec mention bien, j'ai eu l'opportunité
+              de développer des compétences solides dans le domaine du
+              développement informatique, notamment en back-end Java. Au cours
+              de mes deux années d'expérience professionnelle, j'ai pu
+              contribuer à des projets significatifs, notamment lors de ma
+              participation à la migration du code de Java 6 vers Java 17 chez
+              Autoliv, une entreprise internationale spécialisée dans les
+              technologies de sécurité automobile. Cette migration a permis une
+              modernisation importante des systèmes, améliorant ainsi la
+              performance et la sécurité des applications. De plus, j'ai joué un
+              rôle clé dans la transformation des services web REST vers le
+              framework Spring Boot, facilitant la mise en place d'applications
+              plus robustes et flexibles. Ma maîtrise de technologies telles que
+              Java, le serveur d'applications WildFly, et l'outil de gestion de
+              projet Maven me permet d'intervenir efficacement sur des projets
+              complexes. J'ai également acquis des compétences en systèmes
+              d'information web, ce qui me donne une bonne compréhension des
+              besoins liés à la gestion et à l'intégration de données dans des
+              environnements variés. Passionné par les défis techniques liés aux
+              architectures back-end, je suis en permanence à la recherche de
+              moyens pour améliorer la scalabilité et la fiabilité des systèmes.
+              Désireux de continuer à évoluer dans ma carrière, je souhaite
+              approfondir mes connaissances en matière d'architecture
+              logicielle, d'intégration des systèmes dans des environnements
+              cloud (notamment les plateformes comme AWS, Azure ou Google
+              Cloud), ainsi qu'en automatisation des processus via les pipelines
+              CI/CD (intégration continue et déploiement continu). Bien que mon
+              expertise principale soit orientée vers le back-end, je suis
+              également ouvert aux opportunités qui me permettraient de
+              développer davantage mes compétences en full stack, afin d’avoir
+              une vue plus complète des applications web modernes et de
+              participer à des projets de bout en bout.
+            </div>
 
-  <div className="flex justify-between items-center mt-8 space-x-4">
-    <div className="flex items-center">
-      <span>&#128233;</span>
-      <span className="ml-2">mansourh923@gmail.com</span>
-    </div>
-    <div className="flex items-center">
-      <span>&#128241;</span>
-      <span className="ml-2">06 65 15 40 90</span>
-    </div>
-    <div className="flex items-center">
-      <span>&#128664;</span>
-      <span className="ml-2">Ile de France / Hauts de France</span>
-    </div>
-    <div className="flex items-center">
-      <a
-        href="./files/cv.pdf"
-        target="_blank"
-        rel="noopener noreferrer"
-        className="hover:underline text-blue-600"
-      >
-        Mon CV
-      </a>
-    </div>
-  </div>
-</section>
+            <div className="flex justify-between items-center mt-8 space-x-4">
+              <div className="flex items-center">
+                <span>&#128233;</span>
+                <span className="ml-2">mansourh923@gmail.com</span>
+              </div>
+              <div className="flex items-center">
+                <span>&#128241;</span>
+                <span className="ml-2">06 65 15 40 90</span>
+              </div>
+              <div className="flex items-center">
+                <span>&#128664;</span>
+                <span className="ml-2">Ile de France / Hauts de France</span>
+              </div>
+              <div className="flex items-center">
+                <a
+                  href="./files/cv.pdf"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="hover:underline text-blue-600"
+                >
+                  Mon CV
+                </a>
+              </div>
+            </div>
+          </section>
 
-
-          <section id="stack" className="min-h-screen flex flex-col justify-center pl-12">
+          <section
+            id="stack"
+            className="min-h-screen flex flex-col justify-center pl-12"
+          >
             <span className="text-black font-serif text-4xl">
               Stack technique principale
             </span>
@@ -179,7 +228,12 @@ export default function Home() {
                 <span className="mt-2 text-lg">Mockito</span>
               </div>
               <div className="flex flex-col items-center justify-center bg-gray-200 p-4 rounded w-[150px] h-[150px]">
-                <Image src="./img/JUnit.png" alt="JUnit" width={60} height={60} />
+                <Image
+                  src="./img/JUnit.png"
+                  alt="JUnit"
+                  width={60}
+                  height={60}
+                />
                 <span className="mt-2 text-lg">JUnit</span>
               </div>
               <div className="flex flex-col items-center justify-center bg-gray-200 p-4 rounded w-[150px] h-[150px]">
@@ -205,13 +259,21 @@ export default function Home() {
                 <span className="mt-2 text-lg">Angular</span>
               </div>
               <div className="flex flex-col items-center justify-center bg-gray-200 p-4 rounded w-[150px] h-[150px]">
-                <Image src="./img/react.png" alt="React" width={60} height={60} />
+                <Image
+                  src="./img/react.png"
+                  alt="React"
+                  width={60}
+                  height={60}
+                />
                 <span className="mt-2 text-lg">React</span>
               </div>
             </div>
           </section>
 
-          <section id="competences" className="min-h-screen flex flex-col justify-center pl-12 pt-10">
+          <section
+            id="competences"
+            className="min-h-screen flex flex-col justify-center pl-12 pt-10"
+          >
             <span className="text-black font-serif text-4xl">COMPETENCES</span>
             <div className="text-slate-600 text-base italic mt-2">
               Compétences issues du référentiel présent sur le site du CIGREF
@@ -237,7 +299,10 @@ export default function Home() {
             </div>
           </section>
 
-          <section id="experiences" className="min-h-screen flex flex-col justify-center pl-12">
+          <section
+            id="experiences"
+            className="min-h-screen flex flex-col justify-center pl-12"
+          >
             <span className="text-black font-serif text-4xl">EXPERIENCES</span>
             <div className="flex flex-col h-[90%] space-y-4 overflow-y-auto mt-4">
               {experiences.map((item, index) => (
@@ -246,51 +311,110 @@ export default function Home() {
             </div>
           </section>
 
-          <section id="savoirs" className="min-h-screen flex flex-col justify-center pl-12">
-            <span className="text-black font-serif text-4xl">SAVOIR ETRE</span>
-            <div className="text-slate-600 text-base italic mt-2">
-              Savoir-être issus du référentiel présent sur le site de pôle emploi
-              (ROME 4.0)
-            </div>
-            <table className="mt-5 text-center w-[85%] overflow-y-auto text-base">
-              <tr className="bg-gray-800 text-base text-white font-normal">
-                <th>Savoir-être</th>
-                <th>Description</th>
-              </tr>
-              {savoirs.map((item, index) => (
-                <tr key={index}>
-                  <td>{item.nom}</td>
-                  <td>{item.description}</td>
-                </tr>
-              ))}
-            </table>
-          </section>
-
-          <section id="formations" className="min-h-screen flex flex-col justify-center pl-12">
-            <span className="text-black font-serif text-4xl">FORMATIONS</span>
-            <div className="text-slate-600 text-base italic mt-2">
-              Liste des acquis des formations selon le site France competences
-            </div>
-            <div className="relative w-full mt-6">
-              <span
-                onClick={handlePreviousFormation}
-                className="absolute top-[50%] text-7xl text-gray-800 hover:cursor-pointer hover:scale-[130%]"
-              >
-                &#10216;
-              </span>
-              <span
-                onClick={handleNextFormation}
-                className="absolute top-[50%] right-[10%] hover:cursor-pointer text-gray-800 text-7xl hover:scale-[130%]"
-              >
-                &#10217;
-              </span>
-              <div className="ml-28">
-                <Formation form={formations[selectedFormation]}></Formation>
+          <section
+            id="stack"
+            className="min-h-screen flex flex-col justify-center pl-12"
+          >
+            <span className="text-black font-serif text-4xl">
+              Stack technique principale
+            </span>
+            <div className="flex flex-wrap gap-4 mt-6 justify-start">
+              <div className="flex flex-col items-center justify-center bg-gray-200 p-4 rounded w-[150px] h-[150px]">
+                <Image src="./img/java.png" alt="Java" width={60} height={60} />
+                <span className="mt-2 text-lg">Java</span>
+              </div>
+              <div className="flex flex-col items-center justify-center bg-gray-200 p-4 rounded w-[150px] h-[150px]">
+                <Image
+                  src="./img/spring.png"
+                  alt="Spring Boot"
+                  width={60}
+                  height={60}
+                />
+                <span className="mt-2 text-lg">Spring Boot</span>
+              </div>
+              <div className="flex flex-col items-center justify-center bg-gray-200 p-4 rounded w-[150px] h-[150px]">
+                <Image
+                  src="./img/hibernate.png"
+                  alt="Hibernate"
+                  width={60}
+                  height={60}
+                />
+                <span className="mt-2 text-lg">Hibernate</span>
+              </div>
+              <div className="flex flex-col items-center justify-center bg-gray-200 p-4 rounded w-[150px] h-[150px]">
+                <Image
+                  src="./img/data_jpa.png"
+                  alt="Spring Data JPA"
+                  width={60}
+                  height={60}
+                />
+                <span className="mt-2 text-lg">Spring Data JPA</span>
+              </div>
+              <div className="flex flex-col items-center justify-center bg-gray-200 p-4 rounded w-[150px] h-[150px]">
+                <Image
+                  src="./img/spring_mvc.png"
+                  alt="Spring MVC"
+                  width={60}
+                  height={60}
+                />
+                <span className="mt-2 text-lg">Spring MVC</span>
+              </div>
+              <div className="flex flex-col items-center justify-center bg-gray-200 p-4 rounded w-[150px] h-[150px]">
+                <Image
+                  src="./img/mockito.png"
+                  alt="Mockito"
+                  width={60}
+                  height={60}
+                />
+                <span className="mt-2 text-lg">Mockito</span>
+              </div>
+              <div className="flex flex-col items-center justify-center bg-gray-200 p-4 rounded w-[150px] h-[150px]">
+                <Image
+                  src="./img/JUnit.png"
+                  alt="JUnit"
+                  width={60}
+                  height={60}
+                />
+                <span className="mt-2 text-lg">JUnit</span>
+              </div>
+              <div className="flex flex-col items-center justify-center bg-gray-200 p-4 rounded w-[150px] h-[150px]">
+                <Image src="./img/csharp.png" alt="C#" width={60} height={60} />
+                <span className="mt-2 text-lg">C#</span>
+              </div>
+              <div className="flex flex-col items-center justify-center bg-gray-200 p-4 rounded w-[150px] h-[150px]">
+                <Image
+                  src="./img/NET_Core.png"
+                  alt="ASP .NET Core"
+                  width={60}
+                  height={60}
+                />
+                <span className="mt-2 text-lg">ASP .NET Core</span>
+              </div>
+              <div className="flex flex-col items-center justify-center bg-gray-200 p-4 rounded w-[150px] h-[150px]">
+                <Image
+                  src="./img/angular.png"
+                  alt="Angular"
+                  width={60}
+                  height={60}
+                />
+                <span className="mt-2 text-lg">Angular</span>
+              </div>
+              <div className="flex flex-col items-center justify-center bg-gray-200 p-4 rounded w-[150px] h-[150px]">
+                <Image
+                  src="./img/react.png"
+                  alt="React"
+                  width={60}
+                  height={60}
+                />
+                <span className="mt-2 text-lg">React</span>
               </div>
             </div>
           </section>
 
-          <section id="projets" className="min-h-screen flex flex-col justify-center pl-12">
+          <section
+            id="projets"
+            className="min-h-screen flex flex-col justify-center pl-12"
+          >
             <span className="text-black font-serif text-4xl">
               Projets Universitaires
             </span>
