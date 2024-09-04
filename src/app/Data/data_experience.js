@@ -8,7 +8,8 @@ export default function data_exp() {
     detail:
       "Mise à jour du système de traçabilité d 'autoliv de java 6 à java 17 suivant une roadmap pré-établie",
     missions: [
-      "Migration des webservices rest du framework Jersey vers le framework SpringBoot (en cours)",
+      "Migration des webservices rest du framework Jersey vers le framework SpringBoot 2.7",
+      "Tests D'intégrations ",
       "Réalisation de test Unitaires",
       "Correction de bugs et amélioraiton des performances",
       "Migration des applets vers des applications java",
