@@ -122,26 +122,27 @@ export default function Home() {
               performance et la sécurité des applications. De plus, j'ai joué un
               rôle clé dans la transformation des services web REST vers le
               framework Spring Boot, facilitant la mise en place d'applications
-              plus robustes et flexibles. Ma maîtrise de technologies telles que
-              Java, le serveur d'applications WildFly, et l'outil de gestion de
-              projet Maven me permet d'intervenir efficacement sur des projets
-              complexes. J'ai également acquis des compétences en systèmes
-              d'information web, ce qui me donne une bonne compréhension des
-              besoins liés à la gestion et à l'intégration de données dans des
-              environnements variés. Passionné par les défis techniques liés aux
-              architectures back-end, je suis en permanence à la recherche de
-              moyens pour améliorer la scalabilité et la fiabilité des systèmes.
-              Désireux de continuer à évoluer dans ma carrière, je souhaite
-              approfondir mes connaissances en matière d'architecture
-              logicielle, d'intégration des systèmes dans des environnements
-              cloud (notamment les plateformes comme AWS, Azure ou Google
-              Cloud), ainsi qu'en automatisation des processus via les pipelines
-              CI/CD (intégration continue et déploiement continu). Bien que mon
-              expertise principale soit orientée vers le back-end, je suis
-              également ouvert aux opportunités qui me permettraient de
-              développer davantage mes compétences en full stack, afin d’avoir
-              une vue plus complète des applications web modernes et de
-              participer à des projets de bout en bout.
+              plus robustes et flexibles. J'ai également utilisé des outils
+              comme Jenkins et GitLab CI pour l'intégration continue (CI) et le
+              déploiement continu (CD), participant à l'automatisation des
+              processus de build et de déploiement. Grâce à ces pipelines CI/CD,
+              j'ai pu bénéficier des tests automatisés pour garantir la
+              stabilité du code à chaque mise à jour, assurant ainsi une
+              livraison rapide et fiable des fonctionnalités. Ma maîtrise de
+              technologies telles que Java, le serveur d'applications WildFly,
+              et l'outil de gestion de projet Maven me permet d'intervenir
+              efficacement sur des projets complexes. J'ai également acquis des
+              compétences en systèmes d'information web, ce qui me donne une
+              bonne compréhension des besoins liés à la gestion et à
+              l'intégration de données dans des environnements variés. Passionné
+              par les défis techniques liés aux architectures back-end, je suis
+              en permanence à la recherche de moyens pour améliorer la
+              scalabilité et la fiabilité des systèmes. Bien que mon expertise
+              principale soit orientée vers le back-end, je suis également
+              ouvert aux opportunités qui me permettraient de développer
+              davantage mes compétences en full stack, afin d’avoir une vue plus
+              complète des applications web modernes et de participer à des
+              projets de bout en bout.
             </div>
 
             <div className="flex justify-between items-center mt-8 space-x-4">
@@ -267,6 +268,15 @@ export default function Home() {
                 />
                 <span className="mt-2 text-lg">React</span>
               </div>
+              <div className="flex flex-col items-center justify-center bg-gray-200 p-4 rounded w-[150px] h-[150px] flex-shrink-0">
+                <Image
+                  src="./img/jenkins.png"
+                  alt="React"
+                  width={60}
+                  height={60}
+                />
+                <span className="mt-2 text-lg">Jenkins</span>
+              </div>
             </div>
           </section>
 
@@ -308,6 +318,58 @@ export default function Home() {
               {experiences.map((item, index) => (
                 <Experience key={index} exp={item}></Experience>
               ))}
+            </div>
+          </section>
+          <section
+            id="savoirs"
+            className="min-h-screen flex flex-col justify-center pl-12"
+          >
+            <span className="text-black font-serif text-4xl">SAVOIR ETRE</span>
+            <div className="text-slate-600 text-base italic mt-2">
+              Savoir-être issus du référentiel présent sur le site de pôle
+              emploi (ROME 4.0)
+            </div>
+            <table className="mt-5 text-center w-[85%] overflow-y-auto text-base">
+              <thead>
+                <tr className="bg-gray-800 text-base text-white font-normal">
+                  <th>Savoir-être</th>
+                  <th>Description</th>
+                </tr>
+              </thead>
+              <tbody>
+                {savoirs.map((item, index) => (
+                  <tr key={index}>
+                    <td>{item.nom}</td>
+                    <td>{item.description}</td>
+                  </tr>
+                ))}
+              </tbody>
+            </table>
+          </section>
+          <section
+            id="formations"
+            className="min-h-screen flex flex-col justify-center pl-12"
+          >
+            <span className="text-black font-serif text-4xl">FORMATIONS</span>
+            <div className="text-slate-600 text-base italic mt-2">
+              Liste des acquis des formations selon le site France competences
+            </div>
+            <div className="relative w-full mt-6">
+              <span
+                onClick={handlePreviousFormation}
+                className="absolute top-[50%] text-7xl text-gray-800 hover:cursor-pointer hover:scale-[130%]"
+              >
+                &#10216;
+              </span>
+              <span
+                onClick={handleNextFormation}
+                className="absolute top-[50%] right-[10%] hover:cursor-pointer text-gray-800 text-7xl hover:scale-[130%]"
+              >
+                &#10217;
+              </span>
+              <div className="ml-28">
+                <Formation form={formations[selectedFormation]} />
+              </div>
             </div>
           </section>
 
