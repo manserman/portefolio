@@ -325,9 +325,8 @@ export default function Home() {
               </span>
 
               {/* Formation au centre */}
-              <div className="mx-auto ">
-                <Formation form={formations[selectedFormation]} />
-              </div>
+
+              <Formation form={formations[selectedFormation]} />
 
               {/* Bouton de droite */}
               <span
@@ -343,9 +342,7 @@ export default function Home() {
             id="projets"
             className="min-h-screen flex flex-col justify-center pl-12 relative"
           >
-            <span className="text-black font-serif text-4xl">
-              Projets 
-            </span>
+            <span className="text-black font-serif text-4xl">Projets</span>
 
             <div className="relative w-full h-full mt-5">
               {/* Bouton précédent */}
