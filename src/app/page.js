@@ -335,22 +335,25 @@ export default function Home() {
 
           <section
             id="projets"
-            className="min-h-screen flex flex-col justify-center pl-12"
+            className="min-h-screen flex flex-col justify-center pl-12 relative"
           >
             <span className="text-black font-serif text-4xl">
               Projets Universitaires
             </span>
 
             <div className="relative w-full h-full mt-5">
+              {/* Bouton précédent */}
               <span
                 onClick={handlePreviousprojet}
-                className="absolute top-[50%] text-7xl text-gray-800 hover:cursor-pointer hover:scale-[130%]"
+                className="absolute top-[50%] left-5 text-7xl text-gray-800 hover:cursor-pointer hover:scale-[130%] z-10"
               >
                 &#10216;
               </span>
+
+              {/* Bouton suivant */}
               <span
                 onClick={handleNextProjet}
-                className="absolute top-[50%] right-[10%] hover:cursor-pointer text-gray-800 text-7xl hover:scale-[130%]"
+                className="absolute top-[50%] right-5 text-7xl text-gray-800 hover:cursor-pointer hover:scale-[130%] z-10"
               >
                 &#10217;
               </span>
