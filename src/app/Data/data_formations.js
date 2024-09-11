@@ -1,6 +1,6 @@
 export default function data_form() {
   var formation1 = {
-    intitule_s: "MASTER MIAGE",
+    intitule_s: "MASTER MIAGE (mention BIEN)",
     institut: "UPJV",
     logo: "logo.png",
     lieu: "Amiens, France",
@@ -18,7 +18,7 @@ export default function data_form() {
       "Communiquer à des fins de formation ou de transfert de connaissances, par oral et par écrit, en français et dans au moins une langue étrangère",
     ],
     debut: "Septembre 2022",
-    fin: "Actuellement",
+    fin: "Septembre 2024",
   };
 
   var formation2 = {

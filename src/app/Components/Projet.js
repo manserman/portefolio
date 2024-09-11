@@ -14,33 +14,33 @@ export default function Projet({ projet }) {
         show ? "opacity-100 scale-100" : "opacity-0 scale-95"
       }`}
     >
-      <div className="max-w-2xl mx-auto bg-white shadow-lg rounded-lg overflow-hidden border border-gray-200">
+      <div className="max-w-lg mx-auto bg-white shadow-lg rounded-lg overflow-hidden border border-gray-200">
         {/* Titre du projet */}
-        <div className="text-center font-serif text-gray-700 font-semibold py-6 text-2xl">
+        <div className="text-center font-serif text-gray-700 font-semibold py-4 text-xl">
           {projet.titre}
         </div>
 
         {/* Image du projet */}
-        <div className="mt-5 mx-auto rounded-lg overflow-hidden w-full">
+        <div className="mt-4 mx-auto rounded-lg overflow-hidden w-full">
           <Image
-            className="object-contain w-full h-auto"  // Utilisation de object-contain pour éviter de couper l'image
-            width={500}
-            height={400}
+            className="object-contain w-full h-auto"
+            width={400}  // Taille réduite
+            height={300} // Taille réduite
             src={"./img/" + projet.illustration}
             alt={projet.titre}
           />
         </div>
 
         {/* Description du projet */}
-        <div className="px-8 py-6">
-          <p className="text-base text-gray-600">{projet.description}</p>
+        <div className="px-6 py-4">
+          <p className="text-sm text-gray-600">{projet.description}</p>
         </div>
 
         {/* Lien vers le projet */}
-        <div className="px-8 py-4 text-center">
+        <div className="px-6 py-3 text-center">
           <a
             href={projet.lien}
-            className="text-blue-500 hover:underline text-base"
+            className="text-blue-500 hover:underline text-sm"
           >
             Cliquez ici pour accéder au code source du projet
           </a>
