@@ -55,7 +55,7 @@ export default function Home() {
         <Sidebar />
 
         {/********************* SECTION PRINCIPALE **********************/}
-        <div className="flex flex-col w-[70%] mx-auto h-screen justify-center">
+        <div id= "princiaple">
           <section
             id="accueil"
             className="min-h-screen flex flex-col justify-center pl-12 pr-12"

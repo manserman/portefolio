@@ -87,3 +87,13 @@ section {
 section:hover {
   box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Accentue l'ombre au survol */
 }
+#principale {
+  width: 70%;             /* La section occupe 70% de la largeur de l'écran */
+  margin: 0 auto;          /* Centre la section horizontalement */
+  height: 100vh;           /* Hauteur de la section égale à la hauteur de l'écran */
+  display: flex;           /* Utilisation de Flexbox */
+  flex-direction: column;  /* Contenu organisé en colonne */
+  justify-content: center; /* Centre verticalement le contenu */
+  align-items: center;     /* Centre horizontalement le contenu */
+}
+
