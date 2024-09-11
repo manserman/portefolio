@@ -1,34 +1,46 @@
-import { useEffect, useState } from "react";
 import Image from "next/image";
 
-export default function Projet({ projet }) {
-  const [show, setShow] = useState(false);
-
-  useEffect(() => {
-    setShow(true);
-  }, []);
-
+export default function Formation({ form }) {
   return (
-    <div className={`container mx-auto mt-10 px-4 ${show ? 'opacity-100 scale-100' : 'opacity-0 scale-95 transform'}`}>
-      <div className="max-w-md mx-auto text-center font-serif text-gray-700 font-semibold mt-5 transition-opacity transition-transform duration-500">
-        {projet.titre}
-      </div>
-
-      <div className="mt-7 mx-auto rounded-lg overflow-hidden transition-opacity transition-transform duration-500" style={{ width: "13rem", height: "9rem" }}>
+    <div className="w-[80%] pl-4 h-[20em] relative border border-upjv-2 ">
+      <div className="w-[45%] h-20 mt-4 flex flex-row space-x-3  ">
         <Image
-          className="object-cover"
-          width={200}
+          className="w-18 h-20"
           height={200}
-          src={"./img/" + projet.illustration}
-          alt={projet.titre}
+          width={100}
+          src={"./img/" + form.logo}
         />
+
+        <div className="flex flex-col w-30 space-y-1 mt-2">
+          <span className="font-semibold">{form.intitule_s}</span>
+          <span className="text-sm font-semibold text-upjv-2">
+            {form.institut}
+          </span>
+          <span className="text-xs">{form.intitule_l}</span>
+        </div>
       </div>
 
-      <div className="max-w-lg mt-5 mx-auto text-center transition-opacity transition-transform duration-500">
-        <p className="text-sm text-gray-600">{projet.description}</p>
+      <div className="mt-6 text-xs underline font-semibold">
+        {/* {form.description} */}
+        Détail de la formation :
       </div>
-      <div className="max-w-lg mt-5 mx-auto text-center transition-opacity transition-transform duration-500">
-        <p className="text-sm text-gray-600"><a href={projet.lien} className="text-blue-500 hover:underline">Cliquez ici pour accéder au code source du projet</a></p>
+
+      <div className="w-[95%]">
+        <span className="text-xs text-upjv-2 italic">{form.detail}</span>
+      </div>
+
+      <div className="w-[95%] h-[35%] overflow-y-auto">
+        <ul className="list-disc text-xs pl-8 pt-2">
+          {form.acquis.map((item, index) => {
+            return <li key={index}>{item}</li>;
+          })}
+        </ul>
+      </div>
+
+      <div className="absolute top-4 right-4 space-x-2 flex flex-rox">
+        <span className="text-upjv-2">{form.debut}</span>
+        <span>-</span>
+        <span className="text-upjv-2">{form.fin}</span>
       </div>
     </div>
   );

@@ -340,8 +340,9 @@ export default function Home() {
             <span className="text-black font-serif text-4xl">
               Projets Universitaires
             </span>
-            <div className="flex flex-row items-center justify-center space-x-10 mt-10 w-full">
-              <span
+
+            <div className="relative w-full mt-6">
+            <span
                 onClick={handlePreviousprojet}
                 className="absolute top-[50%] text-7xl text-gray-800 hover:cursor-pointer hover:scale-[130%]"
               >
@@ -353,7 +354,8 @@ export default function Home() {
               >
                 &#10217;
               </span>
-              {projets.map((item, index) => (
+              { 
+              projets.map((item, index) => (
                 <div key={index}  id="projet_univs">
                   {item.titre}
                 </div>
