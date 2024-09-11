@@ -31,9 +31,19 @@ export default function Home() {
       prevFormation === formations.length - 1 ? 0 : prevFormation + 1
     );
   };
+  const handleNextProjet = () => {
+    setSelectedProject((prevFormation) =>
+      prevFormation === formations.length - 1 ? 0 : prevFormation + 1
+    );
+  };
 
   const handlePreviousFormation = () => {
     setSelectedFormation((prevFormation) =>
+      prevFormation === 0 ? formations.length - 1 : prevFormation - 1
+    );
+  };
+  const handlePreviousprojet = () => {
+    setSelectedProject((prevFormation) =>
       prevFormation === 0 ? formations.length - 1 : prevFormation - 1
     );
   };
@@ -330,7 +340,19 @@ export default function Home() {
             <span className="text-black font-serif text-4xl">
               Projets Universitaires
             </span>
-            <div className="flex flex-row items-center justify-center space-x-10 mt-10 w-full">
+            <div className="flex flex-row items-center justify-center space-x-10 mt-10 w-full" id="projet_univs">
+            <span
+                onClick={handlePreviousprojet}
+                className="absolute top-[50%] text-7xl text-gray-800 hover:cursor-pointer hover:scale-[130%]"
+              >
+                &#10216;
+              </span>
+              <span
+                onClick={handleNextProjet}
+                className="absolute top-[50%] right-[10%] hover:cursor-pointer text-gray-800 text-7xl hover:scale-[130%]"
+              >
+                &#10217;
+              </span>
               {projets.map((item, index) => (
                 <div
                   key={index}

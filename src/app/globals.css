@@ -68,7 +68,7 @@ html{
   scrollbar-width: none;
 
 }
-section,.projet_univs {
+section,#projet_univs {
   width: 70%;
   height: auto;
   margin: 5px auto; /* Centre la section horizontalement */
@@ -80,6 +80,6 @@ section,.projet_univs {
   transition: box-shadow 0.3s ease; /* Effet de transition pour l'ombre */
 }
 
-.projet_univs,section:hover {
+#projet_univs,section:hover {
   box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Accentue l'ombre au survol */
 }
