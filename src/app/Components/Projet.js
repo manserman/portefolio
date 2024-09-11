@@ -21,15 +21,12 @@ export default function Projet({ projet }) {
         </div>
 
         {/* Image du projet */}
-        <div
-          className="mt-5 mx-auto rounded-lg overflow-hidden"
-          style={{ width: "100%", height: "22rem" }}
-        >
+        <div className="mt-5 mx-auto rounded-lg overflow-hidden w-full">
           <Image
-            className="object-cover w-full h-full"
-            width={500}  // Taille augmentée
-            height={400} // Taille augmentée
-            src={"./img/" + projet.illustration}
+            className="object-contain w-full h-auto"  // Utilisation de object-contain pour éviter de couper l'image
+            width={500}
+            height={400}
+            src={"/img/" + projet.illustration}
             alt={projet.titre}
           />
         </div>
