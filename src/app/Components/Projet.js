@@ -18,7 +18,6 @@ export default function Projet({ projet }) {
         <div className="text-center font-serif text-gray-700 font-semibold py-5">
           {projet.titre}
         </div>
-
         <div
           className="mt-5 mx-auto rounded-lg overflow-hidden"
           style={{ width: "100%", height: "13rem" }}
