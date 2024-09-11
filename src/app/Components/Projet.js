@@ -26,7 +26,7 @@ export default function Projet({ projet }) {
             className="object-contain w-full h-auto"  // Utilisation de object-contain pour éviter de couper l'image
             width={500}
             height={400}
-            src={"/img/" + projet.illustration}
+            src={"./img/" + projet.illustration}
             alt={projet.titre}
           />
         </div>
