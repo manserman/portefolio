@@ -78,6 +78,10 @@ section {
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Effet d'ombre léger */
   background-color: #fff; /* Fond blanc pour un style carte */
   transition: box-shadow 0.3s ease; /* Effet de transition pour l'ombre */
+  display: flex;
+  flex-direction: column;
+  justify-content: center; /* Centre verticalement */
+  align-items: center; /* Centre horizontalement */
 }
 
 section:hover {
