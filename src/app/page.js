@@ -325,7 +325,7 @@ export default function Home() {
               </span>
 
               {/* Formation au centre */}
-              <div className="mx-auto w-[60%]">
+              <div className="mx-auto ">
                 <Formation form={formations[selectedFormation]} />
               </div>
 
@@ -344,7 +344,7 @@ export default function Home() {
             className="min-h-screen flex flex-col justify-center pl-12 relative"
           >
             <span className="text-black font-serif text-4xl">
-              Projets Universitaires
+              Projets 
             </span>
 
             <div className="relative w-full h-full mt-5">
