@@ -49,7 +49,7 @@ export default function Home() {
   };
 
   return (
-    <div className="h-screen w-screen overflow-y-auto">
+    <div className="h-screen justify-center w-screen overflow-y-auto">
       <main className="h-full bg-inherit flex flex-row">
         {/********************* SIDE BAR **********************/}
         <Sidebar />
