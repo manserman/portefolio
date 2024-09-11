@@ -19,6 +19,10 @@ export default function Projet({ projet }) {
           {projet.titre}
         </div>
 
+        <div className="text-center font-serif text-gray-700 py-5">
+          {projet.description}
+        </div>
+
         <div className="mt-5 mx-auto rounded-lg overflow-hidden" style={{ width: "100%", height: "13rem" }}>
           <Image
             className="object-cover w-full h-full"

@@ -341,8 +341,8 @@ export default function Home() {
               Projets Universitaires
             </span>
 
-            <div className="relative w-full mt-6">
-            <span
+            <div className="w-full h-full mt-5">
+              <span
                 onClick={handlePreviousprojet}
                 className="absolute top-[50%] text-7xl text-gray-800 hover:cursor-pointer hover:scale-[130%]"
               >
@@ -354,14 +354,6 @@ export default function Home() {
               >
                 &#10217;
               </span>
-              { 
-              projets.map((item, index) => (
-                <div key={index}  id="projet_univs">
-                  {item.titre}
-                </div>
-              ))}
-            </div>
-            <div className="w-full h-full mt-5">
               <Projet projet={projets[selectedProject]}></Projet>
             </div>
           </section>
