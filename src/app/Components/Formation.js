@@ -2,7 +2,7 @@ import Image from "next/image";
 
 export default function Formation({ form }) {
   return (
-    <div className="w-[90%] h-[28em] px-8 py-6 bg-white shadow-lg rounded-lg border border-gray-200 mx-auto">
+    <div className="w-[70%] h-[28em] px-8 py-6 bg-white shadow-lg rounded-lg border border-gray-200 mx-auto">
       <div className="flex flex-row space-x-4 items-center">
         <Image
           className="w-24 h-28 rounded"
