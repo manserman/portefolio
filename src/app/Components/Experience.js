@@ -2,7 +2,7 @@ import Image from "next/image";
 
 export default function Experience({ exp }) {
   return (
-    <div className="relative bg-white shadow-lg rounded-lg border border-gray-300 hover:shadow-2xl hover:border-gray-500 transition-all duration-300 w-[80%] h-[20em] p-6 mx-auto">
+    <div className="relative bg-white shadow-lg rounded-lg border border-gray-300 hover:shadow-2xl hover:border-gray-500 transition-all duration-300 w-[90%] h-[35em] p-6 mx-auto">
       <div className="flex flex-row space-x-4 items-center">
         <Image
           className="w-24 h-24 rounded"
