@@ -354,7 +354,11 @@ export default function Home() {
               >
                 &#10217;
               </span>
-              <Projet projet={projets[selectedProject]} />
+
+              {/* Affichage du projet */}
+              {projets.length > 0 && (
+                <Projet projet={projets[selectedProject]} />
+              )}
             </div>
           </section>
         </div>
