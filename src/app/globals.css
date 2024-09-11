@@ -71,15 +71,15 @@ html{
 section {
   width: 70%;
   height: auto;
-  margin: 5px auto; /* Centre la section horizontalement */
-  padding: 20px; /* Ajoute de l'espace interne */
+  margin: 50px auto; /* Centre la section horizontalement */
+  padding: 20px; /* Ajoute de l'espace interne pour l'apparence */
   border: 2px solid #ccc; /* Bordure grise */
   border-radius: 15px; /* Coins arrondis */
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Effet d'ombre léger */
-  background-color: #fff; /* Fond blanc */
+  background-color: #fff; /* Fond blanc pour un style carte */
   transition: box-shadow 0.3s ease; /* Effet de transition pour l'ombre */
 }
 
-section:hover{
+section:hover {
   box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Accentue l'ombre au survol */
 }
