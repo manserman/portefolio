@@ -23,7 +23,7 @@ export default function Projet({ projet }) {
         {/* Image du projet */}
         <div
           className="mt-5 mx-auto rounded-lg overflow-hidden"
-          style={{ width: "100%", height: "18rem" }}
+          style={{ width: "100%", height: "22rem" }}
         >
           <Image
             className="object-cover w-full h-full"
