@@ -28,7 +28,7 @@ export default function Projet({ projet }) {
           <Image
             className="object-cover w-full h-full"
             width={500}  // Taille augmentée
-            height={300} // Taille augmentée
+            height={400} // Taille augmentée
             src={"./img/" + projet.illustration}
             alt={projet.titre}
           />
