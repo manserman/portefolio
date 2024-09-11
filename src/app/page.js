@@ -11,6 +11,7 @@ import data_form from "./Data/data_formations";
 import data_savoir from "./Data/data_savoir";
 import data_exp from "./Data/data_experience";
 import data_projet from "./Data/data_projet";
+import Sidebar from "./sideMenu";
 
 export default function Home() {
   /********************* DONNEES  **************************/
@@ -41,58 +42,7 @@ export default function Home() {
     <div className="h-screen w-screen overflow-y-auto">
       <main className="h-full bg-inherit flex flex-row">
         {/********************* SIDE BAR **********************/}
-        <div className="h-[100%] w-[17%] fixed bg-gray-800 flex flex-col">
-          <Image
-            className="mx-auto mt-20 scale-[115%] rounded-full overflow-hidden"
-            height={300}
-            width={200}
-            src="./img/photo.png"
-          />
-          <div className="flex flex-col items-center justify-start mt-4">
-            <a
-              href="#accueil"
-              className="text-white text-lg p-3 w-full text-center hover:bg-gray-700 mt-1 cursor-pointer"
-            >
-              Accueil
-            </a>
-            <a
-              href="#stack"
-              className="text-white text-lg p-3 w-full text-center hover:bg-gray-700 mt-1 cursor-pointer"
-            >
-              Stack technique
-            </a>
-            <a
-              href="#competences"
-              className="text-white text-lg p-3 w-full text-center hover:bg-gray-700 mt-1 cursor-pointer"
-            >
-              Compétences
-            </a>
-            <a
-              href="#experiences"
-              className="text-white text-lg p-3 w-full text-center hover:bg-gray-700 mt-1 cursor-pointer"
-            >
-              Expériences
-            </a>
-            <a
-              href="#savoirs"
-              className="text-white text-lg p-3 w-full text-center hover:bg-gray-700 mt-1 cursor-pointer"
-            >
-              Savoir-être
-            </a>
-            <a
-              href="#formations"
-              className="text-white text-lg p-3 w-full text-center hover:bg-gray-700 mt-1 cursor-pointer"
-            >
-              Formations
-            </a>
-            <a
-              href="#projets"
-              className="text-white text-lg p-3 w-full text-center hover:bg-gray-700 mt-1 cursor-pointer"
-            >
-              Projets Universitaires
-            </a>
-          </div>
-        </div>
+        <Sidebar/>
 
         {/********************* SECTION PRINCIPALE **********************/}
         <div className="flex flex-col w-[83%] ml-[17%]">
