@@ -47,6 +47,19 @@ export default function Home() {
       prevProjet === 0 ? projets.length - 1 : prevProjet - 1
     );
   };
+  const [selectedSavoir, setSelectedSavoir] = useState(0);
+
+  const handleNextSavoir = () => {
+    setSelectedSavoir((prevSavoir) =>
+      prevSavoir === savoirs.length - 1 ? 0 : prevSavoir + 1
+    );
+  };
+
+  const handlePreviousSavoir = () => {
+    setSelectedSavoir((prevSavoir) =>
+      prevSavoir === 0 ? savoirs.length - 1 : prevSavoir - 1
+    );
+  };
 
   return (
     <div className="h-screen  w-screen overflow-y-auto">
@@ -282,29 +295,41 @@ export default function Home() {
           </section>
           <section
             id="savoirs"
-            className="min-h-screen flex flex-col justify-center pl-12"
+            className="min-h-screen flex flex-col justify-center items-center"
           >
             <span className="text-black font-serif text-4xl">SAVOIR ETRE</span>
             <div className="text-slate-600 text-base italic mt-2">
               Savoir-être issus du référentiel présent sur le site de pôle
               emploi (ROME 4.0)
             </div>
-            <table className="mt-5 text-center w-[85%] overflow-y-auto text-base">
-              <thead>
-                <tr className="bg-gray-800 text-base text-white font-normal">
-                  <th>Savoir-être</th>
-                  <th>Description</th>
-                </tr>
-              </thead>
-              <tbody>
-                {savoirs.map((item, index) => (
-                  <tr key={index}>
-                    <td>{item.nom}</td>
-                    <td>{item.description}</td>
-                  </tr>
-                ))}
-              </tbody>
-            </table>
+
+            <div className="relative w-full flex items-center justify-center mt-6 px-12">
+              {/* Bouton de gauche */}
+              <span
+                onClick={handlePreviousSavoir}
+                className="absolute left-0 text-7xl text-gray-800 hover:cursor-pointer hover:scale-[130%] transform -translate-y-1/2 top-[50%]"
+              >
+                &#10216;
+              </span>
+
+              {/* Carte de savoir-être */}
+              <div className="bg-white shadow-lg rounded-lg border border-gray-200 w-[300px] p-6 mx-auto">
+                <h3 className="text-xl font-semibold text-gray-800">
+                  {savoirs[selectedSavoir].nom}
+                </h3>
+                <p className="text-base text-gray-600 mt-2">
+                  {savoirs[selectedSavoir].description}
+                </p>
+              </div>
+
+              {/* Bouton de droite */}
+              <span
+                onClick={handleNextSavoir}
+                className="absolute right-0 text-7xl text-gray-800 hover:cursor-pointer hover:scale-[130%] transform -translate-y-1/2 top-[50%]"
+              >
+                &#10217;
+              </span>
+            </div>
           </section>
           <section
             id="formations"
