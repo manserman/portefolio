@@ -2,7 +2,7 @@ import Image from "next/image";
 
 export default function Formation({ form }) {
   return (
-    <div className="w-[100%] h-[30em] px-8 py-6 bg-white shadow-lg rounded-lg border border-gray-200 mx-auto">
+    <div className="w-[90%] h-[35em] px-8 py-6 bg-white shadow-lg rounded-lg border border-gray-200 mx-auto">
       {/* Partie image et titre */}
       <div className="flex flex-row space-x-4 items-center">
         <Image
