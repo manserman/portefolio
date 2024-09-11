@@ -308,28 +308,34 @@ export default function Home() {
           </section>
           <section
             id="formations"
-            className="min-h-screen flex flex-col justify-center pl-12"
+            className="min-h-screen flex flex-col justify-center items-center"
           >
             <span className="text-black font-serif text-4xl">FORMATIONS</span>
             <div className="text-slate-600 text-base italic mt-2">
-              Liste des acquis des formations selon le site France competences
+              Liste des acquis des formations selon le site France compétences
             </div>
-            <div className="relative w-full mt-6">
+
+            <div className="relative w-[80%] mt-6 flex items-center">
+              {/* Bouton de gauche */}
               <span
                 onClick={handlePreviousFormation}
-                className="absolute top-[50%] text-7xl text-gray-800 hover:cursor-pointer hover:scale-[130%]"
+                className="absolute left-0 top-[50%] text-7xl text-gray-800 hover:cursor-pointer hover:scale-[130%] transform -translate-y-1/2"
               >
                 &#10216;
               </span>
+
+              {/* Formation au centre */}
+              <div className="mx-auto w-[60%]">
+                <Formation form={formations[selectedFormation]} />
+              </div>
+
+              {/* Bouton de droite */}
               <span
                 onClick={handleNextFormation}
-                className="absolute top-[50%] right-[10%] hover:cursor-pointer text-gray-800 text-7xl hover:scale-[130%]"
+                className="absolute right-0 top-[50%] text-7xl text-gray-800 hover:cursor-pointer hover:scale-[130%] transform -translate-y-1/2"
               >
                 &#10217;
               </span>
-              <div className="ml-28">
-                <Formation form={formations[selectedFormation]} />
-              </div>
             </div>
           </section>
 
