@@ -52,7 +52,7 @@ export default function Home() {
     <div className="h-screen w-screen overflow-y-auto">
       <main className="h-full bg-inherit flex flex-row">
         {/********************* SIDE BAR **********************/}
-        <Sidebar/>
+        <Sidebar />
 
         {/********************* SECTION PRINCIPALE **********************/}
         <div className="flex flex-col w-[83%] ml-[17%]">
@@ -340,8 +340,8 @@ export default function Home() {
             <span className="text-black font-serif text-4xl">
               Projets Universitaires
             </span>
-            <div className="flex flex-row items-center justify-center space-x-10 mt-10 w-full" id="projet_univs">
-            <span
+            <div className="flex flex-row items-center justify-center space-x-10 mt-10 w-full">
+              <span
                 onClick={handlePreviousprojet}
                 className="absolute top-[50%] text-7xl text-gray-800 hover:cursor-pointer hover:scale-[130%]"
               >
@@ -354,11 +354,7 @@ export default function Home() {
                 &#10217;
               </span>
               {projets.map((item, index) => (
-                <div
-                  key={index}
-                  className="bg-slate-100 border-2 border-black w-[250px] h-[250px] flex items-center text-center justify-center hover:scale-110 text-black text-base cursor-pointer"
-                  onClick={() => setSelectedProject(index)}
-                >
+                <div key={index}  id="projet_univs">
                   {item.titre}
                 </div>
               ))}
