@@ -60,6 +60,19 @@ export default function Home() {
       prevSavoir === 0 ? savoirs.length - 1 : prevSavoir - 1
     );
   };
+  const [selectedExperience, setSelectedExperience] = useState(0);
+
+  const handleNextExperience = () => {
+    setSelectedExperience((prevExperience) =>
+      prevExperience === experiences.length - 1 ? 0 : prevExperience + 1
+    );
+  };
+
+  const handlePreviousExperience = () => {
+    setSelectedExperience((prevExperience) =>
+      prevExperience === 0 ? experiences.length - 1 : prevExperience - 1
+    );
+  };
 
   return (
     <div className="h-screen  w-screen overflow-y-auto">
@@ -212,13 +225,34 @@ export default function Home() {
 
           <section
             id="experiences"
-            className="min-h-screen flex flex-col justify-center pl-12"
+            className="min-h-screen flex flex-col justify-center items-center px-12"
           >
             <span className="text-black font-serif text-4xl">EXPERIENCES</span>
-            <div className="flex flex-col h-[90%] space-y-4 overflow-y-auto mt-4">
-              {experiences.map((item, index) => (
-                <Experience key={index} exp={item}></Experience>
-              ))}
+            <div className="text-slate-600 text-base italic mt-2">
+              Liste des expériences professionnelles
+            </div>
+
+            <div className="relative w-full mt-6">
+              {/* Bouton pour revenir en arrière */}
+              <span
+                onClick={handlePreviousExperience}
+                className="absolute left-0 top-[50%] text-7xl text-gray-800 hover:cursor-pointer hover:scale-[130%] transform -translate-y-1/2"
+              >
+                &#10216;
+              </span>
+
+              {/* Carte de l'expérience sélectionnée */}
+              <div className="bg-white shadow-lg rounded-lg border border-gray-300 hover:shadow-2xl hover:border-gray-500 transition-all duration-300 p-6 mx-auto w-[80%]">
+                <Experience exp={experiences[selectedExperience]} />
+              </div>
+
+              {/* Bouton pour aller à l'expérience suivante */}
+              <span
+                onClick={handleNextExperience}
+                className="absolute right-0 top-[50%] text-7xl text-gray-800 hover:cursor-pointer hover:scale-[130%] transform -translate-y-1/2"
+              >
+                &#10217;
+              </span>
             </div>
           </section>
           <section

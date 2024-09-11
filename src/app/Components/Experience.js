@@ -2,62 +2,62 @@ import Image from "next/image";
 
 export default function Experience({ exp }) {
   return (
-    <div className="w-[80%] pl-4 h-[20em] relative border border-upjv-2 ">
-      <div className="w-[45%] h-20 mt-4 flex flex-row space-x-3  ">
+    <div className="bg-white shadow-lg rounded-lg border border-gray-300 hover:shadow-2xl hover:border-gray-500 transition-all duration-300 w-[80%] h-[20em] p-6 mx-auto">
+      <div className="flex flex-row space-x-4 items-center">
         <Image
-          className="w-18 h-20"
-          height={200}
-          width={100}
+          className="w-24 h-24 rounded"
+          height={96}
+          width={96}
           src={"./img/" + exp.logo}
+          alt="Logo entreprise"
         />
 
-        <div className="flex flex-col space-y-1 mt-2">
-          <span className="font-semibold">{exp.description}</span>
-          <span className="text-sm font-semibold text-upjv-2">
+        <div className="flex flex-col space-y-2">
+          <span className="font-semibold text-lg">{exp.description}</span>
+          <span className="text-sm font-semibold text-gray-600">
             {exp.entreprise}
           </span>
-          <span className="text-xs">{exp.poste}</span>
+          <span className="text-sm text-gray-500">{exp.poste}</span>
         </div>
       </div>
 
-      <div className="mt-6 text-xs underline font-semibold">
-        {/* {exp.description} */}
+      <div className="mt-6 text-sm underline font-semibold">
         Détail de l'expérience :
       </div>
 
-      <div className="w-[70%]">
-        <span className="text-xs text-upjv-2 italic">{exp.detail}</span>
+      <div className="w-full mt-2">
+        <span className="text-sm text-gray-700 italic">{exp.detail}</span>
       </div>
 
-      <div className="w-[70%] h-[35%] overflow-y-auto">
-        <ul className="list-disc text-xs pl-8 pt-2">
-          {exp.missions.map((item, index) => {
-            return <li key={index}>{item}</li>;
-          })}
+      <div className="w-full mt-2 h-[6em] overflow-y-auto">
+        <ul className="list-disc text-sm pl-6">
+          {exp.missions.map((item, index) => (
+            <li key={index}>{item}</li>
+          ))}
         </ul>
       </div>
 
-      <div className="absolute top-4 right-4 space-x-2 flex flex-rox">
-        <span className="text-upjv-2">{exp.debut}</span>
-        <span>-</span>
-        <span className="text-upjv-2">{exp.fin}</span>
+      <div className="absolute top-4 right-4 space-x-2 flex">
+        <span className="text-sm text-gray-600">{exp.debut}</span>
+        <span className="text-sm text-gray-600">-</span>
+        <span className="text-sm text-gray-600">{exp.fin}</span>
       </div>
 
-      {exp.isExperience ? (
-        <table className="absolute top-16 right-4 text-center h-[60%] w-[22%] text-xs ">
-          <tr className="bg-upjv text-xs text-upjv-2 font-normal">
-            <th>Competences acquises</th>
-          </tr>
-          {exp.competences.map((item, index) => {
-            return (
+      {exp.isExperience && (
+        <table className="absolute top-16 right-4 text-center h-[60%] w-[22%] text-xs border border-gray-300">
+          <thead className="bg-gray-800 text-white">
+            <tr>
+              <th>Compétences acquises</th>
+            </tr>
+          </thead>
+          <tbody>
+            {exp.competences.map((item, index) => (
               <tr key={index}>
-                <td>{item}</td>
+                <td className="border-t border-gray-300 p-1">{item}</td>
               </tr>
-            );
-          })}
+            ))}
+          </tbody>
         </table>
-      ) : (
-        <></>
       )}
     </div>
   );
