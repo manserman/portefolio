@@ -50,7 +50,7 @@ export default function Experience({ exp }) {
           <table className="w-[50%] text-left text-lg border border-gray-300 mt-2 mx-auto">
             <thead className="bg-gray-800 text-white">
               <tr>
-                <th className="p-2">Compétences</th>
+                <th className="p-2 text-lg" >Compétences</th>
               </tr>
             </thead>
             <tbody>
