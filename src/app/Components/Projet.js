@@ -11,7 +11,7 @@ export default function Projet({ projet }) {
   return (
     <div
       className={`container mx-auto mt-10 px-4 transition-all duration-500 ease-in-out transform ${
-        show ? 'opacity-100 scale-100' : 'opacity-0 scale-95'
+        show ? "opacity-100 scale-100" : "opacity-0 scale-95"
       }`}
     >
       <div className="max-w-md mx-auto bg-white shadow-lg rounded-lg overflow-hidden border border-gray-200">
@@ -19,11 +19,10 @@ export default function Projet({ projet }) {
           {projet.titre}
         </div>
 
-        <div className="text-center font-serif text-gray-700 py-5">
-          {projet.description}
-        </div>
-
-        <div className="mt-5 mx-auto rounded-lg overflow-hidden" style={{ width: "100%", height: "13rem" }}>
+        <div
+          className="mt-5 mx-auto rounded-lg overflow-hidden"
+          style={{ width: "100%", height: "13rem" }}
+        >
           <Image
             className="object-cover w-full h-full"
             width={200}

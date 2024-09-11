@@ -32,8 +32,8 @@ export default function Home() {
     );
   };
   const handleNextProjet = () => {
-    setSelectedProject((prevFormation) =>
-      prevFormation === formations.length - 1 ? 0 : prevFormation + 1
+    setSelectedProject((prevProjet) =>
+      prevProjet === projets.length - 1 ? 0 : prevProjet + 1
     );
   };
 
@@ -43,8 +43,8 @@ export default function Home() {
     );
   };
   const handlePreviousprojet = () => {
-    setSelectedProject((prevFormation) =>
-      prevFormation === 0 ? formations.length - 1 : prevFormation - 1
+    setSelectedProject((prevProjet) =>
+      prevProjet === 0 ? projets.length - 1 : prevProjet - 1
     );
   };
 
@@ -55,7 +55,7 @@ export default function Home() {
         <Sidebar />
 
         {/********************* SECTION PRINCIPALE **********************/}
-        <div id= "princiaple">
+        <div id="princiaple">
           <section
             id="accueil"
             className="min-h-screen flex flex-col justify-center pl-12 pr-12"
@@ -341,7 +341,7 @@ export default function Home() {
               Projets Universitaires
             </span>
 
-            <div className="w-full h-full mt-5">
+            <div className="relative w-full h-full mt-5">
               <span
                 onClick={handlePreviousprojet}
                 className="absolute top-[50%] text-7xl text-gray-800 hover:cursor-pointer hover:scale-[130%]"
@@ -354,7 +354,7 @@ export default function Home() {
               >
                 &#10217;
               </span>
-              <Projet projet={projets[selectedProject]}></Projet>
+              <Projet projet={projets[selectedProject]} />
             </div>
           </section>
         </div>
