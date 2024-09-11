@@ -152,107 +152,35 @@ export default function Home() {
               Stack technique principale
             </span>
             <div className="flex flex-wrap gap-4 mt-6 justify-start">
-              <div className="flex flex-col items-center justify-center bg-gray-200 p-4 rounded w-[150px] h-[150px] flex-shrink-0">
-                <Image src="./img/java.png" alt="Java" width={60} height={60} />
-                <span className="mt-2 text-lg">Java</span>
-              </div>
-              <div className="flex flex-col items-center justify-center bg-gray-200 p-4 rounded w-[150px] h-[150px] flex-shrink-0">
-                <Image
-                  src="./img/spring.png"
-                  alt="Spring Boot"
-                  width={60}
-                  height={60}
-                />
-                <span className="mt-2 text-lg">Spring Boot</span>
-              </div>
-              <div className="flex flex-col items-center justify-center bg-gray-200 p-4 rounded w-[150px] h-[150px] flex-shrink-0">
-                <Image
-                  src="./img/hibernate.png"
-                  alt="Hibernate"
-                  width={60}
-                  height={60}
-                />
-                <span className="mt-2 text-lg">Hibernate</span>
-              </div>
-              <div className="flex flex-col items-center justify-center bg-gray-200 p-4 rounded w-[150px] h-[150px] flex-shrink-0">
-                <Image
-                  src="./img/data_jpa.png"
-                  alt="Spring Data JPA"
-                  width={60}
-                  height={60}
-                />
-                <span className="mt-2 text-lg">Spring Data JPA</span>
-              </div>
-              <div className="flex flex-col items-center justify-center bg-gray-200 p-4 rounded w-[150px] h-[150px] flex-shrink-0">
-                <Image
-                  src="./img/spring_mvc.png"
-                  alt="Spring MVC"
-                  width={60}
-                  height={60}
-                />
-                <span className="mt-2 text-lg">Spring MVC</span>
-              </div>
-              <div className="flex flex-col items-center justify-center bg-gray-200 p-4 rounded w-[150px] h-[150px] flex-shrink-0">
-                <Image
-                  src="./img/mockito.png"
-                  alt="Mockito"
-                  width={60}
-                  height={60}
-                />
-                <span className="mt-2 text-lg">Mockito</span>
-              </div>
-              <div className="flex flex-col items-center justify-center bg-gray-200 p-4 rounded w-[150px] h-[150px] flex-shrink-0">
-                <Image
-                  src="./img/JUnit.png"
-                  alt="JUnit"
-                  width={60}
-                  height={60}
-                />
-                <span className="mt-2 text-lg">JUnit</span>
-              </div>
-              <div className="flex flex-col items-center justify-center bg-gray-200 p-4 rounded w-[150px] h-[150px] flex-shrink-0">
-                <Image src="./img/csharp.png" alt="C#" width={60} height={60} />
-                <span className="mt-2 text-lg">C#</span>
-              </div>
-              <div className="flex flex-col items-center justify-center bg-gray-200 p-4 rounded w-[150px] h-[150px] flex-shrink-0">
-                <Image
-                  src="./img/NET_Core.png"
-                  alt="ASP .NET Core"
-                  width={60}
-                  height={60}
-                />
-                <span className="mt-2 text-lg">ASP .NET Core</span>
-              </div>
-              <div className="flex flex-col items-center justify-center bg-gray-200 p-4 rounded w-[150px] h-[150px] flex-shrink-0">
-                <Image
-                  src="./img/angular.png"
-                  alt="Angular"
-                  width={60}
-                  height={60}
-                />
-                <span className="mt-2 text-lg">Angular</span>
-              </div>
-              <div className="flex flex-col items-center justify-center bg-gray-200 p-4 rounded w-[150px] h-[150px] flex-shrink-0">
-                <Image
-                  src="./img/react.png"
-                  alt="React"
-                  width={60}
-                  height={60}
-                />
-                <span className="mt-2 text-lg">React</span>
-              </div>
-              <div className="flex flex-col items-center justify-center bg-gray-200 p-4 rounded w-[150px] h-[150px] flex-shrink-0">
-                <Image
-                  src="./img/jenkins.png"
-                  alt="React"
-                  width={60}
-                  height={60}
-                />
-                <span className="mt-2 text-lg">Jenkins</span>
-              </div>
+              {[
+                { name: "Java", imgSrc: "./img/java.png" },
+                { name: "Spring Boot", imgSrc: "./img/spring.png" },
+                { name: "Hibernate", imgSrc: "./img/hibernate.png" },
+                { name: "Spring Data JPA", imgSrc: "./img/data_jpa.png" },
+                { name: "Spring MVC", imgSrc: "./img/spring_mvc.png" },
+                { name: "Mockito", imgSrc: "./img/mockito.png" },
+                { name: "JUnit", imgSrc: "./img/JUnit.png" },
+                { name: "C#", imgSrc: "./img/csharp.png" },
+                { name: "ASP .NET Core", imgSrc: "./img/NET_Core.png" },
+                { name: "Angular", imgSrc: "./img/angular.png" },
+                { name: "React", imgSrc: "./img/react.png" },
+                { name: "Jenkins", imgSrc: "./img/jenkins.png" },
+              ].map((tech, index) => (
+                <div
+                  key={index}
+                  className="flex flex-col items-center justify-center bg-white p-4 rounded-lg w-[150px] h-[150px] border border-gray-300 shadow-lg hover:shadow-2xl hover:border-gray-500 transition-all duration-300"
+                >
+                  <Image
+                    src={tech.imgSrc}
+                    alt={tech.name}
+                    width={60}
+                    height={60}
+                  />
+                  <span className="mt-2 text-lg">{tech.name}</span>
+                </div>
+              ))}
             </div>
           </section>
-
           <section
             id="competences"
             className="min-h-screen flex flex-col justify-center pl-12 pt-10"
