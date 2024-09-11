@@ -47,7 +47,7 @@ export default function Experience({ exp }) {
       {exp.isExperience && (
         <div className="mt-6">
           <h4 className="text-sm font-semibold">Compétences acquises :</h4>
-          <table className="w-[50%] text-left text-base border border-gray-300 mt-2 mx-auto">
+          <table className="w-[50%] text-left text-lg border border-gray-300 mt-2 mx-auto">
             <thead className="bg-gray-800 text-white">
               <tr>
                 <th className="p-2">Compétences</th>
@@ -56,7 +56,7 @@ export default function Experience({ exp }) {
             <tbody>
               {exp.competences.map((item, index) => (
                 <tr key={index}>
-                  <td className="border-t border-gray-300 p-2">{item}</td>
+                  <td className="border-t border-gray-300  text-lg p-2">{item}</td>
                 </tr>
               ))}
             </tbody>
