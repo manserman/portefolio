@@ -241,10 +241,7 @@ export default function Home() {
                 &#10216;
               </span>
 
-              {/* Carte de l'expérience sélectionnée */}
-              <div className="bg-white shadow-lg rounded-lg border border-gray-300 hover:shadow-2xl hover:border-gray-500 transition-all duration-300 p-6 mx-auto w-[80%]">
-                <Experience exp={experiences[selectedExperience]} />
-              </div>
+              <Experience exp={experiences[selectedExperience]} />
 
               {/* Bouton pour aller à l'expérience suivante */}
               <span
