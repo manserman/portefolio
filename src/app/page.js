@@ -22,7 +22,6 @@ export default function Home() {
   const savoirs = data_savoir();
 
   /********************* ETAT  **************************/
-  /********************* ETAT  **************************/
   const [selectedSection, setSelectedSection] = useState(0); // section actuellement sélectionnée
   const sections = [
     "accueil",
