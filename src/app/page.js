@@ -228,7 +228,7 @@ export default function Home() {
               </span>
 
               {/* Carte de savoir-faire */}
-              <div className="bg-white shadow-lg rounded-lg border border-gray-200 w-[400px] h-[400px] p-6 mx-auto">
+              <div className="bg-white shadow-lg rounded-lg border border-gray-200 w-[500px] h-[500px] p-6 mx-auto flex flex-col justify-center">
                 <h3 className="text-xl font-semibold text-gray-800">
                   {savoirFaire[selectedSavoirFaire].nom}
                 </h3>
@@ -362,7 +362,7 @@ export default function Home() {
               </span>
 
               {/* Carte de savoir-être avec taille fixe */}
-              <div className="bg-white shadow-lg rounded-lg border border-gray-200 w-[400px] h-[400px] p-6 mx-auto flex flex-col justify-center">
+              <div className="bg-white shadow-lg rounded-lg border border-gray-200 w-[500px] h-[500px] p-6 mx-auto flex flex-col justify-center">
                 <h3 className="text-xl font-semibold text-gray-800 text-center">
                   {savoirs[selectedSavoir].nom}
                 </h3>

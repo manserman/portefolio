@@ -39,7 +39,7 @@ export default function Sidebar() {
               Accueil
             </a>
             <a
-              href="#stack"
+              href="#savoir-faire"
               className="text-white text-lg p-3 w-full text-center hover:bg-gray-700 mt-1 cursor-pointer"
             >Savoir faire
             </a>
