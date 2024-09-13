@@ -22,6 +22,48 @@ export default function Home() {
   const savoirs = data_savoir();
 
   /********************* ETAT  **************************/
+  /********************* ETAT  **************************/
+  const [selectedSection, setSelectedSection] = useState(0); // section actuellement sélectionnée
+  const sections = [
+    "accueil",
+    "stack",
+    "competences",
+    "experiences",
+    "savoirs",
+    "formations",
+    "projets",
+  ]; // nom des sections
+
+  // Fonction de gestion du scroll
+  const handleScroll = (event) => {
+    if (event.deltaY > 0) {
+      // Si l'utilisateur fait défiler vers le bas
+      setSelectedSection((prevSection) =>
+        prevSection === sections.length - 1 ? 0 : prevSection + 1
+      );
+    } else {
+      // Si l'utilisateur fait défiler vers le haut
+      setSelectedSection((prevSection) =>
+        prevSection === 0 ? sections.length - 1 : prevSection - 1
+      );
+    }
+  };
+
+  // Effet pour gérer le défilement de la molette
+  useEffect(() => {
+    window.addEventListener("wheel", handleScroll);
+    return () => {
+      window.removeEventListener("wheel", handleScroll);
+    };
+  }, []);
+
+  useEffect(() => {
+    const section = document.getElementById(sections[selectedSection]);
+    if (section) {
+      section.scrollIntoView({ behavior: "smooth" });
+    }
+  }, [selectedSection]);
+
   const [selectedProject, setSelectedProject] = useState(0);
   const [selectedFormation, setSelectedFormation] = useState(0);
 
