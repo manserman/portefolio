@@ -113,7 +113,20 @@ export default function Home() {
       prevExperience === 0 ? experiences.length - 1 : prevExperience - 1
     );
   };
+  const savoirFaire = data_savoir_faire();
+  const [selectedSavoirFaire, setSelectedSavoirFaire] = useState(0);
 
+  const handleNextSavoirFaire = () => {
+    setSelectedSavoirFaire((prevSavoirFaire) =>
+      prevSavoirFaire === savoirFaire.length - 1 ? 0 : prevSavoirFaire + 1
+    );
+  };
+
+  const handlePreviousSavoirFaire = () => {
+    setSelectedSavoirFaire((prevSavoirFaire) =>
+      prevSavoirFaire === 0 ? savoirFaire.length - 1 : prevSavoirFaire - 1
+    );
+  };
   return (
     <div className="h-screen  w-screen overflow-y-auto">
       <main className="h-full bg-inherit flex flex-row">
@@ -194,6 +207,43 @@ export default function Home() {
                   Mon CV
                 </a>
               </div>
+            </div>
+          </section>
+          <section
+            id="savoir-faire"
+            className="min-h-screen flex flex-col justify-center items-center"
+          >
+            <span className="text-black font-serif text-4xl">SAVOIR-FAIRE</span>
+            <div className="text-slate-600 text-base italic mt-2">
+              Liste des savoir-faire techniques et professionnels
+            </div>
+
+            <div className="relative w-full flex items-center justify-center mt-6 px-12">
+              {/* Bouton de gauche */}
+              <span
+                onClick={handlePreviousSavoirFaire}
+                className="absolute left-0 text-7xl text-gray-800 hover:cursor-pointer hover:scale-[130%] transform -translate-y-1/2 top-[50%]"
+              >
+                &#10216;
+              </span>
+
+              {/* Carte de savoir-faire */}
+              <div className="bg-white shadow-lg rounded-lg border border-gray-200 w-[300px] p-6 mx-auto">
+                <h3 className="text-xl font-semibold text-gray-800">
+                  {savoirFaire[selectedSavoirFaire].nom}
+                </h3>
+                <p className="text-base text-gray-600 mt-2">
+                  {savoirFaire[selectedSavoirFaire].description}
+                </p>
+              </div>
+
+              {/* Bouton de droite */}
+              <span
+                onClick={handleNextSavoirFaire}
+                className="absolute right-0 text-7xl text-gray-800 hover:cursor-pointer hover:scale-[130%] transform -translate-y-1/2 top-[50%]"
+              >
+                &#10217;
+              </span>
             </div>
           </section>
 

@@ -41,6 +41,11 @@ export default function Sidebar() {
             <a
               href="#stack"
               className="text-white text-lg p-3 w-full text-center hover:bg-gray-700 mt-1 cursor-pointer"
+            >Savoir faire
+            </a>
+            <a
+              href="#stack"
+              className="text-white text-lg p-3 w-full text-center hover:bg-gray-700 mt-1 cursor-pointer"
             >
               Stack technique
             </a>
