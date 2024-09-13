@@ -11,6 +11,7 @@ import data_savoir from "./Data/data_savoir";
 import data_exp from "./Data/data_experience";
 import data_projet from "./Data/data_projet";
 import Sidebar from "./sideMenu";
+import data_savoir_faire from "./Data/data_savoir_faire";
 
 export default function Home() {
   /********************* DONNEES  **************************/
@@ -19,7 +20,7 @@ export default function Home() {
   const competences = data_comp();
   const formations = data_form();
   const savoirs = data_savoir();
-
+  const savoirFaire = data_savoir_faire();
   /********************* ETAT  **************************/
   const [selectedSection, setSelectedSection] = useState(0); // section actuellement sélectionnée
   const sections = [
@@ -113,7 +114,6 @@ export default function Home() {
       prevExperience === 0 ? experiences.length - 1 : prevExperience - 1
     );
   };
-  const savoirFaire = data_savoir_faire();
   const [selectedSavoirFaire, setSelectedSavoirFaire] = useState(0);
 
   const handleNextSavoirFaire = () => {
@@ -361,12 +361,12 @@ export default function Home() {
                 &#10216;
               </span>
 
-              {/* Carte de savoir-être */}
-              <div className="bg-white shadow-lg rounded-lg border border-gray-200 w-[300px] p-6 mx-auto">
-                <h3 className="text-xl font-semibold text-gray-800">
+              {/* Carte de savoir-être avec taille fixe */}
+              <div className="bg-white shadow-lg rounded-lg border border-gray-200 w-[300px] h-[250px] p-6 mx-auto flex flex-col justify-center">
+                <h3 className="text-xl font-semibold text-gray-800 text-center">
                   {savoirs[selectedSavoir].nom}
                 </h3>
-                <p className="text-base text-gray-600 mt-2">
+                <p className="text-base text-gray-600 mt-2 text-center overflow-y-auto">
                   {savoirs[selectedSavoir].description}
                 </p>
               </div>
