@@ -5,7 +5,6 @@ import Experience from "./Components/Experience";
 import Projet from "./Components/Projet";
 import Competence from "./Components/Competence";
 import Formation from "./Components/Formation";
-import { useState } from "react";
 import data_comp from "./Data/data_competences";
 import data_form from "./Data/data_formations";
 import data_savoir from "./Data/data_savoir";
