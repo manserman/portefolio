@@ -1,5 +1,5 @@
 "use client";
-
+import { useState, useEffect } from "react";
 import Image from "next/image";
 import Experience from "./Components/Experience";
 import Projet from "./Components/Projet";
