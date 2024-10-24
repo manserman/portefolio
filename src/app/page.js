@@ -163,20 +163,21 @@ export default function Home() {
               développement informatique, notamment en back-end Java. Au cours
               de mes deux années d'expérience professionnelle, j'ai pu
               contribuer à des projets significatifs, notamment lors de ma
-              participation à la migration du code de Java 6 vers Java 17 chez
-              Autoliv, une entreprise internationale spécialisée dans les
-              technologies de sécurité automobile. Cette migration a permis une
-              modernisation importante des systèmes, améliorant ainsi la
-              performance et la sécurité des applications. De plus, j'ai joué un
-              rôle clé dans la transformation des services web REST vers le
-              framework Spring Boot, facilitant la mise en place d'applications
-              plus robustes et flexibles. J'ai également utilisé des outils
-              comme Jenkins et GitLab CI pour l'intégration continue (CI) et le
-              déploiement continu (CD), participant à l'automatisation des
-              processus de build et de déploiement. Grâce à ces pipelines CI/CD,
-              j'ai pu bénéficier des tests automatisés pour garantir la
-              stabilité du code à chaque mise à jour, assurant ainsi une
-              livraison rapide et fiable des fonctionnalités. Ma maîtrise de
+              participation à la migration du code de Java 6 à java 8 puis java
+              11 et finalement vers Java 17 chez Autoliv, une entreprise
+              internationale spécialisée dans les technologies de sécurité
+              automobile. Cette migration a permis une modernisation importante
+              des systèmes, améliorant ainsi la performance et la sécurité des
+              applications. De plus, j'ai méné la migration des webservices
+              REST, permettant le partage d'informations entre les parties java
+              et C++, de jersey vers Springboot (uniquement) facilitant la mise
+              en place d'applications plus robustes et flexibles. J'ai également
+              utilisé des outils comme Jenkins et GitLab CI pour l'intégration
+              continue (CI) et le déploiement continu (CD), participant à
+              l'automatisation des processus de build et de déploiement. Grâce à
+              ces pipelines CI/CD, j'ai pu bénéficier des tests automatisés pour
+              garantir la stabilité du code à chaque mise à jour, assurant ainsi
+              une livraison rapide et fiable des fonctionnalités. Ma maîtrise de
               technologies telles que Java, le serveur d'applications WildFly,
               et l'outil de gestion de projet Maven me permet d'intervenir
               efficacement sur des projets complexes. J'ai également acquis des
