@@ -77,7 +77,7 @@ export default function Sidebar() {
               href="#projets"
               className="text-white text-lg p-3 w-full text-center hover:bg-gray-700 mt-1 cursor-pointer"
             >
-              Projets Universitaires
+              Projets
             </a>
           </div>
         </div>
