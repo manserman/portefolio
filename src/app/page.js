@@ -208,7 +208,7 @@ export default function Home() {
               </div>
               <div className="flex items-center">
                 <a
-                  href="./files/cv.pdf"
+                  href="./files/cv_Mansour.pdf"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="hover:underline text-blue-600"
