@@ -25,6 +25,7 @@ export default function Home() {
   const [selectedSection, setSelectedSection] = useState(0); // section actuellement sélectionnée
   const sections = [
     "accueil",
+    "savoir-faire",
     "stack",
     "competences",
     "experiences",
