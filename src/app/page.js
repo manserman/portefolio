@@ -34,18 +34,26 @@ export default function Home() {
   ]; // nom des sections
 
   // Fonction de gestion du scroll
+  // Fonction de gestion du scroll avec débouncing
+  let scrollTimeout = null;
   const handleScroll = (event) => {
-    if (event.deltaY > 0) {
-      // Si l'utilisateur fait défiler vers le bas
-      setSelectedSection((prevSection) =>
-        prevSection === sections.length - 1 ? 0 : prevSection + 1
-      );
-    } else {
-      // Si l'utilisateur fait défiler vers le haut
-      setSelectedSection((prevSection) =>
-        prevSection === 0 ? sections.length - 1 : prevSection - 1
-      );
+    if (scrollTimeout) {
+      clearTimeout(scrollTimeout);
     }
+
+    scrollTimeout = setTimeout(() => {
+      if (event.deltaY > 0) {
+        // Si l'utilisateur fait défiler vers le bas
+        setSelectedSection((prevSection) =>
+          prevSection === sections.length - 1 ? 0 : prevSection + 1
+        );
+      } else {
+        // Si l'utilisateur fait défiler vers le haut
+        setSelectedSection((prevSection) =>
+          prevSection === 0 ? sections.length - 1 : prevSection - 1
+        );
+      }
+    }, 300); // Délai de 300 ms
   };
 
   // Effet pour gérer le défilement de la molette
@@ -56,6 +64,7 @@ export default function Home() {
     };
   }, []);
 
+  // Effet pour faire défiler vers la section sélectionnée
   useEffect(() => {
     const section = document.getElementById(sections[selectedSection]);
     if (section) {
