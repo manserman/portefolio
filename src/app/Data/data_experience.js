@@ -18,7 +18,7 @@ export default function data_exp() {
       "Migration des applets vers des applications java avec Icedtea-Web et le protocole JNLP",
       "Vérification et résolution des CVE (failles de sécurité) avec OWASP discovery",
       "Développement de nouvelles fonctionnalités",
-      "Etude de l'existant",
+      "Etude de l'existant"
     ],
     competences: [
       "Conception et développement d'applications",
