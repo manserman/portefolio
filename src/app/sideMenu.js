@@ -27,7 +27,7 @@ export default function Sidebar() {
         >
           <Image
             className="mx-auto mt-20 scale-[115%] rounded-full overflow-hidden"
-            height={300}
+            height={200}
             width={200}
             src="./img/photo_profil.JPG"
           />
