@@ -27,7 +27,7 @@ export default function data_projet() {
     illustration: "foot.png",
     description:
       "Ce projet consiste à simuler le fonctionnement d'une compétion sportive en java avec les designs patterns  Builder, Factory, Façade et Composite ",
-      lien: "https://github.com/VoltalitSama/CompetitionSportive"
+      lien: "https://github.com/manserman/CompetitionSportive"
   };
   var projet_5 = {
     titre: "Application permettant la gestion des notes des étudiants ",
