@@ -16,6 +16,11 @@ export default function data_savoir_faire() {
         "Capacité à écrire des tests unitaires efficaces pour assurer la fiabilité et la stabilité du code, en détectant les erreurs à un stade précoce du développement.",
     },
     {
+      "nom": "Clean Code",
+      "description": "Capacité à écrire un code clair, lisible, maintenable et bien structuré, respectant les principes de simplicité, de modularité et de responsabilité unique, afin de faciliter la collaboration et l'évolution du projet."
+    }
+,    
+    {
       nom: "Développement de Webservices REST",
       description:
         "Compétence en création de services web RESTful, permettant l'intégration et l'échange de données entre différentes applications de manière efficace.",
