@@ -22,15 +22,16 @@ export default function Projet({ projet }) {
 
         {/* Image du projet */}
         <div className="mt-4 mx-auto rounded-lg overflow-hidden">
-          <Image
-            className="object-contain w-[00px] h-[250px]"
-  src={"./img/" + projet.illustration}
-  alt={projet.titre}
-  width={300}  // Taille forcée (largeur)
-  height={250} // Taille forcée (hauteur)
-  layout="fixed" // Utilisation de 'fixed' pour forcer les dimensions exactes
-/>
-        </div>
+  <Image
+    className="object-contain w-[300px] h-[250px]"
+    src={"./img/" + projet.illustration}
+    alt={projet.titre}
+    width={300}  // Taille forcée (largeur)
+    height={250} // Taille forcée (hauteur)
+    layout="fixed" // Utilisation de 'fixed' pour forcer les dimensions exactes
+  />
+</div>
+
 
         {/* Description du projet */}
         <div className="px-6 py-4">
