@@ -265,7 +265,7 @@ export default function Home() {
             <span className="text-black font-serif text-4xl">
               Stack technique principale
             </span>
-            <div className="flex flex-wrap gap-4 mt-6 justify-start">
+            <div className="flex flex-wrap gap-4 mt-6 justify-evenly">
               {[
                 { name: "Java", imgSrc: "./img/java.png" },
                 { name: "Spring Boot", imgSrc: "./img/spring.png" },
@@ -290,16 +290,18 @@ export default function Home() {
                 </div>
               ))}
             </div>
+            <br></br>
                 <span className="text-black font-serif text-4xl">
               Autre Stack
             </span>
-            <div className="flex flex-wrap gap-4 mt-6 justify-start">
+            <div className="flex flex-wrap gap-4 mt-6 justify-evenly">
               {[
-                 { name: "C++", imgSrc: "./img/c++.png" },
-                { name: "C#", imgSrc: "./img/csharp.png" },
-                { name: "ASP .NET Core", imgSrc: "./img/NET_Core.png" },
                 { name: "Angular", imgSrc: "./img/angular.png" },
                 { name: "React", imgSrc: "./img/react.png" },
+                { name: "C++", imgSrc: "./img/c++.png" },
+                { name: "C#", imgSrc: "./img/csharp.png" },
+                { name: "ASP .NET Core", imgSrc: "./img/NET_Core.png" },
+                
               ].map((tech, index) => (
                 <div
                   key={index}
