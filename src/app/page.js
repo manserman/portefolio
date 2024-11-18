@@ -271,6 +271,7 @@ export default function Home() {
                 { name: "Spring Boot", imgSrc: "./img/spring.png" },
                 { name: "Hibernate", imgSrc: "./img/hibernate.png" },
                 { name: "Spring Data JPA", imgSrc: "./img/data_jpa.png" },
+                { name: "Tomcat", imgSrc: "./img/tomcat.png"}
               ].map((tech, index) => (
                 <div
                   key={index}
@@ -294,6 +295,7 @@ export default function Home() {
                 { name: "Mockito", imgSrc: "./img/mockito.png" },
                 { name: "JUnit", imgSrc: "./img/JUnit.png" },
                 { name: "Jenkins", imgSrc: "./img/jenkins.png" },
+                { name: "Jersey", imgSrc: "./img/jersey.jpg"}
               ].map((tech, index) => (
                 <div
                   key={index}
