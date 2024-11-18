@@ -279,7 +279,7 @@ export default function Home() {
                 <div
                   key={index}
                   className="flex flex-col items-center justify-center bg-white p-4 rounded-lg w-[150px] h-[150px] border border-gray-300 shadow-lg hover:shadow-2xl hover:border-gray-500 transition-all duration-300"
-                  style={{ flex: "1 1 calc(25% - 16px)" }} 
+                  
                 >
                   <Image
                     src={tech.imgSrc}
@@ -307,7 +307,7 @@ export default function Home() {
                 <div
                   key={index}
                   className="flex flex-col items-center justify-center bg-white p-4 rounded-lg w-[150px] h-[150px] border border-gray-300 shadow-lg hover:shadow-2xl hover:border-gray-500 transition-all duration-300"
-                  style={{ flex: "1 1 calc(25% - 16px)" }} 
+                  
                 >
                   <Image
                     src={tech.imgSrc}
