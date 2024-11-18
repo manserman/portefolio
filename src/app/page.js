@@ -271,6 +271,25 @@ export default function Home() {
                 { name: "Spring Boot", imgSrc: "./img/spring.png" },
                 { name: "Hibernate", imgSrc: "./img/hibernate.png" },
                 { name: "Spring Data JPA", imgSrc: "./img/data_jpa.png" },
+              ].map((tech, index) => (
+                <div
+                  key={index}
+                  className="flex flex-col items-center justify-center bg-white p-4 rounded-lg w-[150px] h-[150px] border border-gray-300 shadow-lg hover:shadow-2xl hover:border-gray-500 transition-all duration-300"
+                  
+                >
+                  <Image
+                    src={tech.imgSrc}
+                    alt={tech.name}
+                    width={60}
+                    height={60}
+                  />
+                  <span className="mt-2 text-lg">{tech.name}</span>
+                </div>
+              ))}
+            </div>
+            <br></br>
+            <div className="flex flex-wrap gap-4 mt-6 justify-center">
+              {[
                 { name: "Spring MVC", imgSrc: "./img/spring_mvc.png" },
                 { name: "Mockito", imgSrc: "./img/mockito.png" },
                 { name: "JUnit", imgSrc: "./img/JUnit.png" },
