@@ -21,9 +21,8 @@ export default function Projet({ projet }) {
         </div>
 
         {/* Image du projet */}
-        <div className="mt-4 mx-auto rounded-lg overflow-hidden">
+        <div className="mt-4 mx-auto rounded-lg overflow-hidden flex justify-center">
           <Image
-           
             width={300}  // Taille réduite
             height={250} // Taille réduite
             src={"./img/" + projet.illustration}
