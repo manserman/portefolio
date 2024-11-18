@@ -274,11 +274,32 @@ export default function Home() {
                 { name: "Spring MVC", imgSrc: "./img/spring_mvc.png" },
                 { name: "Mockito", imgSrc: "./img/mockito.png" },
                 { name: "JUnit", imgSrc: "./img/JUnit.png" },
+                { name: "Jenkins", imgSrc: "./img/jenkins.png" },
+              ].map((tech, index) => (
+                <div
+                  key={index}
+                  className="flex flex-col items-center justify-center bg-white p-4 rounded-lg w-[150px] h-[150px] border border-gray-300 shadow-lg hover:shadow-2xl hover:border-gray-500 transition-all duration-300"
+                >
+                  <Image
+                    src={tech.imgSrc}
+                    alt={tech.name}
+                    width={60}
+                    height={60}
+                  />
+                  <span className="mt-2 text-lg">{tech.name}</span>
+                </div>
+              ))}
+            </div>
+                <span className="text-black font-serif text-4xl">
+              Autre Stack
+            </span>
+            <div className="flex flex-wrap gap-4 mt-6 justify-start">
+              {[
+                 { name: "C++", imgSrc: "./img/c++.png" },
                 { name: "C#", imgSrc: "./img/csharp.png" },
                 { name: "ASP .NET Core", imgSrc: "./img/NET_Core.png" },
                 { name: "Angular", imgSrc: "./img/angular.png" },
                 { name: "React", imgSrc: "./img/react.png" },
-                { name: "Jenkins", imgSrc: "./img/jenkins.png" },
               ].map((tech, index) => (
                 <div
                   key={index}
