@@ -265,7 +265,7 @@ export default function Home() {
             <span className="text-black font-serif text-4xl">
               Stack technique principale
             </span>
-            <div className="flex flex-wrap gap-4 mt-6 justify-evenly">
+            <div className="flex flex-wrap gap-4 mt-6 justify-center">
               {[
                 { name: "Java", imgSrc: "./img/java.png" },
                 { name: "Spring Boot", imgSrc: "./img/spring.png" },
@@ -279,6 +279,7 @@ export default function Home() {
                 <div
                   key={index}
                   className="flex flex-col items-center justify-center bg-white p-4 rounded-lg w-[150px] h-[150px] border border-gray-300 shadow-lg hover:shadow-2xl hover:border-gray-500 transition-all duration-300"
+                  style={{ flex: "1 1 calc(25% - 16px)" }} 
                 >
                   <Image
                     src={tech.imgSrc}
@@ -294,7 +295,7 @@ export default function Home() {
                 <span className="text-black font-serif text-4xl">
               Autre Stack
             </span>
-            <div className="flex flex-wrap gap-4 mt-6 justify-evenly">
+            <div className="flex flex-wrap gap-4 mt-6 justify-center">
               {[
                 { name: "Angular", imgSrc: "./img/angular.png" },
                 { name: "React", imgSrc: "./img/react.png" },
@@ -306,6 +307,7 @@ export default function Home() {
                 <div
                   key={index}
                   className="flex flex-col items-center justify-center bg-white p-4 rounded-lg w-[150px] h-[150px] border border-gray-300 shadow-lg hover:shadow-2xl hover:border-gray-500 transition-all duration-300"
+                  style={{ flex: "1 1 calc(25% - 16px)" }} 
                 >
                   <Image
                     src={tech.imgSrc}
