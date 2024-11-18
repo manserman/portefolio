@@ -22,13 +22,14 @@ export default function Projet({ projet }) {
 
         {/* Image du projet */}
         <div className="mt-4 mx-auto rounded-lg overflow-hidden w-full">
-          <Image
-            className="object-contain w-full h-auto"
-            width={300}  // Taille réduite
-            height={250} // Taille réduite
-            src={"./img/" + projet.illustration}
-            alt={projet.titre}
-          />
+        <Image
+  className="object-contain w-full h-auto"
+  src={"/img/" + projet.illustration}
+  alt={projet.titre}
+  width={300}  // Taille forcée (largeur)
+  height={250} // Taille forcée (hauteur)
+  layout="fixed" // Utilisation de 'fixed' pour forcer les dimensions exactes
+/>
         </div>
 
         {/* Description du projet */}
