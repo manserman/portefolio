@@ -24,8 +24,8 @@ export default function Projet({ projet }) {
         <div className="mt-4 mx-auto rounded-lg overflow-hidden w-full">
           <Image
             className="object-contain w-full h-auto"
-            width={400}  // Taille réduite
-            height={300} // Taille réduite
+            width={300}  // Taille réduite
+            height={250} // Taille réduite
             src={"./img/" + projet.illustration}
             alt={projet.titre}
           />
