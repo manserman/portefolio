@@ -37,7 +37,7 @@ export default function data_projet() {
     lien: "https://github.com/KeVinTsHiBaNgU/ArchiWebNewProjet"
   };
   var projet_6 = {
-    titre: "Application andorid permettant la gestion d'un magasin ",
+    titre: "Application mobile permettant la gestion d'un magasin ",
     illustration: "boutique.png",
     description:
       "Ce projet consiste à développer une application mobile pour la gestion de magasin. L'application permet de gérer les produits, de suivre les stocks, d'authentifier les utilisateurs et de recevoir des notifications pour le réapprovisionnement. Le projet utilise Java pour le modèle et le contrôleur, Gradle pour la gestion du projet, et XML pour la vue avec Android Studio. Une base de données SQLite est intégrée pour assurer la persistance des données.",
