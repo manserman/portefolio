@@ -36,10 +36,17 @@ export default function data_projet() {
       "Ce projet consiste à développer une application web permettant de noter des étudiants en fonction de leurs blocs de compétences. Le stechnologies qui ont été utilisées sont Javascript et typescript pour le backend, Angular et css pour le front-end et Mongodb pour la gestion de bases de données NoSQL",
     lien: "https://github.com/KeVinTsHiBaNgU/ArchiWebNewProjet"
   };
+  var projet_6 = {
+    titre: "Application andorid permettant la gestion d'un magasin ",
+    illustration: "boutique.png",
+    description:
+      "Ce projet consiste à développer une application mobile pour la gestion de magasin. L'application permet de gérer les produits, de suivre les stocks, d'authentifier les utilisateurs et de recevoir des notifications pour le réapprovisionnement. Le projet utilise Java pour le modèle et le contrôleur, Gradle pour la gestion du projet, et XML pour la vue avec Android Studio. Une base de données SQLite est intégrée pour assurer la persistance des données.",
+    lien: "https://github.com/manserman/App-gestionn-magasin"
+  };
 
  
 
-  var projets = [projet_4 , projet_1, projet_2,projet_3, projet_5];
+  var projets = [projet_6, projet_4 , projet_1, projet_2,projet_3, projet_5];
 
   return projets;
 }
