@@ -34,44 +34,7 @@ export default function Home() {
     "projets",
   ]; // nom des sections
 
-  // Fonction de gestion du scroll
-  // Fonction de gestion du scroll avec débouncing
-  let scrollTimeout = null;
-  const handleScroll = (event) => {
-    if (scrollTimeout) {
-      clearTimeout(scrollTimeout);
-    }
 
-    scrollTimeout = setTimeout(() => {
-      if (event.deltaY > 0) {
-        // Si l'utilisateur fait défiler vers le bas
-        setSelectedSection((prevSection) =>
-          prevSection === sections.length - 1 ? 0 : prevSection + 1
-        );
-      } else {
-        // Si l'utilisateur fait défiler vers le haut
-        setSelectedSection((prevSection) =>
-          prevSection === 0 ? sections.length - 1 : prevSection - 1
-        );
-      }
-    }, 300); // Délai de 300 ms
-  };
-
-  // Effet pour gérer le défilement de la molette
-  useEffect(() => {
-    window.addEventListener("wheel", handleScroll);
-    return () => {
-      window.removeEventListener("wheel", handleScroll);
-    };
-  }, []);
-
-  // Effet pour faire défiler vers la section sélectionnée
-  useEffect(() => {
-    const section = document.getElementById(sections[selectedSection]);
-    if (section) {
-      section.scrollIntoView({ behavior: "smooth" });
-    }
-  }, [selectedSection]);
 
   const [selectedProject, setSelectedProject] = useState(0);
   const [selectedFormation, setSelectedFormation] = useState(0);

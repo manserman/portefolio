@@ -2,7 +2,7 @@ import { useState } from 'react';
 import Image from 'next/image'; // Si vous utilisez Next.js, sinon importez l'image selon votre projet.
 
 export default function Sidebar() {
-  const [isOpen, setIsOpen] = useState(false);
+  const [isOpen, setIsOpen] = useState(true);
 
   const toggleMenu = () => {
     setIsOpen(!isOpen);
