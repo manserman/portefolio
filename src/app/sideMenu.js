@@ -1,5 +1,5 @@
-import { useState } from 'react';
-import Image from 'next/image'; // Si vous utilisez Next.js, sinon importez l'image selon votre projet.
+import { useState } from "react";
+import Image from "next/image"; // Si vous utilisez Next.js, sinon importez l'image selon votre projet.
 
 export default function Sidebar() {
   const [isOpen, setIsOpen] = useState(true);
@@ -13,16 +13,16 @@ export default function Sidebar() {
       <main className="h-full bg-inherit flex flex-row">
         {/********************* BURGER MENU BUTTON **********************/}
         <button
-          className="p-4 fixed top-4 left-4 z-50 bg-gray-800 text-white"
+          className="py-2 px-4 fixed top-4 left-4 z-50 bg-gray-800 text-white"
           onClick={toggleMenu}
         >
-          {isOpen ? 'Close' : 'Menu'}
+          {isOpen ? "Close" : "Menu"}
         </button>
 
         {/********************* SIDE BAR **********************/}
         <div
           className={`h-[100%] w-[17%] fixed bg-gray-800 flex flex-col transform transition-transform duration-300 ${
-            isOpen ? 'translate-x-0' : '-translate-x-full'
+            isOpen ? "translate-x-0" : "-translate-x-full"
           }`}
         >
           <Image
@@ -41,7 +41,8 @@ export default function Sidebar() {
             <a
               href="#savoir-faire"
               className="text-white text-lg p-3 w-full text-center hover:bg-gray-700 mt-1 cursor-pointer"
-            >Savoir faire
+            >
+              Savoir faire
             </a>
             <a
               href="#stack"
