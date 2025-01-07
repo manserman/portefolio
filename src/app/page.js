@@ -178,7 +178,7 @@ export default function Home() {
                   rel="noopener noreferrer"
                   className="hover:underline text-blue-600"
                 >
-                  Mon CV
+                 Consulter  Mon CV
                 </a>
               </div>
             </div>
