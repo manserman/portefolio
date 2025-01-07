@@ -13,7 +13,7 @@ export default function Sidebar() {
       <main className="h-full bg-inherit flex flex-row">
         {/********************* BURGER MENU BUTTON **********************/}
         <button
-          className="py-2 px-4 fixed top-4 left-4 z-50 bg-gray-800 text-white"
+          className="h-8 w-auto fixed top-4 left-4 z-50 bg-gray-800 text-white px-4"
           onClick={toggleMenu}
         >
           {isOpen ? "Close" : "Menu"}
