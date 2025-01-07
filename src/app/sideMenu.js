@@ -29,9 +29,9 @@ export default function Sidebar() {
             className="mx-auto mt-20 scale-[115%] rounded-full overflow-hidden"
             style={{
               width: "80%",
-              height: "25%",
+              height: "30%",
               maxWidth: "80%",
-              maxHeight: "25%",
+              maxHeight: "30%",
             }}
             src="./img/photo_profil.JPG"
           />
