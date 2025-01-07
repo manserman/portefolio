@@ -27,12 +27,8 @@ export default function Sidebar() {
         >
           <Image
             className="mx-auto mt-20 scale-[115%] rounded-full overflow-hidden"
-            style={{
-              width: "80%",
-              height: "30%",
-              maxWidth: "80%",
-              maxHeight: "30%",
-            }}
+            height={200}
+            width={200}
             src="./img/photo_profil.JPG"
           />
           <div className="flex flex-col items-center justify-start mt-4">
