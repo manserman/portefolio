@@ -24,13 +24,21 @@ export default function Sidebar() {
           className={`h-[100%] w-[17%] fixed bg-gray-800 flex flex-col transform transition-transform duration-300 ${
             isOpen ? 'translate-x-0' : '-translate-x-full'
           }`}
-        >
-          <Image
-            className="mx-auto mt-20 scale-[115%] rounded-full overflow-hidden"
-            height={200}
-            width={200}
-            src="./img/photo_profil.JPG"
-          />
+        > 
+           {/* Image de profil */}
+           <div className="flex justify-center mt-10">
+            <Image
+              className="rounded-full border-4 border-gray-300 shadow-md object-cover"
+              src="./img/photo_profil.JPG" // Assurez-vous que le chemin est correct.
+              alt="Photo de profil"
+              width={150} // Largeur minimale pour Next.js
+              height={150} // Hauteur minimale pour Next.js
+              style={{
+                maxWidth: '80%', // Limite la largeur à 80% du conteneur
+                maxHeight: '30%', // Limite la hauteur à 30% du conteneur
+              }}
+            />
+          </div>
           <div className="flex flex-col items-center justify-start mt-4">
             <a
               href="#accueil"
