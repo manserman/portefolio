@@ -234,7 +234,7 @@ export default function Home() {
                 { name: "Spring Boot", imgSrc: "./img/spring.png" },
                 { name: "Hibernate", imgSrc: "./img/hibernate.png" },
                 { name: "Spring Data JPA", imgSrc: "./img/data_jpa.png" },
-                { name: "Tomcat", imgSrc: "./img/tomcat.png"}
+                { name: "Kubernates", imgSrc: "./img/kubernates.png"}
               ].map((tech, index) => (
                 <div
                   key={index}
@@ -254,11 +254,11 @@ export default function Home() {
             <br></br>
             <div className="flex flex-wrap gap-4 mt-6 justify-center">
               {[
+                { name: "Docker", imgSrc: "./img/docker.jpg"},
                 { name: "Spring MVC", imgSrc: "./img/spring_mvc.png" },
                 { name: "Mockito", imgSrc: "./img/mockito.png" },
                 { name: "JUnit", imgSrc: "./img/JUnit.png" },
-                { name: "Jenkins", imgSrc: "./img/jenkins.png" },
-                { name: "Jersey", imgSrc: "./img/jersey.jpg"}
+                { name: "Jenkins", imgSrc: "./img/jenkins.png" }
               ].map((tech, index) => (
                 <div
                   key={index}
