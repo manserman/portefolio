@@ -254,7 +254,7 @@ export default function Home() {
             <br></br>
             <div className="flex flex-wrap gap-4 mt-6 justify-center">
               {[
-                { name: "Docker", imgSrc: "./img/docker.jpg"},
+                { name: "Docker", imgSrc: "./img/docker.png"},
                 { name: "Spring MVC", imgSrc: "./img/spring_mvc.png" },
                 { name: "Mockito", imgSrc: "./img/mockito.png" },
                 { name: "JUnit", imgSrc: "./img/JUnit.png" },
