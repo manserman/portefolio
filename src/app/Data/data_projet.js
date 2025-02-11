@@ -44,8 +44,23 @@ export default function data_projet() {
       "Ce projet consiste à développer une application mobile pour la gestion de magasin. L'application permet de gérer les produits, de suivre les stocks, d'authentifier les utilisateurs et de recevoir des notifications pour le réapprovisionnement. Le projet utilise Java pour le modèle et le contrôleur, Gradle pour la gestion du projet, et XML pour la vue avec Android Studio. Une base de données SQLite est intégrée pour assurer la persistance des données.",
     lien: "https://github.com/manserman/App-gestionn-magasin",
   };
+  var projet_7 = {
+    titre: "myGrade - Backend pour la gestion des notes des étudiants",
+    illustration: "etudes.jpg",
+    description:
+      "myGrade est une application backend développée en Java avec Spring Boot, permettant de gérer les notes et appréciations des étudiants de manière centralisée. L'application fournit des API REST sécurisées pour la gestion des utilisateurs, des matières et des évaluations. Elle utilise Spring Data MongoDB pour stocker les données et assurer une gestion efficace des notes et des appréciations.",
+    lien: "https://github.com/manserman/myGrade",
+  };
 
-  var projets = [projet_6, projet_4, projet_1, projet_2, projet_3, projet_5];
+  var projets = [
+    projet_7,
+    projet_6,
+    projet_4,
+    projet_1,
+    projet_2,
+    projet_3,
+    projet_5,
+  ];
 
   return projets;
 }
