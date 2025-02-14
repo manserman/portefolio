@@ -34,8 +34,6 @@ export default function Home() {
     "projets",
   ]; // nom des sections
 
-
-
   const [selectedProject, setSelectedProject] = useState(0);
   const [selectedFormation, setSelectedFormation] = useState(0);
 
@@ -121,41 +119,52 @@ export default function Home() {
               </span>
             </div>
             <div className="text-justify tracking-wide text-base font-serif w-[85%] mt-4">
-              Diplômé d'un Master MIAGE (Méthodes Informatiques Appliquées à la
-              Gestion des Entreprises) avec mention bien, j'ai eu l'opportunité
-              de développer des compétences solides dans le domaine du
-              développement informatique, notamment en back-end Java. Au cours
-              de mes deux années d'expérience professionnelle, j'ai pu
-              contribuer à des projets significatifs, notamment lors de ma
-              participation à la migration du code de Java 6 à java 8 puis java
-              11 et finalement vers Java 17 chez Autoliv, une entreprise
-              internationale spécialisée dans les technologies de sécurité
-              automobile. Cette migration a permis une modernisation importante
-              des systèmes, améliorant ainsi la performance et la sécurité des
-              applications. De plus, j'ai méné la migration des webservices
-              REST, permettant le partage d'informations entre les parties java
-              et C++, de jersey vers Springboot (uniquement) facilitant la mise
-              en place d'applications plus robustes et flexibles. J'ai également
-              utilisé des outils comme Jenkins et GitLab CI pour l'intégration
-              continue (CI) et le déploiement continu (CD), participant à
-              l'automatisation des processus de build et de déploiement. Grâce à
-              ces pipelines CI/CD, j'ai pu bénéficier des tests automatisés pour
-              garantir la stabilité du code à chaque mise à jour, assurant ainsi
-              une livraison rapide et fiable des fonctionnalités. Ma maîtrise de
-              technologies telles que Java, le serveur d'applications WildFly,
-              et l'outil de gestion de projet Maven me permet d'intervenir
-              efficacement sur des projets complexes. J'ai également acquis des
-              compétences en systèmes d'information web, ce qui me donne une
-              bonne compréhension des besoins liés à la gestion et à
-              l'intégration de données dans des environnements variés. Passionné
-              par les défis techniques liés aux architectures back-end, je suis
-              en permanence à la recherche de moyens pour améliorer la
-              scalabilité et la fiabilité des systèmes. Bien que mon expertise
-              principale soit orientée vers le back-end, je suis également
-              ouvert aux opportunités qui me permettraient de développer
-              davantage mes compétences en full stack, afin d’avoir une vue plus
-              complète des applications web modernes et de participer à des
-              projets de bout en bout.
+              Diplômé d'un <b>Master MIAGE</b> (Méthodes Informatiques
+              Appliquées à la Gestion des Entreprises), avec une spécialisation
+              en <b>Ingénierie des Données et de la Décision</b>, obtenu avec
+              mention Bien, j'ai développé des compétences solides en
+              développement informatique, notamment en <b>back-end Java</b>.
+              Fort de <b>deux années d'expérience professionnelle</b>, j'ai
+              contribué à des projets significatifs, notamment chez{" "}
+              <b>Autoliv</b>, une entreprise spécialisée dans les technologies
+              de sécurité automobile. J'y ai participé à la{" "}
+              <b>migration du code</b> de <b>Java 6</b> vers <b>Java 8</b>, puis{" "}
+              <b>Java 11</b> et enfin <b>Java 17</b>, modernisant les systèmes
+              et améliorant leur <b>performance et sécurité</b>. J'ai également
+              mené la <b>migration des webservices REST</b>, optimisant le
+              partage d'informations entre les parties <b>Java</b> et <b>C++</b>
+              , en passant de <b>Jersey</b> à <b>Spring Boot</b>. Cette
+              transition a rendu les applications{" "}
+              <b>plus robustes et flexibles</b>. En parallèle, j'ai travaillé
+              sur l'intégration de <b>Kafka</b>
+              pour la <b>gestion des événements</b>, facilitant l'échange de
+              données entre microservices et améliorant la scalabilité. Afin
+              d'optimiser le déploiement et la gestion des applications, j'ai
+              utilisé <b>Docker</b> pour la
+              <b>conteneurisation</b> et <b>Kubernetes</b> pour orchestrer et
+              automatiser le <b>déploiement des services</b>. Cette approche a
+              permis d'améliorer la <b>résilience</b> et la <b>scalabilité</b>{" "}
+              des applications en production. De plus, j'ai intégré des
+              pipelines <b>CI/CD</b> avec <b>Jenkins</b> et <b>GitLab CI</b>,
+              automatisant les processus de build, de test et de déploiement.
+              Cela a renforcé la <b>stabilité</b> et accéléré la{" "}
+              <b>livraison des fonctionnalités</b>, garantissant un cycle de
+              développement plus fluide. Ma maîtrise de technologies telles que{" "}
+              <b>Java, Spring Boot, Kafka, Kubernetes, Docker</b>, le serveur
+              d'applications <b>WildFly</b> et <b>Maven</b> me permet
+              d'intervenir efficacement sur des projets complexes. J'ai
+              également acquis des compétences en{" "}
+              <b>systèmes d'information web</b>, me donnant une bonne
+              compréhension des enjeux liés à la{" "}
+              <b>gestion et l'intégration des données</b> dans divers
+              environnements. Passionné par les défis techniques des{" "}
+              <b>architectures back-end</b>, je cherche constamment à améliorer
+              la <b>scalabilité</b> et la <b>fiabilité</b> des systèmes. Bien
+              que mon expertise principale soit en <b>back-end</b>, je suis
+              ouvert aux opportunités me permettant de renforcer mes compétences
+              en <b>full stack</b>, afin d'avoir une vision complète des{" "}
+              <b>applications web modernes</b> et de contribuer à des projets de
+              bout en bout.
             </div>
 
             <div className="flex justify-between items-center mt-8 space-x-4">
@@ -178,7 +187,7 @@ export default function Home() {
                   rel="noopener noreferrer"
                   className="hover:underline text-blue-600"
                 >
-                 Consulter  Mon CV
+                  Consulter Mon CV
                 </a>
               </div>
             </div>
@@ -234,12 +243,11 @@ export default function Home() {
                 { name: "Spring Boot", imgSrc: "./img/spring.png" },
                 { name: "Hibernate", imgSrc: "./img/hibernate.png" },
                 { name: "Spring Data JPA", imgSrc: "./img/data_jpa.png" },
-                { name: "Kubernates", imgSrc: "./img/kubernates.png"}
+                { name: "Kubernates", imgSrc: "./img/kubernates.png" },
               ].map((tech, index) => (
                 <div
                   key={index}
                   className="flex flex-col items-center justify-center bg-white p-4 rounded-lg w-[150px] h-[150px] border border-gray-300 shadow-lg hover:shadow-2xl hover:border-gray-500 transition-all duration-300"
-                  
                 >
                   <Image
                     src={tech.imgSrc}
@@ -254,16 +262,15 @@ export default function Home() {
             <br></br>
             <div className="flex flex-wrap gap-4 mt-6 justify-center">
               {[
-                { name: "Docker", imgSrc: "./img/docker.png"},
+                { name: "Docker", imgSrc: "./img/docker.png" },
                 { name: "Spring MVC", imgSrc: "./img/spring_mvc.png" },
                 { name: "Mockito", imgSrc: "./img/mockito.png" },
                 { name: "JUnit", imgSrc: "./img/JUnit.png" },
-                { name: "Jenkins", imgSrc: "./img/jenkins.png" }
+                { name: "Jenkins", imgSrc: "./img/jenkins.png" },
               ].map((tech, index) => (
                 <div
                   key={index}
                   className="flex flex-col items-center justify-center bg-white p-4 rounded-lg w-[150px] h-[150px] border border-gray-300 shadow-lg hover:shadow-2xl hover:border-gray-500 transition-all duration-300"
-                  
                 >
                   <Image
                     src={tech.imgSrc}
@@ -276,9 +283,7 @@ export default function Home() {
               ))}
             </div>
             <br></br>
-                <span className="text-black font-serif text-4xl">
-              Autre Stack
-            </span>
+            <span className="text-black font-serif text-4xl">Autre Stack</span>
             <div className="flex flex-wrap gap-4 mt-6 justify-center">
               {[
                 { name: "Angular", imgSrc: "./img/angular.png" },
@@ -286,12 +291,10 @@ export default function Home() {
                 { name: "C++", imgSrc: "./img/c++.png" },
                 { name: "C#", imgSrc: "./img/csharp.png" },
                 { name: "ASP .NET Core", imgSrc: "./img/NET_Core.png" },
-                
               ].map((tech, index) => (
                 <div
                   key={index}
                   className="flex flex-col items-center justify-center bg-white p-4 rounded-lg w-[150px] h-[150px] border border-gray-300 shadow-lg hover:shadow-2xl hover:border-gray-500 transition-all duration-300"
-                  
                 >
                   <Image
                     src={tech.imgSrc}
