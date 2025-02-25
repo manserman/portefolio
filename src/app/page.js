@@ -21,19 +21,7 @@ export default function Home() {
   const formations = data_form();
   const savoirs = data_savoir();
   const savoirFaire = data_savoir_faire();
-  /********************* ETAT  **************************/
-  const [selectedSection, setSelectedSection] = useState(0); // section actuellement sélectionnée
-  const sections = [
-    "accueil",
-    "savoir-faire",
-    "stack",
-    "competences",
-    "experiences",
-    "savoirs",
-    "formations",
-    "projets",
-  ]; // nom des sections
-
+ 
   const [selectedProject, setSelectedProject] = useState(0);
   const [selectedFormation, setSelectedFormation] = useState(0);
 
@@ -182,7 +170,7 @@ export default function Home() {
               </div>
               <div className="flex items-center">
                 <a
-                  href="./files/cv_Mansour.pdf"
+                  href="./files/FR_Mohamadou_Mansour_HABIBOU_HAMANI.pdf"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="hover:underline text-blue-600"
