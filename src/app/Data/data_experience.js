@@ -17,7 +17,7 @@ export default function data_exp() {
       "CI/CD",
       "Correction de bugs et amélioraiton des performances",
       "Migration des applets vers des applications bureau java (clients lourds) avec Icedtea-Web et le protocole JNLP",
-      "Vérification et résolution des CVE (failles de sécurité) avec OWASP dependancy-check",
+      "Vérification et résolution des CVE (failles de sécurité) avec OWASP Dependency-Check",
       "Développement de nouvelles fonctionnalités",
       "Etude de l'existant"
     ],
