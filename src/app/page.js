@@ -87,26 +87,44 @@ export default function Home() {
     );
   };
   return (
-    <div className="h-screen  w-screen overflow-y-auto">
+    <div className="h-screen w-screen overflow-y-auto">
       <main className="h-full bg-inherit flex flex-row">
         {/********************* SIDE BAR **********************/}
         <Sidebar />
 
         {/********************* SECTION PRINCIPALE **********************/}
-        <div id="princiaple">
+        <div id="princiaple" className="ml-72">
           <section
             id="accueil"
-            className="min-h-screen flex flex-col justify-center pl-12 pr-12"
+            className="min-h-screen flex flex-col justify-center px-12 relative overflow-hidden"
           >
-            <span className="text-5xl font-serif text-black">
-              Mohamadou Mansour HABIBOU HAMANI
-            </span>
-            <div className="flex flex-row mt-4">
-              <span className="italic font-serif text-xl text-black">
-                Ingénieur logiciel
-              </span>
-            </div>
-            <div className="text-justify tracking-wide text-base font-serif w-[85%] mt-4">
+            {/* Background decorative elements */}
+            <div className="absolute top-20 right-20 w-96 h-96 bg-indigo-200 rounded-full mix-blend-multiply filter blur-3xl opacity-20 animate-pulse"></div>
+            <div className="absolute bottom-20 left-20 w-96 h-96 bg-purple-200 rounded-full mix-blend-multiply filter blur-3xl opacity-20 animate-pulse" style={{ animationDelay: '2s' }}></div>
+
+            <div className="relative z-10">
+              {/* Badge de salutation */}
+              <div className="inline-flex items-center gap-2 px-4 py-2 bg-gradient-to-r from-indigo-50 to-purple-50 border border-indigo-200 rounded-full mb-6 animate-fade-in">
+                <span className="text-2xl">👋</span>
+                <span className="text-sm font-medium text-indigo-700">Bienvenue sur mon portfolio</span>
+              </div>
+
+              {/* Nom */}
+              <h1 className="text-6xl font-bold bg-gradient-to-r from-slate-900 via-indigo-800 to-slate-900 bg-clip-text text-transparent leading-tight mb-6 animate-fade-in-up">
+                Mohamadou Mansour<br />HABIBOU HAMANI
+              </h1>
+
+              {/* Titre professionnel */}
+              <div className="flex items-center gap-3 mb-8 animate-fade-in-up" style={{ animationDelay: '100ms' }}>
+                <div className="h-1 w-12 bg-gradient-to-r from-indigo-500 to-purple-600 rounded"></div>
+                <h2 className="text-2xl font-semibold text-slate-700">
+                  Ingénieur Logiciel
+                </h2>
+              </div>
+
+              {/* Description */}
+              <div className="max-w-5xl animate-fade-in-up" style={{ animationDelay: '200ms' }}>
+                <div className="text-justify leading-relaxed text-base text-slate-700 space-y-4 bg-white/50 backdrop-blur-sm p-8 rounded-2xl shadow-lg border border-slate-200">
               Diplômé d'un <b>Master MIAGE</b> (Méthodes Informatiques
               Appliquées à la Gestion des Entreprises), avec une spécialisation
               en <b>Ingénierie des Données et de la Décision</b>, obtenu avec
@@ -153,29 +171,60 @@ export default function Home() {
               en <b>full stack</b>, afin d'avoir une vision complète des{" "}
               <b>applications web modernes</b> et de contribuer à des projets de
               bout en bout.
-            </div>
+                </div>
+              </div>
 
-            <div className="flex justify-between items-center mt-8 space-x-4">
-              <div className="flex items-center">
-                <span>&#128233;</span>
-                <span className="ml-2">mansourh923@gmail.com</span>
-              </div>
-              <div className="flex items-center">
-                <span>&#128241;</span>
-                <span className="ml-2">06 65 15 40 90</span>
-              </div>
-              <div className="flex items-center">
-                <span>&#128664;</span>
-                <span className="ml-2">Ile de France / Hauts de France</span>
-              </div>
-              <div className="flex items-center">
+              {/* Informations de contact */}
+              <div className="mt-10 grid grid-cols-2 md:grid-cols-4 gap-4 animate-fade-in-up" style={{ animationDelay: '300ms' }}>
+                <a href="mailto:mansourh923@gmail.com" className="group modern-card p-4 hover:scale-105 transition-all duration-300">
+                  <div className="flex items-center gap-3">
+                    <div className="w-10 h-10 rounded-lg bg-gradient-to-br from-indigo-500 to-purple-600 flex items-center justify-center text-white text-xl group-hover:scale-110 transition-transform duration-300">
+                      ✉️
+                    </div>
+                    <div className="flex-1 min-w-0">
+                      <div className="text-xs text-slate-500 font-medium">Email</div>
+                      <div className="text-sm text-slate-700 truncate">mansourh923@gmail.com</div>
+                    </div>
+                  </div>
+                </a>
+
+                <div className="modern-card p-4">
+                  <div className="flex items-center gap-3">
+                    <div className="w-10 h-10 rounded-lg bg-gradient-to-br from-indigo-500 to-purple-600 flex items-center justify-center text-white text-xl">
+                      📱
+                    </div>
+                    <div className="flex-1 min-w-0">
+                      <div className="text-xs text-slate-500 font-medium">Téléphone</div>
+                      <div className="text-sm text-slate-700">06 65 15 40 90</div>
+                    </div>
+                  </div>
+                </div>
+
+                <div className="modern-card p-4">
+                  <div className="flex items-center gap-3">
+                    <div className="w-10 h-10 rounded-lg bg-gradient-to-br from-indigo-500 to-purple-600 flex items-center justify-center text-white text-xl">
+                      📍
+                    </div>
+                    <div className="flex-1 min-w-0">
+                      <div className="text-xs text-slate-500 font-medium">Localisation</div>
+                      <div className="text-sm text-slate-700">Ile de France</div>
+                    </div>
+                  </div>
+                </div>
+
                 <a
                   href="./files/FR_Mohamadou_Mansour_HABIBOU_HAMANI.pdf"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="hover:underline text-blue-600"
+                  className="modern-button text-white p-4 rounded-lg flex items-center justify-center gap-2 font-medium hover:scale-105 transition-all duration-300 group/cv"
                 >
-                  Consulter Mon CV
+                  <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
+                  </svg>
+                  <span>Télécharger CV</span>
+                  <svg className="w-4 h-4 transition-transform duration-300 group-hover/cv:translate-x-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                  </svg>
                 </a>
               </div>
             </div>
@@ -184,142 +233,184 @@ export default function Home() {
             id="savoir-faire"
             className="min-h-screen flex flex-col justify-center items-center"
           >
-            <span className="text-black font-serif text-4xl">SAVOIR-FAIRE</span>
-            <div className="text-slate-600 text-base italic mt-2">
-              Liste des savoir-faire techniques et professionnels
+            <div className="text-center mb-12 animate-fade-in-up">
+              <h2 className="text-5xl font-bold bg-gradient-to-r from-slate-900 via-indigo-800 to-slate-900 bg-clip-text text-transparent mb-3">
+                SAVOIR-FAIRE
+              </h2>
+              <p className="text-slate-600 text-lg">
+                Liste des savoir-faire techniques et professionnels
+              </p>
             </div>
 
             <div className="relative w-full flex items-center justify-center mt-6 px-12">
-              {/* Bouton de gauche */}
-              <span
+              {/* Bouton de navigation gauche */}
+              <button
                 onClick={handlePreviousSavoirFaire}
-                className="absolute left-0 text-7xl text-gray-800 hover:cursor-pointer hover:scale-[130%] transform -translate-y-1/2 top-[50%]"
+                className="absolute left-12 z-20 w-14 h-14 rounded-full bg-white shadow-lg border border-slate-200 flex items-center justify-center text-slate-700 hover:bg-indigo-500 hover:text-white hover:scale-110 transition-all duration-300 group"
+                aria-label="Précédent"
               >
-                &#10216;
-              </span>
+                <svg className="w-6 h-6 transition-transform duration-300 group-hover:-translate-x-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
+                </svg>
+              </button>
 
-              {/* Carte de savoir-faire */}
-              <div className="bg-white shadow-lg rounded-lg border border-gray-200 w-[500px] h-[500px] p-6 mx-auto flex flex-col justify-center">
-                <h3 className="text-xl font-semibold text-gray-800">
-                  {savoirFaire[selectedSavoirFaire].nom}
-                </h3>
-                <p className="text-base text-gray-600 mt-2">
-                  {savoirFaire[selectedSavoirFaire].description}
-                </p>
+              {/* Carte de savoir-faire moderne */}
+              <div className="modern-card w-[600px] min-h-[400px] p-10 mx-auto flex flex-col justify-center relative overflow-hidden animate-fade-in">
+                <div className="absolute top-0 right-0 w-32 h-32 bg-gradient-to-br from-indigo-100 to-purple-100 rounded-full -mr-16 -mt-16 opacity-50"></div>
+
+                <div className="relative z-10">
+                  <div className="inline-flex items-center gap-2 px-4 py-2 bg-gradient-to-r from-indigo-50 to-purple-50 border border-indigo-200 rounded-full mb-6">
+                    <span className="text-2xl">💼</span>
+                    <span className="text-sm font-medium text-indigo-700">
+                      {selectedSavoirFaire + 1} / {savoirFaire.length}
+                    </span>
+                  </div>
+
+                  <h3 className="text-3xl font-bold text-slate-900 mb-6 leading-tight">
+                    {savoirFaire[selectedSavoirFaire].nom}
+                  </h3>
+
+                  <p className="text-lg text-slate-700 leading-relaxed">
+                    {savoirFaire[selectedSavoirFaire].description}
+                  </p>
+                </div>
               </div>
 
-              {/* Bouton de droite */}
-              <span
+              {/* Bouton de navigation droite */}
+              <button
                 onClick={handleNextSavoirFaire}
-                className="absolute right-0 text-7xl text-gray-800 hover:cursor-pointer hover:scale-[130%] transform -translate-y-1/2 top-[50%]"
+                className="absolute right-12 z-20 w-14 h-14 rounded-full bg-white shadow-lg border border-slate-200 flex items-center justify-center text-slate-700 hover:bg-indigo-500 hover:text-white hover:scale-110 transition-all duration-300 group"
+                aria-label="Suivant"
               >
-                &#10217;
-              </span>
+                <svg className="w-6 h-6 transition-transform duration-300 group-hover:translate-x-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                </svg>
+              </button>
             </div>
           </section>
 
           <section
             id="stack"
-            className="min-h-screen flex flex-col justify-center pl-12 pr-12"
+            className="min-h-screen flex flex-col justify-center px-12"
           >
-            <span className="text-black font-serif text-4xl">
-              Stack technique principale
-            </span>
-            <div className="flex flex-wrap gap-4 mt-6 justify-center">
-              {[
-                { name: "Java", imgSrc: "./img/java.png" },
-                { name: "Spring Boot", imgSrc: "./img/spring.png" },
-                { name: "Hibernate", imgSrc: "./img/hibernate.png" },
-                { name: "Spring Data JPA", imgSrc: "./img/data_jpa.png" },
-                { name: "Kubernates", imgSrc: "./img/kubernates.png" },
-              ].map((tech, index) => (
-                <div
-                  key={index}
-                  className="flex flex-col items-center justify-center bg-white p-4 rounded-lg w-[150px] h-[150px] border border-gray-300 shadow-lg hover:shadow-2xl hover:border-gray-500 transition-all duration-300"
-                >
-                  <Image
-                    src={tech.imgSrc}
-                    alt={tech.name}
-                    width={60}
-                    height={60}
-                  />
-                  <span className="mt-2 text-lg">{tech.name}</span>
-                </div>
-              ))}
+            <div className="text-center mb-12 animate-fade-in-up">
+              <h2 className="text-5xl font-bold bg-gradient-to-r from-slate-900 via-indigo-800 to-slate-900 bg-clip-text text-transparent mb-3">
+                Stack Technique
+              </h2>
+              <p className="text-slate-600 text-lg">Technologies et frameworks maîtrisés</p>
             </div>
-            <br></br>
-            <div className="flex flex-wrap gap-4 mt-6 justify-center">
-              {[
-                { name: "Docker", imgSrc: "./img/docker.png" },
-                { name: "Spring MVC", imgSrc: "./img/spring_mvc.png" },
-                { name: "Mockito", imgSrc: "./img/mockito.png" },
-                { name: "JUnit", imgSrc: "./img/JUnit.png" },
-                { name: "Jenkins", imgSrc: "./img/jenkins.png" },
-              ].map((tech, index) => (
-                <div
-                  key={index}
-                  className="flex flex-col items-center justify-center bg-white p-4 rounded-lg w-[150px] h-[150px] border border-gray-300 shadow-lg hover:shadow-2xl hover:border-gray-500 transition-all duration-300"
-                >
-                  <Image
-                    src={tech.imgSrc}
-                    alt={tech.name}
-                    width={60}
-                    height={60}
-                  />
-                  <span className="mt-2 text-lg">{tech.name}</span>
-                </div>
-              ))}
+
+            {/* Stack principale */}
+            <div className="mb-16">
+              <div className="flex items-center gap-3 mb-8">
+                <div className="h-1 w-12 bg-gradient-to-r from-indigo-500 to-purple-600 rounded"></div>
+                <h3 className="text-2xl font-bold text-slate-900">Stack Principale</h3>
+              </div>
+              <div className="flex flex-wrap gap-6 justify-center">
+                {[
+                  { name: "Java", imgSrc: "./img/java.png" },
+                  { name: "Spring Boot", imgSrc: "./img/spring.png" },
+                  { name: "Hibernate", imgSrc: "./img/hibernate.png" },
+                  { name: "Spring Data JPA", imgSrc: "./img/data_jpa.png" },
+                  { name: "Kubernetes", imgSrc: "./img/kubernates.png" },
+                  { name: "Docker", imgSrc: "./img/docker.png" },
+                  { name: "Spring MVC", imgSrc: "./img/spring_mvc.png" },
+                  { name: "Mockito", imgSrc: "./img/mockito.png" },
+                  { name: "JUnit", imgSrc: "./img/JUnit.png" },
+                  { name: "Jenkins", imgSrc: "./img/jenkins.png" },
+                ].map((tech, index) => (
+                  <div
+                    key={index}
+                    className="group modern-card p-6 w-40 h-40 flex flex-col items-center justify-center hover:scale-110 transition-all duration-300"
+                    style={{ animationDelay: `${index * 50}ms` }}
+                  >
+                    <div className="relative w-16 h-16 mb-4 group-hover:scale-110 transition-transform duration-300">
+                      <Image
+                        src={tech.imgSrc}
+                        alt={tech.name}
+                        width={64}
+                        height={64}
+                        className="object-contain"
+                      />
+                    </div>
+                    <span className="text-sm font-medium text-slate-700 text-center group-hover:text-indigo-600 transition-colors duration-300">
+                      {tech.name}
+                    </span>
+                  </div>
+                ))}
+              </div>
             </div>
-            <br></br>
-            <span className="text-black font-serif text-4xl">Autre Stack</span>
-            <div className="flex flex-wrap gap-4 mt-6 justify-center">
-              {[
-                { name: "Angular", imgSrc: "./img/angular.png" },
-                { name: "React", imgSrc: "./img/react.png" },
-                { name: "C++", imgSrc: "./img/c++.png" },
-                { name: "C#", imgSrc: "./img/csharp.png" },
-                { name: "ASP .NET Core", imgSrc: "./img/NET_Core.png" },
-              ].map((tech, index) => (
-                <div
-                  key={index}
-                  className="flex flex-col items-center justify-center bg-white p-4 rounded-lg w-[150px] h-[150px] border border-gray-300 shadow-lg hover:shadow-2xl hover:border-gray-500 transition-all duration-300"
-                >
-                  <Image
-                    src={tech.imgSrc}
-                    alt={tech.name}
-                    width={60}
-                    height={60}
-                  />
-                  <span className="mt-2 text-lg">{tech.name}</span>
-                </div>
-              ))}
+
+            {/* Autre stack */}
+            <div>
+              <div className="flex items-center gap-3 mb-8">
+                <div className="h-1 w-12 bg-gradient-to-r from-indigo-500 to-purple-600 rounded"></div>
+                <h3 className="text-2xl font-bold text-slate-900">Technologies Complémentaires</h3>
+              </div>
+              <div className="flex flex-wrap gap-6 justify-center">
+                {[
+                  { name: "Angular", imgSrc: "./img/angular.png" },
+                  { name: "React", imgSrc: "./img/react.png" },
+                  { name: "C++", imgSrc: "./img/c++.png" },
+                  { name: "C#", imgSrc: "./img/csharp.png" },
+                  { name: "ASP .NET Core", imgSrc: "./img/NET_Core.png" },
+                ].map((tech, index) => (
+                  <div
+                    key={index}
+                    className="group modern-card p-6 w-40 h-40 flex flex-col items-center justify-center hover:scale-110 transition-all duration-300"
+                    style={{ animationDelay: `${index * 50}ms` }}
+                  >
+                    <div className="relative w-16 h-16 mb-4 group-hover:scale-110 transition-transform duration-300">
+                      <Image
+                        src={tech.imgSrc}
+                        alt={tech.name}
+                        width={64}
+                        height={64}
+                        className="object-contain"
+                      />
+                    </div>
+                    <span className="text-sm font-medium text-slate-700 text-center group-hover:text-indigo-600 transition-colors duration-300">
+                      {tech.name}
+                    </span>
+                  </div>
+                ))}
+              </div>
             </div>
           </section>
           <section
             id="competences"
-            className="min-h-screen flex flex-col justify-center pl-12 pt-10"
+            className="min-h-screen flex flex-col justify-center px-12 py-20"
           >
-            <span className="text-black font-serif text-4xl">COMPETENCES</span>
-            <div className="text-slate-600 text-base italic mt-2">
-              Compétences issues du référentiel présent sur le site du CIGREF
-              (version 2022)
+            <div className="text-center mb-12 animate-fade-in-up">
+              <h2 className="text-5xl font-bold bg-gradient-to-r from-slate-900 via-indigo-800 to-slate-900 bg-clip-text text-transparent mb-3">
+                COMPÉTENCES
+              </h2>
+              <p className="text-slate-600 text-lg">
+                Compétences issues du référentiel présent sur le site du CIGREF (version 2022)
+              </p>
             </div>
-            <div className="flex flex-row mx-auto space-x-7 mt-6 h-[17%] w-[70%]">
+
+            {/* Tabs des catégories */}
+            <div className="flex flex-wrap gap-4 justify-center mb-12">
               {competences.map((item, index) => (
                 <div
                   key={index}
-                  className={
-                    "h-full w-[100%] flex items-center justify-center border border-black font-semibold text-white " +
-                    item.color
-                  }
+                  className={`
+                    px-6 py-4 rounded-lg font-semibold text-white text-center
+                    shadow-lg hover:shadow-xl hover:scale-105 transition-all duration-300
+                    min-w-[200px] modern-button
+                    ${item.color}
+                  `}
                 >
                   {item.poste}
                 </div>
               ))}
             </div>
-            <div className="no-scrollbar mt-10 overflow-y-auto h-[60%]">
+
+            {/* Liste des compétences */}
+            <div className="max-h-[600px] overflow-y-auto px-4 no-scrollbar space-y-4">
               {competences[0].comp.map((item, index) => (
-                <Competence key={index} comp={item}></Competence>
+                <Competence key={index} comp={item} />
               ))}
             </div>
           </section>
@@ -328,123 +419,176 @@ export default function Home() {
             id="experiences"
             className="min-h-screen flex flex-col justify-center items-center px-12"
           >
-            <span className="text-black font-serif text-4xl">EXPERIENCES</span>
-            <div className="text-slate-600 text-base italic mt-2">
-              Liste des expériences professionnelles
+            <div className="text-center mb-12 animate-fade-in-up">
+              <h2 className="text-5xl font-bold bg-gradient-to-r from-slate-900 via-indigo-800 to-slate-900 bg-clip-text text-transparent mb-3">
+                EXPÉRIENCES
+              </h2>
+              <p className="text-slate-600 text-lg">
+                Mon parcours professionnel
+              </p>
             </div>
 
             <div className="relative w-full mt-6">
-              {/* Bouton pour revenir en arrière */}
-              <span
+              {/* Bouton navigation gauche */}
+              <button
                 onClick={handlePreviousExperience}
-                className="absolute left-0 top-[50%] text-7xl text-gray-800 hover:cursor-pointer hover:scale-[130%] transform -translate-y-1/2"
+                className="absolute left-0 top-[50%] z-20 w-14 h-14 rounded-full bg-white shadow-lg border border-slate-200 flex items-center justify-center text-slate-700 hover:bg-indigo-500 hover:text-white hover:scale-110 transition-all duration-300 group -translate-y-1/2"
+                aria-label="Expérience précédente"
               >
-                &#10216;
-              </span>
+                <svg className="w-6 h-6 transition-transform duration-300 group-hover:-translate-x-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
+                </svg>
+              </button>
 
               <Experience exp={experiences[selectedExperience]} />
 
-              {/* Bouton pour aller à l'expérience suivante */}
-              <span
+              {/* Bouton navigation droite */}
+              <button
                 onClick={handleNextExperience}
-                className="absolute right-0 top-[50%] text-7xl text-gray-800 hover:cursor-pointer hover:scale-[130%] transform -translate-y-1/2"
+                className="absolute right-0 top-[50%] z-20 w-14 h-14 rounded-full bg-white shadow-lg border border-slate-200 flex items-center justify-center text-slate-700 hover:bg-indigo-500 hover:text-white hover:scale-110 transition-all duration-300 group -translate-y-1/2"
+                aria-label="Expérience suivante"
               >
-                &#10217;
-              </span>
+                <svg className="w-6 h-6 transition-transform duration-300 group-hover:translate-x-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                </svg>
+              </button>
             </div>
           </section>
           <section
             id="savoirs"
             className="min-h-screen flex flex-col justify-center items-center"
           >
-            <span className="text-black font-serif text-4xl">SAVOIR ETRE</span>
-            <div className="text-slate-600 text-base italic mt-2">
-              Savoir-être issus du référentiel présent sur le site de pôle
-              emploi (ROME 4.0)
+            <div className="text-center mb-12 animate-fade-in-up">
+              <h2 className="text-5xl font-bold bg-gradient-to-r from-slate-900 via-indigo-800 to-slate-900 bg-clip-text text-transparent mb-3">
+                SAVOIR-ÊTRE
+              </h2>
+              <p className="text-slate-600 text-lg">
+                Savoir-être issus du référentiel présent sur le site de Pôle emploi (ROME 4.0)
+              </p>
             </div>
 
             <div className="relative w-full flex items-center justify-center mt-6 px-12">
-              {/* Bouton de gauche */}
-              <span
+              {/* Bouton navigation gauche */}
+              <button
                 onClick={handlePreviousSavoir}
-                className="absolute left-0 text-7xl text-gray-800 hover:cursor-pointer hover:scale-[130%] transform -translate-y-1/2 top-[50%]"
+                className="absolute left-12 z-20 w-14 h-14 rounded-full bg-white shadow-lg border border-slate-200 flex items-center justify-center text-slate-700 hover:bg-indigo-500 hover:text-white hover:scale-110 transition-all duration-300 group"
+                aria-label="Précédent"
               >
-                &#10216;
-              </span>
+                <svg className="w-6 h-6 transition-transform duration-300 group-hover:-translate-x-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
+                </svg>
+              </button>
 
-              {/* Carte de savoir-être avec taille fixe */}
-              <div className="bg-white shadow-lg rounded-lg border border-gray-200 w-[500px] h-[500px] p-6 mx-auto flex flex-col justify-center">
-                <h3 className="text-xl font-semibold text-gray-800 text-center">
-                  {savoirs[selectedSavoir].nom}
-                </h3>
-                <p className="text-base text-gray-600 mt-2 text-center overflow-y-auto">
-                  {savoirs[selectedSavoir].description}
-                </p>
+              {/* Carte moderne de savoir-être */}
+              <div className="modern-card w-[600px] min-h-[400px] p-10 mx-auto flex flex-col justify-center relative overflow-hidden animate-fade-in">
+                <div className="absolute top-0 right-0 w-32 h-32 bg-gradient-to-br from-indigo-100 to-purple-100 rounded-full -mr-16 -mt-16 opacity-50"></div>
+
+                <div className="relative z-10 text-center">
+                  <div className="inline-flex items-center gap-2 px-4 py-2 bg-gradient-to-r from-indigo-50 to-purple-50 border border-indigo-200 rounded-full mb-6">
+                    <span className="text-2xl">🌟</span>
+                    <span className="text-sm font-medium text-indigo-700">
+                      {selectedSavoir + 1} / {savoirs.length}
+                    </span>
+                  </div>
+
+                  <h3 className="text-3xl font-bold text-slate-900 mb-6 leading-tight">
+                    {savoirs[selectedSavoir].nom}
+                  </h3>
+
+                  <p className="text-lg text-slate-700 leading-relaxed">
+                    {savoirs[selectedSavoir].description}
+                  </p>
+                </div>
               </div>
 
-              {/* Bouton de droite */}
-              <span
+              {/* Bouton navigation droite */}
+              <button
                 onClick={handleNextSavoir}
-                className="absolute right-0 text-7xl text-gray-800 hover:cursor-pointer hover:scale-[130%] transform -translate-y-1/2 top-[50%]"
+                className="absolute right-12 z-20 w-14 h-14 rounded-full bg-white shadow-lg border border-slate-200 flex items-center justify-center text-slate-700 hover:bg-indigo-500 hover:text-white hover:scale-110 transition-all duration-300 group"
+                aria-label="Suivant"
               >
-                &#10217;
-              </span>
+                <svg className="w-6 h-6 transition-transform duration-300 group-hover:translate-x-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                </svg>
+              </button>
             </div>
           </section>
           <section
             id="formations"
             className="min-h-screen flex flex-col justify-center items-center"
           >
-            <span className="text-black font-serif text-4xl">FORMATIONS</span>
-            <div className="text-slate-600 text-base italic mt-2">
-              Liste des acquis des formations selon le site France compétences
+            <div className="text-center mb-12 animate-fade-in-up">
+              <h2 className="text-5xl font-bold bg-gradient-to-r from-slate-900 via-indigo-800 to-slate-900 bg-clip-text text-transparent mb-3">
+                FORMATIONS
+              </h2>
+              <p className="text-slate-600 text-lg">
+                Liste des acquis des formations selon le site France Compétences
+              </p>
             </div>
 
-            <div className="relative w-[80%] mt-6 flex items-center">
-              {/* Bouton de gauche */}
-              <span
+            <div className="relative w-full mt-6 flex items-center px-12">
+              {/* Bouton navigation gauche */}
+              <button
                 onClick={handlePreviousFormation}
-                className="absolute left-0 top-[50%] text-7xl text-gray-800 hover:cursor-pointer hover:scale-[130%] transform -translate-y-1/2"
+                className="absolute left-12 z-20 w-14 h-14 rounded-full bg-white shadow-lg border border-slate-200 flex items-center justify-center text-slate-700 hover:bg-indigo-500 hover:text-white hover:scale-110 transition-all duration-300 group"
+                aria-label="Formation précédente"
               >
-                &#10216;
-              </span>
+                <svg className="w-6 h-6 transition-transform duration-300 group-hover:-translate-x-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
+                </svg>
+              </button>
 
               {/* Formation au centre */}
-
               <Formation form={formations[selectedFormation]} />
 
-              {/* Bouton de droite */}
-              <span
+              {/* Bouton navigation droite */}
+              <button
                 onClick={handleNextFormation}
-                className="absolute right-0 top-[50%] text-7xl text-gray-800 hover:cursor-pointer hover:scale-[130%] transform -translate-y-1/2"
+                className="absolute right-12 z-20 w-14 h-14 rounded-full bg-white shadow-lg border border-slate-200 flex items-center justify-center text-slate-700 hover:bg-indigo-500 hover:text-white hover:scale-110 transition-all duration-300 group"
+                aria-label="Formation suivante"
               >
-                &#10217;
-              </span>
+                <svg className="w-6 h-6 transition-transform duration-300 group-hover:translate-x-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                </svg>
+              </button>
             </div>
           </section>
 
           <section
             id="projets"
-            className="min-h-screen flex flex-col justify-center pl-12 relative"
+            className="min-h-screen flex flex-col justify-center items-center px-12"
           >
-            <span className="text-black font-serif text-4xl">Projets</span>
+            <div className="text-center mb-12 animate-fade-in-up">
+              <h2 className="text-5xl font-bold bg-gradient-to-r from-slate-900 via-indigo-800 to-slate-900 bg-clip-text text-transparent mb-3">
+                PROJETS
+              </h2>
+              <p className="text-slate-600 text-lg">
+                Mes réalisations et projets personnels
+              </p>
+            </div>
 
-            <div className="relative w-full h-full mt-5">
-              {/* Bouton précédent */}
-              <span
+            <div className="relative w-full mt-6">
+              {/* Bouton navigation gauche */}
+              <button
                 onClick={handlePreviousprojet}
-                className="absolute top-[50%] left-5 text-7xl text-gray-800 hover:cursor-pointer hover:scale-[130%] z-10"
+                className="absolute left-12 top-[50%] z-20 w-14 h-14 rounded-full bg-white shadow-lg border border-slate-200 flex items-center justify-center text-slate-700 hover:bg-indigo-500 hover:text-white hover:scale-110 transition-all duration-300 group -translate-y-1/2"
+                aria-label="Projet précédent"
               >
-                &#10216;
-              </span>
+                <svg className="w-6 h-6 transition-transform duration-300 group-hover:-translate-x-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
+                </svg>
+              </button>
 
-              {/* Bouton suivant */}
-              <span
+              {/* Bouton navigation droite */}
+              <button
                 onClick={handleNextProjet}
-                className="absolute top-[50%] right-5 text-7xl text-gray-800 hover:cursor-pointer hover:scale-[130%] z-10"
+                className="absolute right-12 top-[50%] z-20 w-14 h-14 rounded-full bg-white shadow-lg border border-slate-200 flex items-center justify-center text-slate-700 hover:bg-indigo-500 hover:text-white hover:scale-110 transition-all duration-300 group -translate-y-1/2"
+                aria-label="Projet suivant"
               >
-                &#10217;
-              </span>
+                <svg className="w-6 h-6 transition-transform duration-300 group-hover:translate-x-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                </svg>
+              </button>
 
               {/* Affichage du projet */}
               {projets.length > 0 && (

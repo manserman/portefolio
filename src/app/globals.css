@@ -3,54 +3,94 @@
 @tailwind utilities;
 
 :root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
+  /* Modern Color Palette - Sobre et élégant */
+  --color-primary: 30, 41, 59; /* slate-800 */
+  --color-secondary: 71, 85, 105; /* slate-600 */
+  --color-accent: 99, 102, 241; /* indigo-500 */
+  --color-background: 248, 250, 252; /* slate-50 */
+  --color-surface: 255, 255, 255; /* white */
+  --color-text-primary: 15, 23, 42; /* slate-900 */
+  --color-text-secondary: 100, 116, 139; /* slate-500 */
+  --color-border: 226, 232, 240; /* slate-200 */
+
+  /* Spacing & Layout */
+  --spacing-section: 6rem;
+  --radius-card: 1rem;
+  --radius-button: 0.5rem;
+
+  /* Shadows */
+  --shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+  --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+  --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+  --shadow-xl: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+
+  /* Transitions */
+  --transition-fast: 150ms cubic-bezier(0.4, 0, 0.2, 1);
+  --transition-base: 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  --transition-slow: 350ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
-  }
+* {
+  scroll-behavior: smooth;
 }
 
 body {
-  color: rgb(var(--foreground-rgb));
-  /* background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb)); */
-  background-color: inherit;
+  color: rgb(var(--color-text-primary));
+  background: linear-gradient(
+    135deg,
+    rgb(var(--color-background)) 0%,
+    rgb(250, 251, 252) 50%,
+    rgb(var(--color-background)) 100%
+  );
+  background-attachment: fixed;
   height: 100%;
   overflow-y: auto;
+  font-feature-settings: "kern" 1;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
-td{
-  border : 1px solid black;
-  font-size: x-small;
+/* Tables modernes */
+td {
+  border: 1px solid rgb(var(--color-border));
+  font-size: 0.875rem;
+  padding: 0.75rem;
+  transition: background-color var(--transition-fast);
 }
 
-th{
-  border : 1px solid black;
-  font-size: x-small;
-
+td:hover {
+  background-color: rgb(var(--color-background));
 }
 
-tr{
-  border : 1px solid black;
+th {
+  border: 1px solid rgb(var(--color-border));
+  font-size: 0.875rem;
+  padding: 0.75rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  background-color: rgb(var(--color-primary));
+  color: white;
 }
 
-main{
-  color: black;
+tr {
+  border: 1px solid rgb(var(--color-border));
+  transition: all var(--transition-fast);
 }
 
-html{
+tr:hover {
+  transform: translateY(-1px);
+  box-shadow: var(--shadow-sm);
+}
+
+main {
+  color: rgb(var(--color-text-primary));
+}
+
+html {
   height: 100%;
-  
+  scroll-padding-top: 2rem;
 }
 
 @layer utilities {
@@ -59,41 +99,222 @@ html{
   }
 }
 
-.no-scrollbar::-webkit-scrollbar{
+/* Custom scrollbar moderne */
+.no-scrollbar::-webkit-scrollbar {
   display: none;
 }
 
-.no-scrollbar{
-  -ms-overflow-style: none ;
+.no-scrollbar {
+  -ms-overflow-style: none;
   scrollbar-width: none;
-
 }
+
+/* Scrollbar personnalisée pour les autres éléments */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: rgb(var(--color-background));
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgb(var(--color-secondary));
+  border-radius: 4px;
+  transition: background var(--transition-fast);
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: rgb(var(--color-primary));
+}
+
+/* Sections modernisées */
 section {
-  width: 70%;
+  width: 85%;
+  max-width: 1400px;
   height: auto;
-  margin: 50px auto; /* Centre la section horizontalement */
-  padding: 20px; /* Ajoute de l'espace interne pour l'apparence */
-  border: 2px solid #ccc; /* Bordure grise */
-  border-radius: 15px; /* Coins arrondis */
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Effet d'ombre léger */
-  background-color: #fff; /* Fond blanc pour un style carte */
-  transition: box-shadow 0.3s ease; /* Effet de transition pour l'ombre */
+  margin: var(--spacing-section) auto;
+  padding: 3rem;
+  border: 1px solid rgb(var(--color-border) / 0.5);
+  border-radius: var(--radius-card);
+  box-shadow: var(--shadow-lg);
+  background: rgba(var(--color-surface), 0.95);
+  backdrop-filter: blur(10px);
+  transition: all var(--transition-slow);
   display: flex;
   flex-direction: column;
-  justify-content: center; /* Centre verticalement */
-  align-items: center; /* Centre horizontalement */
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  overflow: hidden;
+}
+
+section::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 4px;
+  background: linear-gradient(
+    90deg,
+    rgb(var(--color-accent)) 0%,
+    rgb(var(--color-primary)) 100%
+  );
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform var(--transition-slow);
+}
+
+section:hover::before {
+  transform: scaleX(1);
 }
 
 section:hover {
-  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Accentue l'ombre au survol */
+  box-shadow: var(--shadow-xl);
+  transform: translateY(-4px);
+  border-color: rgb(var(--color-accent) / 0.3);
 }
+
 #principale {
-  width: 70%;             /* La section occupe 70% de la largeur de l'écran */
-  margin: 0 auto;          /* Centre la section horizontalement */
-  height: 100vh;           /* Hauteur de la section égale à la hauteur de l'écran */
-  display: flex;           /* Utilisation de Flexbox */
-  flex-direction: column;  /* Contenu organisé en colonne */
-  justify-content: center; /* Centre verticalement le contenu */
-  align-items: center;     /* Centre horizontalement le contenu */
+  width: 85%;
+  max-width: 1400px;
+  margin: 0 auto;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Animations d'entrée */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.animate-fade-in-up {
+  animation: fadeInUp var(--transition-slow) ease-out;
+}
+
+.animate-fade-in {
+  animation: fadeIn var(--transition-slow) ease-out;
+}
+
+/* Boutons modernes */
+.modern-button {
+  position: relative;
+  overflow: hidden;
+  transition: all var(--transition-base);
+  background: linear-gradient(
+    135deg,
+    rgb(var(--color-accent)) 0%,
+    rgb(var(--color-primary)) 100%
+  );
+  border: none;
+  box-shadow: var(--shadow-md);
+}
+
+.modern-button::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: rgba(255, 255, 255, 0.2);
+  transition: left var(--transition-base);
+}
+
+.modern-button:hover::before {
+  left: 100%;
+}
+
+.modern-button:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-lg);
+}
+
+/* Cards modernes */
+.modern-card {
+  background: rgb(var(--color-surface));
+  border: 1px solid rgb(var(--color-border) / 0.5);
+  border-radius: var(--radius-card);
+  box-shadow: var(--shadow-md);
+  transition: all var(--transition-base);
+  position: relative;
+  overflow: hidden;
+}
+
+.modern-card::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(
+    135deg,
+    rgba(var(--color-accent), 0.05) 0%,
+    transparent 50%
+  );
+  opacity: 0;
+  transition: opacity var(--transition-base);
+  pointer-events: none;
+}
+
+.modern-card:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-xl);
+  border-color: rgb(var(--color-accent) / 0.3);
+}
+
+.modern-card:hover::after {
+  opacity: 1;
+}
+
+/* Responsive */
+@media (max-width: 1024px) {
+  section {
+    width: 90%;
+    padding: 2rem;
+    margin: 3rem auto;
+  }
+
+  #principale {
+    width: 90%;
+  }
+}
+
+@media (max-width: 768px) {
+  section {
+    width: 95%;
+    padding: 1.5rem;
+    margin: 2rem auto;
+  }
+
+  #principale {
+    width: 95%;
+  }
+
+  :root {
+    --spacing-section: 3rem;
+  }
 }
 
