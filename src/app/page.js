@@ -88,7 +88,7 @@ export default function Home() {
   };
   return (
     <div className="h-screen w-screen overflow-y-auto page-transition">
-      <main className="h-full bg-inherit flex flex-row relative">
+      <main className="min-h-full bg-inherit flex flex-row relative">
         {/********************* SIDE BAR **********************/}
         <Sidebar />
 
