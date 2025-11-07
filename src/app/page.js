@@ -334,7 +334,7 @@ export default function Home() {
                         className="object-contain"
                       />
                     </div>
-                    <span className="text-sm font-medium text-slate-700 text-center group-hover:text-indigo-600 transition-colors duration-300">
+                    <span className="text-sm font-medium text-slate-300 text-center group-hover:text-violet-400 transition-colors duration-300">
                       {tech.name}
                     </span>
                   </div>
@@ -370,7 +370,7 @@ export default function Home() {
                         className="object-contain"
                       />
                     </div>
-                    <span className="text-sm font-medium text-slate-700 text-center group-hover:text-indigo-600 transition-colors duration-300">
+                    <span className="text-sm font-medium text-slate-300 text-center group-hover:text-violet-400 transition-colors duration-300">
                       {tech.name}
                     </span>
                   </div>
