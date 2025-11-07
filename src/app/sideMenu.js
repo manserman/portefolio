@@ -2,7 +2,7 @@ import { useState } from "react";
 import Image from "next/image";
 
 export default function Sidebar() {
-  const [isOpen, setIsOpen] = useState(true);
+  const [isOpen, setIsOpen] = useState(false);
   const [activeSection, setActiveSection] = useState("accueil");
 
   const toggleMenu = () => {
