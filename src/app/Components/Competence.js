@@ -43,7 +43,7 @@ export default function Competence({ comp }) {
       {/* Content - Expandable */}
       <div
         className={`
-          bg-white transition-all duration-500 ease-in-out overflow-hidden
+          bg-slate-800/50 transition-all duration-500 ease-in-out overflow-hidden
           ${isOpen ? 'max-h-96 opacity-100' : 'max-h-0 opacity-0'}
         `}
       >
@@ -52,11 +52,11 @@ export default function Competence({ comp }) {
             {comp.competences.map((item, index) => (
               <li
                 key={index}
-                className="flex items-start gap-3 text-sm text-slate-700 group/item animate-fade-in-up"
+                className="flex items-start gap-3 text-sm text-slate-300 group/item animate-fade-in-up"
                 style={{ animationDelay: `${index * 50}ms` }}
               >
-                <span className="flex-shrink-0 w-2 h-2 mt-1.5 rounded-full bg-gradient-to-br from-indigo-500 to-purple-600 group-hover/item:scale-150 transition-transform duration-300"></span>
-                <span className="flex-1 leading-relaxed group-hover/item:text-slate-900 transition-colors duration-200">
+                <span className="flex-shrink-0 w-2 h-2 mt-1.5 rounded-full bg-gradient-to-br from-violet-500 to-blue-500 group-hover/item:scale-150 transition-transform duration-300 shadow-lg shadow-violet-500/50"></span>
+                <span className="flex-1 leading-relaxed group-hover/item:text-slate-50 transition-colors duration-200">
                   {item}
                 </span>
               </li>
