@@ -224,8 +224,12 @@ export default function Home() {
           </div>
 
           <div className="grid gap-6">
-            {competences.map((comp, index) => (
-              <Competence key={index} comp={comp} />
+            {competences.map((compGroup, groupIndex) => (
+              compGroup.comp && Array.isArray(compGroup.comp) ? (
+                compGroup.comp.map((comp, index) => (
+                  <Competence key={`${groupIndex}-${index}`} comp={comp} />
+                ))
+              ) : null
             ))}
           </div>
         </div>
