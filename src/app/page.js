@@ -12,10 +12,10 @@ import data_exp from "./Data/data_experience";
 import data_projet from "./Data/data_projet";
 
 export default function Home() {
-  const experiences = data_exp();
-  const projets = data_projet();
-  const competences = data_comp();
-  const formations = data_form();
+  const experiences = data_exp() || [];
+  const projets = data_projet() || [];
+  const competences = data_comp() || [];
+  const formations = data_form() || [];
 
   const [selectedProject, setSelectedProject] = useState(0);
 
