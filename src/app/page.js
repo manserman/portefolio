@@ -12,10 +12,41 @@ import data_exp from "./Data/data_experience";
 import data_projet from "./Data/data_projet";
 
 export default function Home() {
-  const experiences = data_exp() || [];
-  const projets = data_projet() || [];
-  const competences = data_comp() || [];
-  const formations = data_form() || [];
+  // Protection robuste contre les données undefined
+  let experiences = [];
+  let projets = [];
+  let competences = [];
+  let formations = [];
+
+  try {
+    experiences = data_exp() || [];
+  } catch (e) {
+    console.error("Error loading experiences:", e);
+  }
+
+  try {
+    projets = data_projet() || [];
+  } catch (e) {
+    console.error("Error loading projets:", e);
+  }
+
+  try {
+    competences = data_comp() || [];
+  } catch (e) {
+    console.error("Error loading competences:", e);
+  }
+
+  try {
+    formations = data_form() || [];
+  } catch (e) {
+    console.error("Error loading formations:", e);
+  }
+
+  // S'assurer que ce sont des tableaux
+  if (!Array.isArray(experiences)) experiences = [];
+  if (!Array.isArray(projets)) projets = [];
+  if (!Array.isArray(competences)) competences = [];
+  if (!Array.isArray(formations)) formations = [];
 
   const [selectedProject, setSelectedProject] = useState(0);
 
