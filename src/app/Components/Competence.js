@@ -9,6 +9,13 @@ export default function Competence({ comp }) {
     setIsOpen(!isOpen);
   };
 
+  // Protection contre les données undefined
+  if (!comp || !comp.competences || !Array.isArray(comp.competences)) {
+    return null;
+  }
+
+  const competencesCount = comp.competences.length || 0;
+
   return (
     <div className="w-full max-w-4xl mx-auto mb-4 rounded-lg overflow-hidden shadow-md hover:shadow-xl transition-all duration-300 modern-card">
       {/* Header - Cliquable */}
@@ -17,7 +24,7 @@ export default function Competence({ comp }) {
         className={`
           w-full flex items-center justify-between px-6 py-4 text-white font-medium
           transition-all duration-300 relative overflow-hidden group
-          ${comp.color}
+          ${comp.color || 'bg-gray-800'}
         `}
       >
         {/* Gradient overlay au hover */}
@@ -31,12 +38,12 @@ export default function Competence({ comp }) {
           `}>
             ▶
           </span>
-          <h2 className="text-lg font-semibold tracking-wide">{comp.titre}</h2>
+          <h2 className="text-lg font-semibold tracking-wide">{comp.titre || 'Compétence'}</h2>
         </div>
 
         {/* Badge compteur */}
         <span className="px-3 py-1 bg-white/20 backdrop-blur-sm rounded-full text-sm font-medium">
-          {comp.competences.length} compétence{comp.competences.length > 1 ? 's' : ''}
+          {competencesCount} compétence{competencesCount > 1 ? 's' : ''}
         </span>
       </button>
 

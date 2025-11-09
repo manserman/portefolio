@@ -8,6 +8,11 @@ export default function Projet({ projet }) {
     setShow(true);
   }, [projet]);
 
+  // Protection contre les données undefined
+  if (!projet) {
+    return null;
+  }
+
   return (
     <div
       className={`w-full max-w-2xl mx-auto px-4 transition-all duration-500 ease-in-out transform ${

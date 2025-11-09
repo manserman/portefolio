@@ -1,6 +1,11 @@
 import Image from "next/image";
 
 export default function Formation({ form }) {
+  // Protection contre les données undefined
+  if (!form) {
+    return null;
+  }
+
   return (
     <div className="relative w-full max-w-5xl min-h-[28rem] modern-card p-8 mx-auto animate-fade-in-up">
       {/* Timeline Indicator */}
@@ -65,29 +70,31 @@ export default function Formation({ form }) {
       </div>
 
       {/* Acquis */}
-      <div>
-        <h4 className="text-lg font-semibold text-slate-50 mb-4 flex items-center gap-2">
-          <svg className="w-5 h-5 text-violet-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
-          </svg>
-          Compétences acquises
-        </h4>
-        <div className="max-h-48 overflow-y-auto pr-2 no-scrollbar">
-          <ul className="space-y-3">
-            {form.acquis.map((item, index) => (
-              <li
-                key={index}
-                className="flex items-start gap-3 text-sm text-slate-300 group/acquis"
-              >
-                <span className="flex-shrink-0 w-2 h-2 mt-2 rounded-full bg-gradient-to-br from-violet-500 to-blue-500 group-hover/acquis:scale-150 transition-transform duration-300 shadow-lg shadow-violet-500/50"></span>
-                <span className="flex-1 leading-relaxed group-hover/acquis:text-slate-50 transition-colors duration-200">
-                  {item}
-                </span>
-              </li>
-            ))}
-          </ul>
+      {form.acquis && Array.isArray(form.acquis) && form.acquis.length > 0 && (
+        <div>
+          <h4 className="text-lg font-semibold text-slate-50 mb-4 flex items-center gap-2">
+            <svg className="w-5 h-5 text-violet-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+            </svg>
+            Compétences acquises
+          </h4>
+          <div className="max-h-48 overflow-y-auto pr-2 no-scrollbar">
+            <ul className="space-y-3">
+              {form.acquis.map((item, index) => (
+                <li
+                  key={index}
+                  className="flex items-start gap-3 text-sm text-slate-300 group/acquis"
+                >
+                  <span className="flex-shrink-0 w-2 h-2 mt-2 rounded-full bg-gradient-to-br from-violet-500 to-blue-500 group-hover/acquis:scale-150 transition-transform duration-300 shadow-lg shadow-violet-500/50"></span>
+                  <span className="flex-1 leading-relaxed group-hover/acquis:text-slate-50 transition-colors duration-200">
+                    {item}
+                  </span>
+                </li>
+              ))}
+            </ul>
+          </div>
         </div>
-      </div>
+      )}
 
       {/* Footer Badge */}
       <div className="mt-6 pt-4 border-t border-slate-700 flex justify-center">

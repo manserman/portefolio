@@ -1,6 +1,11 @@
 import Image from "next/image";
 
 export default function Experience({ exp }) {
+  // Protection contre les données undefined
+  if (!exp) {
+    return null;
+  }
+
   return (
     <div className="relative modern-card w-full max-w-5xl h-auto p-8 mx-auto animate-fade-in-up">
       {/* Timeline Indicator */}
@@ -52,24 +57,26 @@ export default function Experience({ exp }) {
       </div>
 
       {/* Missions */}
-      <div className="mb-6">
-        <h4 className="text-lg font-semibold text-slate-50 mb-4 flex items-center gap-2">
-          <svg className="w-5 h-5 text-violet-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-6 9l2 2 4-4" />
-          </svg>
-          Missions principales
-        </h4>
-        <ul className="space-y-3">
-          {exp.missions.map((item, index) => (
-            <li key={index} className="flex items-start gap-3 text-sm text-slate-300 group/mission">
-              <span className="flex-shrink-0 w-6 h-6 mt-0.5 flex items-center justify-center rounded-full bg-gradient-to-br from-violet-900/50 to-blue-900/50 text-violet-300 font-semibold text-xs group-hover/mission:scale-110 transition-transform duration-200 border border-violet-700/50">
-                {index + 1}
-              </span>
-              <span className="flex-1 leading-relaxed">{item}</span>
-            </li>
-          ))}
-        </ul>
-      </div>
+      {exp.missions && Array.isArray(exp.missions) && exp.missions.length > 0 && (
+        <div className="mb-6">
+          <h4 className="text-lg font-semibold text-slate-50 mb-4 flex items-center gap-2">
+            <svg className="w-5 h-5 text-violet-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-6 9l2 2 4-4" />
+            </svg>
+            Missions principales
+          </h4>
+          <ul className="space-y-3">
+            {exp.missions.map((item, index) => (
+              <li key={index} className="flex items-start gap-3 text-sm text-slate-300 group/mission">
+                <span className="flex-shrink-0 w-6 h-6 mt-0.5 flex items-center justify-center rounded-full bg-gradient-to-br from-violet-900/50 to-blue-900/50 text-violet-300 font-semibold text-xs group-hover/mission:scale-110 transition-transform duration-200 border border-violet-700/50">
+                  {index + 1}
+                </span>
+                <span className="flex-1 leading-relaxed">{item}</span>
+              </li>
+            ))}
+          </ul>
+        </div>
+      )}
 
       {/* Compétences acquises */}
       {exp.isExperience && exp.competences && exp.competences.length > 0 && (
