@@ -1,4 +1,5 @@
 "use client";
+import Image from "next/image";
 import Header from "./Components/Header";
 import Experience from "./Components/Experience";
 import Competence from "./Components/Competence";
@@ -53,6 +54,20 @@ export default function Home() {
 
         <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <div className="max-w-4xl mx-auto text-center">
+            {/* Photo de profil */}
+            <div className="mb-8 flex justify-center">
+              <div className="relative group">
+                <div className="absolute inset-0 bg-gradient-to-br from-indigo-600 to-violet-600 rounded-full opacity-20 group-hover:opacity-30 transition-opacity duration-300 blur-xl"></div>
+                <Image
+                  src="/img/photo_profil.JPG"
+                  alt="Mohamadou Mansour HABIBOU HAMANI"
+                  width={200}
+                  height={200}
+                  className="relative rounded-full object-cover border-4 border-indigo-600/30 shadow-2xl shadow-indigo-600/50 group-hover:scale-105 transition-transform duration-300"
+                />
+              </div>
+            </div>
+
             {/* Badge */}
             <div className="inline-flex items-center gap-2 px-4 py-2 bg-indigo-600/10 border border-indigo-600/30 rounded-full mb-8 backdrop-blur-sm">
               <span className="text-2xl">👋</span>

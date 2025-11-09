@@ -2,7 +2,7 @@ export default function data_exp() {
   var exp_1 = {
     poste: "Software Engineer",
     entreprise: "ISA Software",
-    logo: "logo_isa.png",
+    logo: "isa.jpeg",
     lieu: "Ville de Paris, Île-de-France, France",
     description:
       "Conception et développement d'un middleware de communication pour systèmes distribués dans le cadre du projet ORCI, initiative européenne d'optimisation du trafic aérien par IA",
