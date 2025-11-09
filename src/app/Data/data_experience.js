@@ -20,7 +20,7 @@ export default function data_exp() {
       "Travail en équipe",
       "Innovation technique"
     ],
-    debut: "Présent",
+    debut: "Avril 2025",
     fin: "Présent",
     isExperience: true,
   };
