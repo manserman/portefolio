@@ -21,7 +21,6 @@ export default function Header() {
     { id: "apropos", label: "À propos" },
     { id: "experiences", label: "Expériences" },
     { id: "competences", label: "Compétences" },
-    { id: "projets", label: "Projets" },
     { id: "contact", label: "Contact" },
   ];
 

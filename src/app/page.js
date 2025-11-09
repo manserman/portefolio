@@ -1,20 +1,15 @@
 "use client";
-import { useState } from "react";
-import Image from "next/image";
 import Header from "./Components/Header";
 import Experience from "./Components/Experience";
 import Competence from "./Components/Competence";
 import Formation from "./Components/Formation";
-import Projet from "./Components/Projet";
 import data_comp from "./Data/data_competences";
 import data_form from "./Data/data_formations";
 import data_exp from "./Data/data_experience";
-import data_projet from "./Data/data_projet";
 
 export default function Home() {
   // Protection robuste contre les données undefined
   let experiences = [];
-  let projets = [];
   let competences = [];
   let formations = [];
 
@@ -22,12 +17,6 @@ export default function Home() {
     experiences = data_exp() || [];
   } catch (e) {
     console.error("Error loading experiences:", e);
-  }
-
-  try {
-    projets = data_projet() || [];
-  } catch (e) {
-    console.error("Error loading projets:", e);
   }
 
   try {
@@ -44,11 +33,8 @@ export default function Home() {
 
   // S'assurer que ce sont des tableaux
   if (!Array.isArray(experiences)) experiences = [];
-  if (!Array.isArray(projets)) projets = [];
   if (!Array.isArray(competences)) competences = [];
   if (!Array.isArray(formations)) formations = [];
-
-  const [selectedProject, setSelectedProject] = useState(0);
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950">
@@ -115,7 +101,7 @@ export default function Home() {
             </div>
 
             {/* Quick Stats */}
-            <div className="grid grid-cols-3 gap-8 mt-16 max-w-2xl mx-auto">
+            <div className="grid grid-cols-2 gap-8 mt-16 max-w-2xl mx-auto">
               <div className="text-center">
                 <div className="text-4xl font-bold text-indigo-400">3+</div>
                 <div className="text-sm text-slate-400 mt-1">Ans d'expérience</div>
@@ -123,10 +109,6 @@ export default function Home() {
               <div className="text-center">
                 <div className="text-4xl font-bold text-violet-400">15+</div>
                 <div className="text-sm text-slate-400 mt-1">Technologies</div>
-              </div>
-              <div className="text-center">
-                <div className="text-4xl font-bold text-indigo-400">3</div>
-                <div className="text-sm text-slate-400 mt-1">Projets majeurs</div>
               </div>
             </div>
           </div>
@@ -230,26 +212,6 @@ export default function Home() {
                   <Competence key={`${groupIndex}-${index}`} comp={comp} />
                 ))
               ) : null
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* PROJETS */}
-      <section id="projets" className="py-20 px-4 sm:px-6 lg:px-8 bg-slate-900/30">
-        <div className="container mx-auto max-w-6xl">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl sm:text-5xl font-bold mb-4">
-              <span className="bg-gradient-to-r from-white via-indigo-200 to-violet-200 bg-clip-text text-transparent">
-                Projets
-              </span>
-            </h2>
-            <p className="text-slate-400 text-lg">Mes réalisations</p>
-          </div>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            {projets.map((projet, index) => (
-              <Projet key={index} projet={projet} />
             ))}
           </div>
         </div>
