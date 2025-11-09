@@ -6,6 +6,9 @@ export default function Header() {
   const [activeSection, setActiveSection] = useState("accueil");
 
   useEffect(() => {
+    // Vérification que window existe (important pour le build statique)
+    if (typeof window === 'undefined') return;
+
     const handleScroll = () => {
       setIsScrolled(window.scrollY > 50);
     };
