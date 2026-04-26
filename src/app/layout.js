@@ -5,8 +5,9 @@ import Head from 'next/head';
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata = {
-  title: "Portefolio Mohamadou Mansour",
-  description: "Portefolio Mohamadou Mansour",
+  title: "Mohamadou Mansour Habibou Hamani — Ingénieur Logiciel & Fondateur d'Ascelyo",
+  description:
+    "Ingénieur logiciel spécialisé Backend Java, systèmes distribués et IA générative. Fondateur d'Ascelyo, coach de vie IA mobile.",
 };
 
 export default function RootLayout({ children }) {

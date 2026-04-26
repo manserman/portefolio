@@ -69,12 +69,20 @@ export default function Home() {
             </div>
 
             {/* Badge */}
-            <div className="inline-flex items-center gap-2 px-4 py-2 bg-indigo-600/10 border border-indigo-600/30 rounded-full mb-8 backdrop-blur-sm">
-              <span className="text-2xl">👋</span>
-              <span className="text-sm font-medium text-indigo-300">
-                Bienvenue sur mon portfolio
+            <a
+              href="https://ascelyo.app"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-2 px-4 py-2 bg-indigo-600/10 border border-indigo-600/30 rounded-full mb-8 backdrop-blur-sm hover:border-indigo-500 hover:bg-indigo-600/20 transition-all"
+            >
+              <span className="relative flex h-2 w-2">
+                <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-indigo-400 opacity-75"></span>
+                <span className="relative inline-flex h-2 w-2 rounded-full bg-indigo-500"></span>
               </span>
-            </div>
+              <span className="text-sm font-medium text-indigo-300">
+                Building <span className="text-white font-semibold">Ascelyo</span> · Coach de vie IA
+              </span>
+            </a>
 
             {/* Name */}
             <h1 className="text-5xl sm:text-6xl lg:text-7xl font-bold mb-6">
@@ -94,9 +102,10 @@ export default function Home() {
 
             {/* Specializations */}
             <p className="text-xl text-slate-400 mb-12 max-w-2xl mx-auto">
-              Spécialisé en <span className="text-indigo-400 font-semibold">Backend Java</span>,
-              <span className="text-indigo-400 font-semibold"> Systèmes Distribués</span> et
-              <span className="text-indigo-400 font-semibold"> Architecture Middleware</span>
+              <span className="text-indigo-400 font-semibold">Backend Java</span> ·
+              <span className="text-indigo-400 font-semibold"> Systèmes distribués</span> ·
+              <span className="text-indigo-400 font-semibold"> IA générative</span> ·
+              <span className="text-indigo-400 font-semibold"> Mobile React Native</span>
             </p>
 
             {/* CTA Buttons */}
@@ -116,7 +125,7 @@ export default function Home() {
             </div>
 
             {/* Quick Stats */}
-            <div className="grid grid-cols-2 gap-8 mt-16 max-w-2xl mx-auto">
+            <div className="grid grid-cols-3 gap-6 mt-16 max-w-3xl mx-auto">
               <div className="text-center">
                 <div className="text-4xl font-bold text-indigo-400">3+</div>
                 <div className="text-sm text-slate-400 mt-1">Ans d'expérience</div>
@@ -124,6 +133,10 @@ export default function Home() {
               <div className="text-center">
                 <div className="text-4xl font-bold text-violet-400">15+</div>
                 <div className="text-sm text-slate-400 mt-1">Technologies</div>
+              </div>
+              <div className="text-center">
+                <div className="text-4xl font-bold text-indigo-400">1</div>
+                <div className="text-sm text-slate-400 mt-1">Produit en cours</div>
               </div>
             </div>
           </div>
@@ -159,25 +172,40 @@ export default function Home() {
               </p>
 
               <p className="text-slate-300 leading-relaxed mb-6">
-                Fort de <span className="text-indigo-400 font-semibold">trois années d'expérience professionnelle</span>,
+                Fort de plus de <span className="text-indigo-400 font-semibold">trois années d'expérience professionnelle</span>,
                 j'ai contribué à des projets significatifs, notamment chez <span className="text-indigo-400 font-semibold">Autoliv</span>,
-                une entreprise spécialisée dans les technologies de sécurité automobile, et sur le
+                acteur mondial de la sécurité automobile, et sur le
                 <span className="text-indigo-400 font-semibold"> projet ORCI</span>, une initiative européenne d'optimisation
-                du trafic aérien par l'IA.
+                du trafic aérien par IA.
               </p>
 
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mt-8">
+              <p className="text-slate-300 leading-relaxed mb-6">
+                En parallèle, je conçois et développe <a href="https://ascelyo.app" target="_blank" rel="noopener noreferrer" className="text-indigo-400 font-semibold hover:text-indigo-300 underline decoration-indigo-500/40 underline-offset-4">Ascelyo</a> —
+                un coach de vie IA mobile qui transforme des objectifs long terme en actions quotidiennes.
+                Du backend (NestJS, Prisma) au mobile (React Native, Expo), en passant par
+                l'IA générative (OpenAI, Anthropic, Whisper), les paiements multi-provider et la
+                landing éditoriale, je porte le produit de bout en bout.
+              </p>
+
+              <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mt-8">
                 <div className="p-6 bg-slate-800/50 rounded-xl border border-slate-700">
-                  <h3 className="text-xl font-semibold text-indigo-400 mb-3">Expertise Backend</h3>
+                  <h3 className="text-xl font-semibold text-indigo-400 mb-3">Backend &amp; Cloud</h3>
                   <p className="text-slate-400">
-                    Maîtrise de Java, Spring Boot, et architectures microservices pour des systèmes robustes et scalables.
+                    Java / Spring Boot, NestJS, PostgreSQL, Redis. Architectures microservices et middleware temps réel.
                   </p>
                 </div>
 
                 <div className="p-6 bg-slate-800/50 rounded-xl border border-slate-700">
-                  <h3 className="text-xl font-semibold text-violet-400 mb-3">Systèmes Distribués</h3>
+                  <h3 className="text-xl font-semibold text-violet-400 mb-3">IA générative</h3>
                   <p className="text-slate-400">
-                    Conception de middleware et intégration de protocoles (REST, AMQP, RPC) pour des communications temps réel.
+                    OpenAI, Anthropic, Whisper. Prompt engineering, validation Zod, défense anti-injection en production.
+                  </p>
+                </div>
+
+                <div className="p-6 bg-slate-800/50 rounded-xl border border-slate-700">
+                  <h3 className="text-xl font-semibold text-indigo-400 mb-3">Mobile &amp; Produit</h3>
+                  <p className="text-slate-400">
+                    React Native (Expo), paiements multi-canal (Stripe, IAP), design system et copywriting éditorial.
                   </p>
                 </div>
               </div>
@@ -305,8 +333,21 @@ export default function Home() {
       <footer className="py-12 px-4 sm:px-6 lg:px-8 border-t border-slate-800 bg-slate-900/50">
         <div className="container mx-auto max-w-6xl text-center">
           <div className="text-slate-400 text-sm">
-            <p>© 2025 Mohamadou Mansour HABIBOU HAMANI - Tous droits réservés</p>
-            <p className="mt-2">Ingénieur Logiciel | Backend Java & Systèmes Distribués</p>
+            <p className="text-slate-300">
+              Ingénieur Logiciel · Fondateur de{" "}
+              <a
+                href="https://ascelyo.app"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-indigo-400 hover:text-indigo-300 transition-colors"
+              >
+                Ascelyo
+              </a>
+            </p>
+            <p className="mt-2 text-slate-500">Backend · IA générative · Mobile · Île-de-France</p>
+            <p className="mt-6 text-xs text-slate-600">
+              © 2026 Mohamadou Mansour Habibou Hamani. Tous droits réservés.
+            </p>
           </div>
         </div>
       </footer>

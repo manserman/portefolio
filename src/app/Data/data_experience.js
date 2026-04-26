@@ -1,4 +1,34 @@
 export default function data_exp() {
+  var exp_0 = {
+    poste: "Fondateur · Software Engineer",
+    entreprise: "Ascelyo",
+    logo: "ascelyo-logo.png",
+    lieu: "Île-de-France, France",
+    description:
+      "Conception et développement d'un coach de vie IA mobile transformant des objectifs long terme en plan d'action quotidien personnalisé",
+    detail:
+      "Ascelyo est une application mobile (iOS · Android) que je conçois et développe seul, du backend à l'identité visuelle. C'est un coach de vie IA qui aide ses utilisateurs à structurer leurs objectifs sur 6 mois à 30 ans, à les décomposer en jalons puis en actions journalières, et à itérer chaque semaine via une boucle « human in the loop » : revue de la semaine, replan collaborative, journal vocal avec transcription automatique. Le produit cible le ROI d'un coaching humain (~300 €/mois) à 19,99 €/mois.",
+    missions: [
+      "Architecture full-stack : backend NestJS + Prisma + PostgreSQL + Redis/BullMQ, et application mobile React Native (Expo)",
+      "Intégration IA multi-providers (OpenAI, Anthropic) : onboarding conversationnel, synthèse de plans, journal vocal avec transcription Whisper",
+      "Système de paiement multi-canal (Stripe, Apple StoreKit 2, Google Play RTDN) avec webhooks idempotents et réconciliation BullMQ",
+      "Authentification JWT (jose, HS256) avec refresh automatique et RBAC plan-based (free / pro / elite)",
+      "Conception et déploiement de la landing page éditoriale (Hetzner + Caddy + Docker + GHCR)",
+      "Direction produit : positionnement, copywriting, design system, identité visuelle",
+    ],
+    competences: [
+      "Architecture full-stack (NestJS, React Native, PostgreSQL)",
+      "IA générative en production (OpenAI, Anthropic, Whisper)",
+      "Prompt engineering et défense anti-injection",
+      "Paiements multi-provider (Stripe, IAP)",
+      "DevOps (Docker, Caddy, Hetzner, GHCR)",
+      "Mobile (Expo, Reanimated, RevenueCat)",
+      "Direction produit et copywriting",
+    ],
+    debut: "Avril 2026",
+    fin: "Présent",
+    isExperience: true,
+  };
   var exp_1 = {
     poste: "Software Engineer",
     entreprise: "ISA Software",
@@ -91,7 +121,7 @@ export default function data_exp() {
     isExperience: true,
   };
 
-  var experiences = [exp_1, exp_2, exp_3];
+  var experiences = [exp_0, exp_1, exp_2, exp_3];
 
   return experiences;
 }
