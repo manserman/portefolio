@@ -21,10 +21,10 @@ export default function Header() {
         </a>
         <nav className="nav-links">
           <a href="#apropos" className="nav-link">À propos</a>
-          <a href="#formation" className="nav-link">Formation</a>
           <a href="#experiences" className="nav-link">Expériences</a>
           <a href="#stack" className="nav-link">Stack</a>
           <a href="#competences" className="nav-link">Compétences</a>
+          <a href="#formation" className="nav-link">Formation</a>
           <a href="#contact" className="nav-link">Contact</a>
           <a
             href="https://ascelyo.app"
