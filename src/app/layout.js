@@ -5,9 +5,9 @@ const SITE_URL = "https://manserman.github.io/portefolio/";
 const OG_IMAGE = "https://manserman.github.io/portefolio/og-cover.png";
 
 const TITLE =
-  "Mohamadou Mansour Habibou Hamani — Ingénieur Logiciel & Fondateur d'Ascelyo";
+  "Mohamadou Mansour Habibou Hamani — Ingénieur Logiciel";
 const DESCRIPTION =
-  "Ingénieur logiciel spécialisé Backend Java, systèmes distribués et IA générative. Fondateur d'Ascelyo, coach de vie IA mobile (iOS · Android).";
+  "Ingénieur logiciel spécialisé Backend Java, systèmes distribués et IA générative. Conception de produits mobiles et plateformes cloud de bout en bout.";
 
 export const metadata = {
   metadataBase: new URL(SITE_URL),
@@ -33,7 +33,7 @@ export const metadata = {
         url: OG_IMAGE,
         width: 1200,
         height: 630,
-        alt: "Mohamadou Mansour Habibou Hamani — Ingénieur Logiciel & Fondateur d'Ascelyo",
+        alt: "Mohamadou Mansour Habibou Hamani — Ingénieur Logiciel",
       },
     ],
   },
@@ -66,16 +66,11 @@ const personSchema = {
   alternateName: "M. Mansour",
   givenName: "Mohamadou Mansour",
   familyName: "Habibou Hamani",
-  jobTitle: "Ingénieur Logiciel · Fondateur d'Ascelyo",
+  jobTitle: "Ingénieur Logiciel",
   description: DESCRIPTION,
   url: SITE_URL,
   image: `${SITE_URL}img/photo_profil.JPG`,
   email: "mailto:mansourh923@gmail.com",
-  worksFor: {
-    "@type": "Organization",
-    name: "Ascelyo",
-    url: "https://ascelyo.app",
-  },
   alumniOf: {
     "@type": "CollegeOrUniversity",
     name: "Université de Picardie Jules Verne — Master MIAGE",
@@ -105,7 +100,7 @@ const personSchema = {
     "CI/CD",
   ],
   knowsLanguage: ["fr", "en"],
-  sameAs: ["https://github.com/manserman", "https://ascelyo.app"],
+  sameAs: ["https://github.com/manserman"],
 };
 
 export default function RootLayout({ children }) {
