@@ -1,7 +1,5 @@
-import { Inter } from "next/font/google";
 import "./globals.css";
-
-const inter = Inter({ subsets: ["latin"] });
+import RevealClient from "./Components/RevealClient";
 
 const SITE_URL = "https://manserman.github.io/portefolio/";
 const OG_IMAGE = "https://manserman.github.io/portefolio/og-cover.png";
@@ -107,21 +105,36 @@ const personSchema = {
     "CI/CD",
   ],
   knowsLanguage: ["fr", "en"],
-  sameAs: [
-    "https://github.com/manserman",
-    "https://ascelyo.app",
-  ],
+  sameAs: ["https://github.com/manserman", "https://ascelyo.app"],
 };
 
 export default function RootLayout({ children }) {
   return (
     <html lang="fr">
-      <body className={inter.className}>
+      <head>
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link
+          rel="preconnect"
+          href="https://fonts.gstatic.com"
+          crossOrigin=""
+        />
+        <link
+          href="https://fonts.googleapis.com/css2?family=Geist:wght@300;400;500;600;700&family=Geist+Mono:wght@400;500;600&family=Instrument+Serif:ital@0;1&display=swap"
+          rel="stylesheet"
+        />
+      </head>
+      <body>
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(personSchema) }}
         />
+        <div className="aurora" aria-hidden="true">
+          <span className="aurora-blob a"></span>
+          <span className="aurora-blob b"></span>
+          <span className="aurora-blob c"></span>
+        </div>
         {children}
+        <RevealClient />
       </body>
     </html>
   );

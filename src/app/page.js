@@ -1,356 +1,368 @@
 "use client";
-import Image from "next/image";
 import Header from "./Components/Header";
 import Experience from "./Components/Experience";
-import Competence from "./Components/Competence";
-import Formation from "./Components/Formation";
-import data_comp from "./Data/data_competences";
-import data_form from "./Data/data_formations";
 import data_exp from "./Data/data_experience";
 
-export default function Home() {
-  // Protection robuste contre les données undefined
-  let experiences = [];
-  let competences = [];
-  let formations = [];
+const STACK = [
+  {
+    label: "Backend",
+    items: ["Java", "Spring Boot", "NestJS", "TypeScript", "PostgreSQL", "Redis", "Prisma", "BullMQ"],
+  },
+  {
+    label: "IA générative",
+    items: ["OpenAI", "Anthropic Claude", "Whisper", "Prompt engineering", "Zod schemas"],
+  },
+  {
+    label: "Mobile & Web",
+    items: ["React Native", "Expo", "React", "Reanimated", "Next.js"],
+  },
+  {
+    label: "Cloud & DevOps",
+    items: ["Docker", "Caddy", "Hetzner", "GitHub Actions", "GHCR", "Vercel"],
+  },
+  {
+    label: "Paiement & Auth",
+    items: ["Stripe", "Apple StoreKit 2", "Google Play RTDN", "RevenueCat", "JWT (jose)"],
+  },
+  {
+    label: "Méthodes",
+    items: ["Tests (Vitest, Mockito)", "CI/CD", "Architecture distribuée", "AMQP 1.0", "REST · WebSockets"],
+  },
+];
 
+export default function Home() {
+  let experiences = [];
   try {
     experiences = data_exp() || [];
   } catch (e) {
     console.error("Error loading experiences:", e);
   }
-
-  try {
-    competences = data_comp() || [];
-  } catch (e) {
-    console.error("Error loading competences:", e);
-  }
-
-  try {
-    formations = data_form() || [];
-  } catch (e) {
-    console.error("Error loading formations:", e);
-  }
-
-  // S'assurer que ce sont des tableaux
   if (!Array.isArray(experiences)) experiences = [];
-  if (!Array.isArray(competences)) competences = [];
-  if (!Array.isArray(formations)) formations = [];
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950">
+    <>
       <Header />
 
-      {/* HERO SECTION */}
-      <section
-        id="accueil"
-        className="min-h-screen flex items-center justify-center relative overflow-hidden pt-20"
-      >
-        {/* Animated Background */}
-        <div className="absolute inset-0 overflow-hidden">
-          <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-indigo-600/20 rounded-full blur-3xl animate-pulse"></div>
-          <div className="absolute bottom-1/4 right-1/4 w-96 h-96 bg-violet-600/20 rounded-full blur-3xl animate-pulse" style={{ animationDelay: '1s' }}></div>
-        </div>
+      <main>
+        {/* ═══ HERO ═══ */}
+        <section id="accueil" className="hero">
+          <div className="container">
+            <div className="hero-inner">
+              <div>
+                <div className="hero-eyebrow reveal">
+                  <span className="eyebrow">
+                    <span className="eyebrow-dot"></span>
+                    Building Ascelyo · Coach de vie IA
+                  </span>
+                </div>
 
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-          <div className="max-w-4xl mx-auto text-center">
-            {/* Photo de profil */}
-            <div className="mb-8 flex justify-center">
-              <div className="relative group">
-                <div className="absolute inset-0 bg-gradient-to-br from-indigo-600 to-violet-600 rounded-full opacity-20 group-hover:opacity-30 transition-opacity duration-300 blur-xl"></div>
-                <Image
-                  src="./img/photo_profil.JPG"
-                  alt="Mohamadou Mansour HABIBOU HAMANI"
-                  width={200}
-                  height={200}
-                  className="relative rounded-full object-cover border-4 border-indigo-600/30 shadow-2xl shadow-indigo-600/50 group-hover:scale-105 transition-transform duration-300"
-                />
+                <h1 className="reveal">
+                  <span className="line">Mohamadou Mansour</span>
+                  <span className="line italic-accent">Habibou Hamani</span>
+                </h1>
+
+                <p className="hero-sub reveal">
+                  Ingénieur logiciel — backend Java, systèmes distribués,
+                  IA générative et mobile. Je construis des systèmes qui durent,
+                  et un produit qui aide à durer :{" "}
+                  <a
+                    href="https://ascelyo.app"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    Ascelyo
+                  </a>.
+                </p>
+
+                <div className="hero-ctas reveal">
+                  <a href="#experiences" className="btn btn-primary">
+                    Voir mes expériences
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" aria-hidden="true">
+                      <path d="M5 12h14M12 5l7 7-7 7" strokeLinecap="round" strokeLinejoin="round" />
+                    </svg>
+                  </a>
+                  <a
+                    href="./files/FR_Mohamadou_Mansour_HABIBOU_HAMANI.pdf"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="btn btn-ghost"
+                  >
+                    Télécharger le CV
+                  </a>
+                </div>
+
+                <div className="hero-meta reveal">
+                  <div className="meta-item">
+                    <div className="meta-value">3+ ans</div>
+                    <div className="meta-label">Expérience pro</div>
+                  </div>
+                  <div className="meta-item">
+                    <div className="meta-value">Ascelyo</div>
+                    <div className="meta-label">Fondateur · 2026</div>
+                  </div>
+                  <div className="meta-item">
+                    <div className="meta-value">FR · EN</div>
+                    <div className="meta-label">Langues</div>
+                  </div>
+                  <div className="meta-item">
+                    <div className="meta-value status-available">Disponible</div>
+                    <div className="meta-label">Île-de-France</div>
+                  </div>
+                </div>
               </div>
+
+              {/* Now-card (right column) */}
+              <aside className="now-card reveal">
+                <header className="now-header">
+                  <span className="now-title">Currently building</span>
+                  <span className="now-status">Live</span>
+                </header>
+
+                <div className="now-rows">
+                  <div className="now-row">
+                    <div className="now-row-label">Produit</div>
+                    <div className="now-row-value">
+                      <span className="accent">Ascelyo</span> — coach de vie IA mobile.
+                    </div>
+                  </div>
+                  <div className="now-row">
+                    <div className="now-row-label">Stack</div>
+                    <div className="now-row-value">
+                      NestJS · React Native · OpenAI · Anthropic · Stripe.
+                    </div>
+                  </div>
+                  <div className="now-row">
+                    <div className="now-row-label">Phase</div>
+                    <div className="now-row-value">
+                      Landing live, app en développement actif.
+                    </div>
+                  </div>
+                  <div className="now-row">
+                    <div className="now-row-label">Ouvert à</div>
+                    <div className="now-row-value">
+                      CDI, freelance backend / IA, missions ponctuelles.
+                    </div>
+                  </div>
+                </div>
+
+                <div className="now-cta">
+                  <span>Voir le produit</span>
+                  <a
+                    href="https://ascelyo.app"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    ascelyo.app
+                    <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" aria-hidden="true">
+                      <path d="M7 17L17 7M9 7h8v8" strokeLinecap="round" strokeLinejoin="round" />
+                    </svg>
+                  </a>
+                </div>
+              </aside>
             </div>
+          </div>
+        </section>
 
-            {/* Badge */}
-            <a
-              href="https://ascelyo.app"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="inline-flex items-center gap-2 px-4 py-2 bg-indigo-600/10 border border-indigo-600/30 rounded-full mb-8 backdrop-blur-sm hover:border-indigo-500 hover:bg-indigo-600/20 transition-all"
-            >
-              <span className="relative flex h-2 w-2">
-                <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-indigo-400 opacity-75"></span>
-                <span className="relative inline-flex h-2 w-2 rounded-full bg-indigo-500"></span>
+        {/* ═══ ABOUT ═══ */}
+        <section id="apropos" className="section">
+          <div className="container section-inner">
+            <div className="section-header reveal">
+              <span className="eyebrow">
+                <span className="eyebrow-dot"></span>À propos
               </span>
-              <span className="text-sm font-medium text-indigo-300">
-                Building <span className="text-white font-semibold">Ascelyo</span> · Coach de vie IA
-              </span>
-            </a>
-
-            {/* Name */}
-            <h1 className="text-5xl sm:text-6xl lg:text-7xl font-bold mb-6">
-              <span className="bg-gradient-to-r from-white via-indigo-200 to-violet-200 bg-clip-text text-transparent">
-                Mohamadou Mansour<br />HABIBOU HAMANI
-              </span>
-            </h1>
-
-            {/* Title */}
-            <div className="flex items-center justify-center gap-3 mb-8">
-              <div className="h-1 w-12 bg-gradient-to-r from-indigo-600 to-violet-600 rounded"></div>
-              <h2 className="text-2xl sm:text-3xl font-semibold text-slate-300">
-                Ingénieur Logiciel
+              <h2>
+                Backend, IA, mobile —{" "}
+                <span className="italic-accent">de bout en bout</span>.
               </h2>
-              <div className="h-1 w-12 bg-gradient-to-r from-violet-600 to-indigo-600 rounded"></div>
             </div>
 
-            {/* Specializations */}
-            <p className="text-xl text-slate-400 mb-12 max-w-2xl mx-auto">
-              <span className="text-indigo-400 font-semibold">Backend Java</span> ·
-              <span className="text-indigo-400 font-semibold"> Systèmes distribués</span> ·
-              <span className="text-indigo-400 font-semibold"> IA générative</span> ·
-              <span className="text-indigo-400 font-semibold"> Mobile React Native</span>
-            </p>
+            <div className="about-grid">
+              <div className="about-text reveal">
+                <p>
+                  Diplômé d'un <strong>Master MIAGE</strong> (Méthodes Informatiques
+                  Appliquées à la Gestion des Entreprises) avec spécialisation
+                  Ingénierie des Données et de la Décision, mention Bien.
+                </p>
+                <p>
+                  Plus de <strong>trois années d'expérience</strong> en backend Java
+                  et systèmes distribués — chez{" "}
+                  <strong>Autoliv</strong> (modernisation d'un système de
+                  traçabilité critique pour la sécurité automobile, Java 6 → 17),
+                  puis sur le <strong>projet ORCI</strong>, initiative européenne
+                  d'optimisation du trafic aérien par IA, avec un middleware
+                  multi-protocole (REST · AMQP 1.0 · RPC).
+                </p>
+                <p>
+                  En parallèle, je conçois et développe{" "}
+                  <a
+                    href="https://ascelyo.app"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    Ascelyo
+                  </a>{" "}
+                  — un coach de vie IA mobile qui transforme des objectifs long
+                  terme en actions quotidiennes. Du backend (NestJS, Prisma) au
+                  mobile (React Native, Expo), en passant par l'IA générative
+                  (OpenAI, Anthropic, Whisper), les paiements multi-provider et la
+                  landing éditoriale, je porte le produit de bout en bout.
+                </p>
+              </div>
 
-            {/* CTA Buttons */}
-            <div className="flex flex-wrap gap-4 justify-center">
+              <figure className="about-portrait reveal">
+                {/* eslint-disable-next-line @next/next/no-img-element */}
+                <img
+                  src="./img/photo_profil.JPG"
+                  alt="Mohamadou Mansour Habibou Hamani"
+                />
+                <figcaption className="about-portrait-tag">
+                  Mansour · Île-de-France
+                </figcaption>
+              </figure>
+            </div>
+          </div>
+        </section>
+
+        {/* ═══ EXPERIENCES ═══ */}
+        <section id="experiences" className="section">
+          <div className="container section-inner">
+            <div className="section-header reveal">
+              <span className="eyebrow">
+                <span className="eyebrow-dot"></span>Expériences
+              </span>
+              <h2>
+                Quatre années,{" "}
+                <span className="italic-accent">plusieurs contextes</span>.
+              </h2>
+              <p>
+                D'un système de traçabilité de sécurité automobile à un coach IA
+                mobile, en passant par un projet européen d'optimisation du trafic
+                aérien.
+              </p>
+            </div>
+
+            <div className="exp-list">
+              {experiences.map((exp, i) => (
+                <Experience key={i} exp={exp} />
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* ═══ STACK ═══ */}
+        <section id="stack" className="section">
+          <div className="container section-inner">
+            <div className="section-header reveal">
+              <span className="eyebrow">
+                <span className="eyebrow-dot"></span>Stack
+              </span>
+              <h2>
+                Outillage <span className="italic-accent">au quotidien</span>.
+              </h2>
+              <p>
+                Sélection de ce que j'utilise effectivement en production —
+                pas la liste complète, juste ce qui compte.
+              </p>
+            </div>
+
+            <div className="stack-grid reveal">
+              {STACK.map((row) => (
+                <div key={row.label} className="stack-row">
+                  <div className="stack-label">{row.label}</div>
+                  <div className="stack-tags">
+                    {row.items.map((item) => (
+                      <span key={item} className="stack-tag">
+                        {item}
+                      </span>
+                    ))}
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* ═══ CONTACT ═══ */}
+        <section id="contact" className="section">
+          <div className="container section-inner">
+            <div className="section-header reveal">
+              <span className="eyebrow">
+                <span className="eyebrow-dot"></span>Contact
+              </span>
+              <h2>
+                Travaillons <span className="italic-accent">ensemble</span>.
+              </h2>
+              <p>
+                Disponible pour discuter d'opportunités CDI, freelance backend / IA,
+                ou de missions ponctuelles autour d'Ascelyo.
+              </p>
+            </div>
+
+            <div className="contact-grid reveal">
+              <a href="mailto:mansourh923@gmail.com" className="contact-card">
+                <div className="contact-label">Email</div>
+                <div className="contact-value">mansourh923@gmail.com</div>
+              </a>
+              <div className="contact-card">
+                <div className="contact-label">Téléphone</div>
+                <div className="contact-value">06 65 15 40 90</div>
+              </div>
+              <div className="contact-card">
+                <div className="contact-label">Localisation</div>
+                <div className="contact-value">Île-de-France</div>
+              </div>
+            </div>
+
+            <div className="contact-cta reveal">
               <a
-                href="#experiences"
-                className="btn-primary px-8 py-4 bg-gradient-to-r from-indigo-600 to-violet-600 text-white rounded-xl font-semibold hover:scale-105 transition-transform shadow-lg shadow-indigo-600/30"
+                href="./files/FR_Mohamadou_Mansour_HABIBOU_HAMANI.pdf"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="btn btn-primary"
               >
-                Voir mes expériences
+                Télécharger mon CV
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" aria-hidden="true">
+                  <path d="M12 3v14m0 0l-5-5m5 5l5-5M5 21h14" strokeLinecap="round" strokeLinejoin="round" />
+                </svg>
               </a>
               <a
-                href="#contact"
-                className="btn-secondary px-8 py-4 bg-slate-800/50 border-2 border-slate-700 text-white rounded-xl font-semibold hover:border-indigo-600 hover:bg-slate-800 transition-all backdrop-blur-sm"
+                href="https://github.com/manserman"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="btn btn-ghost"
               >
-                Me contacter
+                GitHub
               </a>
-            </div>
-
-            {/* Quick Stats */}
-            <div className="grid grid-cols-3 gap-6 mt-16 max-w-3xl mx-auto">
-              <div className="text-center">
-                <div className="text-4xl font-bold text-indigo-400">3+</div>
-                <div className="text-sm text-slate-400 mt-1">Ans d'expérience</div>
-              </div>
-              <div className="text-center">
-                <div className="text-4xl font-bold text-violet-400">15+</div>
-                <div className="text-sm text-slate-400 mt-1">Technologies</div>
-              </div>
-              <div className="text-center">
-                <div className="text-4xl font-bold text-indigo-400">1</div>
-                <div className="text-sm text-slate-400 mt-1">Produit en cours</div>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        {/* Scroll Indicator */}
-        <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce">
-          <svg className="w-6 h-6 text-slate-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 14l-7 7m0 0l-7-7m7 7V3" />
-          </svg>
-        </div>
-      </section>
-
-      {/* À PROPOS */}
-      <section id="apropos" className="py-20 px-4 sm:px-6 lg:px-8">
-        <div className="container mx-auto max-w-6xl">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl sm:text-5xl font-bold mb-4">
-              <span className="bg-gradient-to-r from-white via-indigo-200 to-violet-200 bg-clip-text text-transparent">
-                À propos
-              </span>
-            </h2>
-            <p className="text-slate-400 text-lg">Mon parcours et mes compétences</p>
-          </div>
-
-          <div className="modern-card p-8 sm:p-12 bg-slate-900/50 backdrop-blur-sm border border-slate-800 rounded-2xl">
-            <div className="prose prose-invert prose-lg max-w-none">
-              <p className="text-slate-300 leading-relaxed mb-6">
-                Diplômé d'un <span className="text-indigo-400 font-semibold">Master MIAGE</span> (Méthodes Informatiques
-                Appliquées à la Gestion des Entreprises), avec une spécialisation
-                en <span className="text-indigo-400 font-semibold">Ingénierie des Données et de la Décision</span>, obtenu avec
-                mention Bien.
-              </p>
-
-              <p className="text-slate-300 leading-relaxed mb-6">
-                Fort de plus de <span className="text-indigo-400 font-semibold">trois années d'expérience professionnelle</span>,
-                j'ai contribué à des projets significatifs, notamment chez <span className="text-indigo-400 font-semibold">Autoliv</span>,
-                acteur mondial de la sécurité automobile, et sur le
-                <span className="text-indigo-400 font-semibold"> projet ORCI</span>, une initiative européenne d'optimisation
-                du trafic aérien par IA.
-              </p>
-
-              <p className="text-slate-300 leading-relaxed mb-6">
-                En parallèle, je conçois et développe <a href="https://ascelyo.app" target="_blank" rel="noopener noreferrer" className="text-indigo-400 font-semibold hover:text-indigo-300 underline decoration-indigo-500/40 underline-offset-4">Ascelyo</a> —
-                un coach de vie IA mobile qui transforme des objectifs long terme en actions quotidiennes.
-                Du backend (NestJS, Prisma) au mobile (React Native, Expo), en passant par
-                l'IA générative (OpenAI, Anthropic, Whisper), les paiements multi-provider et la
-                landing éditoriale, je porte le produit de bout en bout.
-              </p>
-
-              <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mt-8">
-                <div className="p-6 bg-slate-800/50 rounded-xl border border-slate-700">
-                  <h3 className="text-xl font-semibold text-indigo-400 mb-3">Backend &amp; Cloud</h3>
-                  <p className="text-slate-400">
-                    Java / Spring Boot, NestJS, PostgreSQL, Redis. Architectures microservices et middleware temps réel.
-                  </p>
-                </div>
-
-                <div className="p-6 bg-slate-800/50 rounded-xl border border-slate-700">
-                  <h3 className="text-xl font-semibold text-violet-400 mb-3">IA générative</h3>
-                  <p className="text-slate-400">
-                    OpenAI, Anthropic, Whisper. Prompt engineering, validation Zod, défense anti-injection en production.
-                  </p>
-                </div>
-
-                <div className="p-6 bg-slate-800/50 rounded-xl border border-slate-700">
-                  <h3 className="text-xl font-semibold text-indigo-400 mb-3">Mobile &amp; Produit</h3>
-                  <p className="text-slate-400">
-                    React Native (Expo), paiements multi-canal (Stripe, IAP), design system et copywriting éditorial.
-                  </p>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* EXPÉRIENCES */}
-      <section id="experiences" className="py-20 px-4 sm:px-6 lg:px-8 bg-slate-900/30">
-        <div className="container mx-auto max-w-6xl">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl sm:text-5xl font-bold mb-4">
-              <span className="bg-gradient-to-r from-white via-indigo-200 to-violet-200 bg-clip-text text-transparent">
-                Expériences Professionnelles
-              </span>
-            </h2>
-            <p className="text-slate-400 text-lg">Mon parcours professionnel</p>
-          </div>
-
-          <div className="timeline space-y-8">
-            {experiences.map((exp, index) => (
-              <div key={index} className="timeline-item">
-                <Experience exp={exp} />
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* COMPÉTENCES */}
-      <section id="competences" className="py-20 px-4 sm:px-6 lg:px-8">
-        <div className="container mx-auto max-w-6xl">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl sm:text-5xl font-bold mb-4">
-              <span className="bg-gradient-to-r from-white via-indigo-200 to-violet-200 bg-clip-text text-transparent">
-                Compétences
-              </span>
-            </h2>
-            <p className="text-slate-400 text-lg">Technologies et expertises</p>
-          </div>
-
-          <div className="grid gap-6">
-            {competences.map((compGroup, groupIndex) => (
-              compGroup.comp && Array.isArray(compGroup.comp) ? (
-                compGroup.comp.map((comp, index) => (
-                  <Competence key={`${groupIndex}-${index}`} comp={comp} />
-                ))
-              ) : null
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* CONTACT */}
-      <section id="contact" className="py-20 px-4 sm:px-6 lg:px-8">
-        <div className="container mx-auto max-w-4xl">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl sm:text-5xl font-bold mb-4">
-              <span className="bg-gradient-to-r from-white via-indigo-200 to-violet-200 bg-clip-text text-transparent">
-                Contact
-              </span>
-            </h2>
-            <p className="text-slate-400 text-lg">Travaillons ensemble</p>
-          </div>
-
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-            <a
-              href="mailto:mansourh923@gmail.com"
-              className="modern-card p-6 hover:scale-105 transition-transform bg-slate-900/50 border border-slate-800 rounded-xl"
-            >
-              <div className="flex items-center gap-4">
-                <div className="w-12 h-12 rounded-lg bg-gradient-to-br from-indigo-600 to-violet-600 flex items-center justify-center text-2xl shadow-lg">
-                  ✉️
-                </div>
-                <div>
-                  <div className="text-xs text-slate-400 font-medium">Email</div>
-                  <div className="text-sm text-slate-200 truncate">mansourh923@gmail.com</div>
-                </div>
-              </div>
-            </a>
-
-            <div className="modern-card p-6 bg-slate-900/50 border border-slate-800 rounded-xl">
-              <div className="flex items-center gap-4">
-                <div className="w-12 h-12 rounded-lg bg-gradient-to-br from-indigo-600 to-violet-600 flex items-center justify-center text-2xl shadow-lg">
-                  📱
-                </div>
-                <div>
-                  <div className="text-xs text-slate-400 font-medium">Téléphone</div>
-                  <div className="text-sm text-slate-200">06 65 15 40 90</div>
-                </div>
-              </div>
-            </div>
-
-            <div className="modern-card p-6 bg-slate-900/50 border border-slate-800 rounded-xl">
-              <div className="flex items-center gap-4">
-                <div className="w-12 h-12 rounded-lg bg-gradient-to-br from-indigo-600 to-violet-600 flex items-center justify-center text-2xl shadow-lg">
-                  📍
-                </div>
-                <div>
-                  <div className="text-xs text-slate-400 font-medium">Localisation</div>
-                  <div className="text-sm text-slate-200">Ile de France</div>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div className="mt-12 text-center">
-            <a
-              href="./files/FR_Mohamadou_Mansour_HABIBOU_HAMANI.pdf"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="inline-flex items-center gap-3 px-8 py-4 bg-gradient-to-r from-indigo-600 to-violet-600 text-white rounded-xl font-semibold hover:scale-105 transition-transform shadow-lg shadow-indigo-600/30"
-            >
-              <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
-              </svg>
-              Télécharger mon CV
-            </a>
-          </div>
-        </div>
-      </section>
-
-      {/* FOOTER */}
-      <footer className="py-12 px-4 sm:px-6 lg:px-8 border-t border-slate-800 bg-slate-900/50">
-        <div className="container mx-auto max-w-6xl text-center">
-          <div className="text-slate-400 text-sm">
-            <p className="text-slate-300">
-              Ingénieur Logiciel · Fondateur de{" "}
               <a
                 href="https://ascelyo.app"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-indigo-400 hover:text-indigo-300 transition-colors"
+                className="btn btn-ghost"
               >
-                Ascelyo
+                Ascelyo →
               </a>
-            </p>
-            <p className="mt-2 text-slate-500">Backend · IA générative · Mobile · Île-de-France</p>
-            <p className="mt-6 text-xs text-slate-600">
-              © 2026 Mohamadou Mansour Habibou Hamani. Tous droits réservés.
-            </p>
+            </div>
           </div>
+        </section>
+      </main>
+
+      {/* ═══ FOOTER ═══ */}
+      <footer className="footer">
+        <div className="container footer-inner">
+          <div className="footer-brand">
+            <strong>Mohamadou Mansour Habibou Hamani</strong> — Ingénieur Logiciel · Fondateur d'
+            <a
+              href="https://ascelyo.app"
+              target="_blank"
+              rel="noopener noreferrer"
+              style={{ color: "var(--accent)" }}
+            >
+              Ascelyo
+            </a>
+          </div>
+          <div className="footer-meta">© 2026 · Tous droits réservés</div>
         </div>
       </footer>
-    </div>
+    </>
   );
 }
