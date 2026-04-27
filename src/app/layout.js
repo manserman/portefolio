@@ -18,10 +18,16 @@ export const metadata = {
   publisher: "Mohamadou Mansour Habibou Hamani",
   alternates: {
     canonical: SITE_URL,
+    languages: {
+      "fr-FR": SITE_URL,
+      "en-US": `${SITE_URL}en/`,
+      "x-default": SITE_URL,
+    },
   },
   openGraph: {
     type: "profile",
     locale: "fr_FR",
+    alternateLocale: "en_US",
     url: SITE_URL,
     siteName: "Mohamadou Mansour Habibou Hamani — Portfolio",
     title: TITLE,

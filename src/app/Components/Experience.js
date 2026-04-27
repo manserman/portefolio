@@ -1,6 +1,6 @@
 import Image from "next/image";
 
-export default function Experience({ exp }) {
+export default function Experience({ exp, imgPrefix = "./img/" }) {
   if (!exp) return null;
 
   return (
@@ -15,7 +15,7 @@ export default function Experience({ exp }) {
           {exp.logo && (
             <Image
               className="exp-logo"
-              src={`./img/${exp.logo}`}
+              src={`${imgPrefix}${exp.logo}`}
               alt={`Logo ${exp.entreprise}`}
               width={44}
               height={44}
