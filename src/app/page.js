@@ -105,8 +105,8 @@ export default function Home() {
                     <div className="meta-label">Langues</div>
                   </div>
                   <div className="meta-item">
-                    <div className="meta-value status-available">Disponible</div>
-                    <div className="meta-label">Île-de-France</div>
+                    <div className="meta-value">Île-de-France</div>
+                    <div className="meta-label">Localisation</div>
                   </div>
                 </div>
               </div>
@@ -135,12 +135,6 @@ export default function Home() {
                     <div className="now-row-label">Phase</div>
                     <div className="now-row-value">
                       Landing live, app en développement actif.
-                    </div>
-                  </div>
-                  <div className="now-row">
-                    <div className="now-row-label">Ouvert à</div>
-                    <div className="now-row-value">
-                      CDI, freelance backend / IA, missions ponctuelles.
                     </div>
                   </div>
                 </div>

@@ -247,17 +247,6 @@ a { color: inherit; text-decoration: none; }
   color: var(--text);
   letter-spacing: -0.02em;
 }
-.meta-value.status-available::before {
-  content: '';
-  display: inline-block;
-  width: 8px; height: 8px;
-  border-radius: 50%;
-  background: var(--success);
-  margin-right: 8px;
-  box-shadow: 0 0 10px rgba(107, 159, 122, 0.6);
-  animation: pulse 2.4s ease-in-out infinite;
-  vertical-align: 2px;
-}
 .meta-label {
   font-size: 11px; font-weight: 500;
   color: var(--text-dim);
