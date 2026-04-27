@@ -1,5 +1,6 @@
 "use client";
 import { useEffect, useState } from "react";
+import Link from "next/link";
 import { usePathname } from "next/navigation";
 
 const COPY = {
@@ -43,30 +44,27 @@ export default function Header() {
     return () => window.removeEventListener("scroll", onScroll);
   }, []);
 
-  const homeHref = isEn ? "/en#accueil" : "#accueil";
-  const link = (anchor) => (isEn ? `/en#${anchor}` : `#${anchor}`);
-
   return (
     <header className={`nav${scrolled ? " is-scrolled" : ""}`}>
       <div className="container nav-inner">
-        <a href={homeHref} className="nav-logo">
+        <a href="#accueil" className="nav-logo">
           <span className="nav-logo-mark">M</span>
           <span>Mansour</span>
         </a>
         <nav className="nav-links">
-          <a href={link("apropos")} className="nav-link">{t.apropos}</a>
-          <a href={link("experiences")} className="nav-link">{t.experiences}</a>
-          <a href={link("stack")} className="nav-link">{t.stack}</a>
-          <a href={link("competences")} className="nav-link">{t.competences}</a>
-          <a href={link("formation")} className="nav-link">{t.formation}</a>
-          <a href={link("contact")} className="nav-link">{t.contact}</a>
-          <a
+          <a href="#apropos" className="nav-link">{t.apropos}</a>
+          <a href="#experiences" className="nav-link">{t.experiences}</a>
+          <a href="#stack" className="nav-link">{t.stack}</a>
+          <a href="#competences" className="nav-link">{t.competences}</a>
+          <a href="#formation" className="nav-link">{t.formation}</a>
+          <a href="#contact" className="nav-link">{t.contact}</a>
+          <Link
             href={t.altLocaleHref}
             className="nav-locale"
             aria-label={t.altLocaleAria}
           >
             {t.altLocaleLabel}
-          </a>
+          </Link>
           <a
             href="https://ascelyo.app"
             target="_blank"
