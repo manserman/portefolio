@@ -290,11 +290,11 @@ export default function Home() {
                 <span className="eyebrow-dot"></span>Contact
               </span>
               <h2>
-                Travaillons <span className="italic-accent">ensemble</span>.
+                Garder <span className="italic-accent">le lien</span>.
               </h2>
               <p>
-                Disponible pour discuter d'opportunités CDI, freelance backend / IA,
-                ou de missions ponctuelles autour d'Ascelyo.
+                Pour échanger sur Ascelyo, le backend, l'IA générative — ou
+                simplement dire bonjour.
               </p>
             </div>
 
