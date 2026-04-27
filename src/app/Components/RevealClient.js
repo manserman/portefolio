@@ -1,11 +1,14 @@
 "use client";
 import { useEffect } from "react";
+import { usePathname } from "next/navigation";
 
 export default function RevealClient() {
+  const pathname = usePathname();
+
   useEffect(() => {
     if (typeof window === "undefined") return;
 
-    const els = document.querySelectorAll(".reveal");
+    const els = document.querySelectorAll(".reveal:not(.visible)");
     if (!els.length) return;
 
     const obs = new IntersectionObserver(
@@ -23,7 +26,7 @@ export default function RevealClient() {
     els.forEach((el) => obs.observe(el));
 
     return () => obs.disconnect();
-  }, []);
+  }, [pathname]);
 
   return null;
 }
