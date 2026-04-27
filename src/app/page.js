@@ -2,6 +2,8 @@
 import Header from "./Components/Header";
 import Experience from "./Components/Experience";
 import data_exp from "./Data/data_experience";
+import data_form from "./Data/data_formations";
+import data_comp from "./Data/data_competences";
 
 const STACK = [
   {
@@ -32,12 +34,26 @@ const STACK = [
 
 export default function Home() {
   let experiences = [];
+  let formations = [];
+  let skillGroups = [];
   try {
     experiences = data_exp() || [];
   } catch (e) {
     console.error("Error loading experiences:", e);
   }
+  try {
+    formations = data_form() || [];
+  } catch (e) {
+    console.error("Error loading formations:", e);
+  }
+  try {
+    skillGroups = data_comp() || [];
+  } catch (e) {
+    console.error("Error loading competences:", e);
+  }
   if (!Array.isArray(experiences)) experiences = [];
+  if (!Array.isArray(formations)) formations = [];
+  if (!Array.isArray(skillGroups)) skillGroups = [];
 
   return (
     <>
@@ -217,6 +233,55 @@ export default function Home() {
           </div>
         </section>
 
+        {/* ═══ FORMATION ═══ */}
+        <section id="formation" className="section">
+          <div className="container section-inner">
+            <div className="section-header reveal">
+              <span className="eyebrow">
+                <span className="eyebrow-dot"></span>Formation
+              </span>
+              <h2>
+                Bac+5 MIAGE,{" "}
+                <span className="italic-accent">double compétence</span>.
+              </h2>
+              <p>
+                Formation universitaire en informatique et systèmes
+                d&apos;information — du fondement algorithmique à
+                l&apos;architecture décisionnelle.
+              </p>
+            </div>
+
+            <div className="exp-list">
+              {formations.map((f, i) => (
+                <article key={i} className="exp-item reveal">
+                  <div className="exp-years">
+                    <span className="exp-year-from">{f.debut}</span>
+                    <span className="exp-year-to">→ {f.fin}</span>
+                  </div>
+                  <div className="exp-body">
+                    <header className="exp-header">
+                      <div>
+                        <div className="exp-role">{f.intitule_s}</div>
+                        <div className="exp-company">
+                          {f.institut} · {f.lieu}
+                        </div>
+                      </div>
+                    </header>
+                    <p className="exp-detail">{f.detail}</p>
+                    {Array.isArray(f.acquis) && f.acquis.length > 0 && (
+                      <ul className="exp-missions">
+                        {f.acquis.map((a, k) => (
+                          <li key={k}>{a}</li>
+                        ))}
+                      </ul>
+                    )}
+                  </div>
+                </article>
+              ))}
+            </div>
+          </div>
+        </section>
+
         {/* ═══ EXPERIENCES ═══ */}
         <section id="experiences" className="section">
           <div className="container section-inner">
@@ -270,6 +335,43 @@ export default function Home() {
                       </span>
                     ))}
                   </div>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* ═══ COMPÉTENCES ═══ */}
+        <section id="competences" className="section">
+          <div className="container section-inner">
+            <div className="section-header reveal">
+              <span className="eyebrow">
+                <span className="eyebrow-dot"></span>Compétences
+              </span>
+              <h2>
+                Du code <span className="italic-accent">au produit</span>.
+              </h2>
+              <p>
+                Six domaines, articulés — des fondamentaux du génie logiciel à
+                la conduite de projet et au savoir-être.
+              </p>
+            </div>
+
+            <div className="skills-grid reveal">
+              {skillGroups.map((g, i) => (
+                <div key={i} className="skills-group">
+                  <span className="skills-group-label">
+                    {String(i + 1).padStart(2, "0")} · {g.titre}
+                  </span>
+                  <h3 className="skills-group-title">{g.titre}</h3>
+                  {g.summary && (
+                    <p className="skills-group-summary">{g.summary}</p>
+                  )}
+                  <ul className="skills-list">
+                    {(g.competences || []).map((c, k) => (
+                      <li key={k}>{c}</li>
+                    ))}
+                  </ul>
                 </div>
               ))}
             </div>

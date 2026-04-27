@@ -1,47 +1,45 @@
 export default function data_form() {
-  var formation1 = {
-    intitule_s: "MASTER MIAGE (mention BIEN)",
-    institut: "UPJV",
-    logo: "logo.png",
-    lieu: "Amiens, France",
-    intitule_l: "Méthode informatique appliqué à la gestion d'entreprise",
-    detail:
-      "Diplôme universitaire français de niveau Bac+5, alliant une double compétence en informatique et en gestion, destiné à former des cadres d’entreprise experts en ingénierie des systèmes d’information ",
-    acquis: [
-      "Gérer un changement métier suite à une évolution informatique",
-      "Planifier et gérer un projet informatique",
-      "Gérer un portefeuille de projets",
-      "Gérer une relation client ou une relation fournisseur",
-      "Identifier et formaliser les besoins des clients / utilisateurs",
-      "Développer, tester et déployer un composant logiciel ou matériel dans divers contextes",
-      "Mettre en œuvre les outils d’analyse et de fouille de données pour l’aide à la décision",
-      "Communiquer à des fins de formation ou de transfert de connaissances, par oral et par écrit, en français et dans au moins une langue étrangère",
-    ],
-    debut: "Septembre 2022",
-    fin: "Septembre 2024",
-  };
-
-  var formation2 = {
-    intitule_s: "LICENCE INFORMATIQUE",
-    institut: "UPJV",
-    logo: "logoUpjv.png",
-    lieu: "Amiens, France",
-    intitule_l: "Licence informatique mention MIAGE",
-    detail:
-      "L'objectif de la licence est de former des scientifiques ayant une culture large et fondamentale en informatique, la mention MIAGE permet en plus de comprendre l'importance et le fonctionnement des Systèmes d'Information au sein d'une entreprise ",
-    acquis: [
-      "Analyser et interpréter les résultats produits par l'exécution d'un programme",
-      "Expliquer et documenter la mise en œuvre d'une solution technique",
-      "Concevoir, implémenter et exploiter des bases de données",
-      "Situer son rôle et sa mission au sein d'une organisation pour s'adapter et prendre des initiatives",
-      "Travailler en équipe autant qu’en autonomie et responsabilité au service d’un projet",
-      "Analyser ses actions en situation professionnelle, s’autoévaluer pour améliorer sa pratique",
-    ],
-    debut: "Septembre 2021",
-    fin: "Septembre 2022",
-  };
-
-  var formations = [formation1, formation2];
+  const formations = [
+    {
+      intitule_s: "Master MIAGE — Mention Bien",
+      intitule_l:
+        "Méthodes Informatiques Appliquées à la Gestion des Entreprises · Spécialisation Ingénierie des Données et de la Décision",
+      institut: "Université de Picardie Jules Verne",
+      lieu: "Amiens, France",
+      logo: "logo.png",
+      detail:
+        "Diplôme universitaire français de niveau Bac+5, alliant double compétence en informatique et en gestion. Forme des cadres experts en ingénierie des systèmes d'information, capables de conduire un projet du besoin métier au déploiement technique.",
+      acquis: [
+        "Concevoir, développer et déployer des composants logiciels en environnements hétérogènes",
+        "Mettre en œuvre les outils d'analyse et de fouille de données pour l'aide à la décision",
+        "Identifier et formaliser les besoins clients / utilisateurs",
+        "Planifier, gérer et piloter un projet ou un portefeuille de projets",
+        "Conduire un changement métier consécutif à une évolution informatique",
+        "Communiquer en français et en anglais à des fins de formation et de transfert de connaissances",
+      ],
+      debut: "Sept. 2022",
+      fin: "Sept. 2024",
+    },
+    {
+      intitule_s: "Licence Informatique — parcours MIAGE",
+      intitule_l:
+        "Licence Informatique mention MIAGE — culture fondamentale en informatique et systèmes d'information",
+      institut: "Université de Picardie Jules Verne",
+      lieu: "Amiens, France",
+      logo: "logoUpjv.png",
+      detail:
+        "Formation visant une culture large et fondamentale en informatique. Le parcours MIAGE ajoute la compréhension du fonctionnement des systèmes d'information au sein de l'entreprise, et la capacité à articuler choix techniques et enjeux métier.",
+      acquis: [
+        "Concevoir, implémenter et exploiter des bases de données relationnelles",
+        "Analyser et interpréter les résultats produits par l'exécution d'un programme",
+        "Expliquer et documenter la mise en œuvre d'une solution technique",
+        "Travailler en équipe ou en autonomie au service d'un projet",
+        "S'autoévaluer et améliorer sa pratique en situation professionnelle",
+      ],
+      debut: "Sept. 2021",
+      fin: "Sept. 2022",
+    },
+  ];
 
   return formations;
 }

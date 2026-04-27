@@ -487,6 +487,63 @@ a { color: inherit; text-decoration: none; }
   box-shadow: 0 6px 16px var(--accent-glow);
 }
 
+/* ═══ SKILLS ═══ */
+.skills-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 56px 64px;
+}
+@media (max-width: 900px) { .skills-grid { grid-template-columns: 1fr; gap: 40px; } }
+
+.skills-group {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+.skills-group-label {
+  font-family: 'Geist Mono', monospace;
+  font-size: 11px;
+  color: var(--accent);
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+.skills-group-title {
+  font-size: 22px;
+  font-weight: 600;
+  color: var(--text);
+  letter-spacing: -0.02em;
+  line-height: 1.2;
+}
+.skills-group-summary {
+  font-size: 14px;
+  line-height: 1.55;
+  color: var(--text-muted);
+  max-width: 56ch;
+}
+.skills-list {
+  list-style: none;
+  padding: 0;
+  margin: 6px 0 0 0;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.skills-list li {
+  font-size: 14px;
+  color: var(--text-muted);
+  line-height: 1.55;
+  padding-left: 20px;
+  position: relative;
+  max-width: 60ch;
+}
+.skills-list li::before {
+  content: '→';
+  position: absolute; left: 0; top: 0;
+  color: var(--accent);
+  font-family: 'Geist Mono', monospace;
+  font-size: 12px;
+}
+
 /* ═══ CONTACT ═══ */
 .contact-grid {
   display: grid;
