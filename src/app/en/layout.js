@@ -5,7 +5,7 @@ const OG_IMAGE = `${SITE_URL}og-cover.png`;
 const TITLE =
   "Mohamadou Mansour Habibou Hamani — Software Engineer";
 const DESCRIPTION =
-  "Software engineer specialized in Java backend, distributed systems and generative AI. End-to-end design of mobile products and cloud platforms.";
+  "Software engineer: Java and TypeScript back-ends, generative AI, automation and mobile apps. Three apps live on the App Store. Available for freelance work.";
 
 export const metadata = {
   title: TITLE,

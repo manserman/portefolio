@@ -6,16 +6,18 @@ export default function data_exp_en() {
       logo: "ascelyo-logo.png",
       lieu: "Île-de-France, France",
       description:
-        "Designing and building an AI life-coach mobile app that turns long-term goals into a personalized daily action plan.",
+        "Designing, building and shipping three iOS apps: Ascelyo, Macro Recipe and Aure.",
       detail:
-        "Ascelyo is a mobile app (iOS · Android) I design and build end-to-end, from backend to brand identity. It is an AI life coach that helps users structure their goals over a 6-month-to-30-year horizon, break them down into milestones and daily actions, and iterate every week through a human-in-the-loop loop: weekly review, collaborative replanning, and a voice journal with automatic transcription. The product targets the ROI of human coaching (~€300/mo) at €19.99/mo.",
+        "I design and build my own products end to end, from back-end to brand identity. Three apps are live on the App Store. Ascelyo is an AI coach that helps users structure goals over a 6-month-to-30-year horizon, break them down into milestones and daily actions, and adjust the plan with them every week. Macro Recipe builds a meal plan and a grocery list around each person's tastes and nutrition goals. Aure helps Muslims in Niger and across the diaspora meet for marriage, putting words before photos.",
       missions: [
+        "Shipped three apps on the App Store: Ascelyo, Macro Recipe and Aure",
         "Full-stack architecture: NestJS + Prisma + PostgreSQL + Redis/BullMQ backend, and a React Native (Expo) mobile app",
         "Multi-provider AI integration (OpenAI, Anthropic): conversational onboarding, plan synthesis, voice journal with Whisper transcription",
         "Multi-channel payments (Stripe, Apple StoreKit 2, Google Play RTDN) with idempotent webhooks and BullMQ-based reconciliation",
         "JWT auth (jose, HS256) with automatic refresh and plan-based RBAC (free / pro / elite)",
         "Editorial landing page design and deployment (Hetzner + Caddy + Docker + GHCR)",
         "Product direction: positioning, copywriting, design system, visual identity",
+        "Daily automation pipelines: AI agents (Claude) that research, write and fact-check SEO articles published in six languages",
       ],
       competences: [
         "Full-stack architecture (NestJS, React Native, PostgreSQL)",
@@ -24,6 +26,7 @@ export default function data_exp_en() {
         "Multi-provider payments (Stripe, IAP)",
         "DevOps (Docker, Caddy, Hetzner, GHCR)",
         "Mobile (Expo, Reanimated, RevenueCat)",
+        "AI agents and automation (Claude, n8n)",
         "Product direction and copywriting",
       ],
       debut: "Apr. 2026",

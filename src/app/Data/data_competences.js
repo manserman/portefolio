@@ -37,6 +37,7 @@ export default function data_comp() {
         "Évaluer et comparer les modèles via des protocoles de test reproductibles (Haiku coach + Opus judge)",
         "Boucler « human-in-the-loop » : revue, replan, journal, feedback",
         "Maîtriser les coûts par caching de prompts et choix de modèle ciblé",
+        "Construire des agents IA et des automatisations (n8n, chaînes planifiées) qui tournent chaque jour",
       ],
     },
     {
