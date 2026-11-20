@@ -5,16 +5,18 @@ export default function data_exp() {
     logo: "ascelyo-logo.png",
     lieu: "Île-de-France, France",
     description:
-      "Conception et développement d'un coach de vie IA mobile transformant des objectifs long terme en plan d'action quotidien personnalisé",
+      "Conception, développement et publication de trois applications iOS : Ascelyo, Macro Recipe et Aure",
     detail:
-      "Ascelyo est une application mobile (iOS · Android) que je conçois et développe de bout en bout, du backend à l'identité visuelle. C'est un coach de vie IA qui aide ses utilisateurs à structurer leurs objectifs sur 6 mois à 30 ans, à les décomposer en jalons puis en actions journalières, et à itérer chaque semaine via une boucle « human in the loop » : revue de la semaine, replan collaborative, journal vocal avec transcription automatique. Le produit cible le ROI d'un coaching humain (~300 €/mois) à 19,99 €/mois.",
+      "Je conçois et développe mes propres produits de bout en bout, du back-end à l'identité visuelle. Trois applications sont en ligne sur l'App Store. Ascelyo est un coach IA qui aide ses utilisateurs à structurer leurs objectifs sur 6 mois à 30 ans, à les décomposer en jalons puis en actions journalières, et à ajuster le plan chaque semaine avec eux. Macro Recipe compose un menu et une liste de courses selon les goûts et les objectifs nutritionnels de chacun. Aure aide les musulmans du Niger et de la diaspora à se rencontrer en vue du mariage, en mettant les mots avant les photos.",
     missions: [
+      "Publication de trois applications sur l'App Store : Ascelyo, Macro Recipe et Aure",
       "Architecture full-stack : backend NestJS + Prisma + PostgreSQL + Redis/BullMQ, et application mobile React Native (Expo)",
       "Intégration IA multi-providers (OpenAI, Anthropic) : onboarding conversationnel, synthèse de plans, journal vocal avec transcription Whisper",
       "Système de paiement multi-canal (Stripe, Apple StoreKit 2, Google Play RTDN) avec webhooks idempotents et réconciliation BullMQ",
       "Authentification JWT (jose, HS256) avec refresh automatique et RBAC plan-based (free / pro / elite)",
       "Conception et déploiement de la landing page éditoriale (Hetzner + Caddy + Docker + GHCR)",
       "Direction produit : positionnement, copywriting, design system, identité visuelle",
+      "Chaînes d'automatisation quotidiennes : agents IA (Claude) qui recherchent, rédigent et vérifient des articles SEO publiés en six langues",
     ],
     competences: [
       "Architecture full-stack (NestJS, React Native, PostgreSQL)",
@@ -23,6 +25,7 @@ export default function data_exp() {
       "Paiements multi-provider (Stripe, IAP)",
       "DevOps (Docker, Caddy, Hetzner, GHCR)",
       "Mobile (Expo, Reanimated, RevenueCat)",
+      "Agents IA et automatisation (Claude, n8n)",
       "Direction produit et copywriting",
     ],
     debut: "Avril 2026",

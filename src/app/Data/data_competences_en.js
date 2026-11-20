@@ -37,6 +37,7 @@ export default function data_comp_en() {
         "Evaluate and compare models with reproducible test protocols (Haiku coach + Opus judge)",
         "Run human-in-the-loop loops: review, replan, journal, feedback",
         "Control costs through prompt caching and targeted model selection",
+        "Build AI agents and automations (n8n, scheduled pipelines) that run every day",
       ],
     },
     {

@@ -7,7 +7,7 @@ const OG_IMAGE = "https://manserman.github.io/portefolio/og-cover.png";
 const TITLE =
   "Mohamadou Mansour Habibou Hamani — Ingénieur Logiciel";
 const DESCRIPTION =
-  "Ingénieur logiciel spécialisé Backend Java, systèmes distribués et IA générative. Conception de produits mobiles et plateformes cloud de bout en bout.";
+  "Ingénieur logiciel : back-end Java et TypeScript, IA générative, automatisation et apps mobiles. Trois applications publiées sur l\'App Store. Disponible en freelance.";
 
 export const metadata = {
   metadataBase: new URL(SITE_URL),

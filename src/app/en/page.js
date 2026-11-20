@@ -8,11 +8,11 @@ import data_comp from "../Data/data_competences_en";
 const STACK = [
   {
     label: "Backend",
-    items: ["Java", "Spring Boot", "NestJS", "TypeScript", "PostgreSQL", "Redis", "Prisma", "BullMQ"],
+    items: ["Java", "Spring Boot", "NestJS", "TypeScript", "Node.js", "Rust", "gRPC", "Python", "PostgreSQL", "Redis", "Prisma", "BullMQ"],
   },
   {
-    label: "Generative AI",
-    items: ["OpenAI", "Anthropic Claude", "Whisper", "Prompt engineering", "Zod schemas"],
+    label: "Generative AI & automation",
+    items: ["Anthropic Claude", "OpenAI", "AI agents", "RAG", "n8n", "Whisper", "Prompt engineering", "Zod schemas"],
   },
   {
     label: "Mobile & Web",
@@ -68,7 +68,7 @@ export default function HomeEn() {
                 <div className="hero-eyebrow reveal">
                   <span className="eyebrow">
                     <span className="eyebrow-dot"></span>
-                    Building Ascelyo · AI life coach
+                    3 apps on the App Store · Available for freelance work
                   </span>
                 </div>
 
@@ -78,15 +78,30 @@ export default function HomeEn() {
                 </h1>
 
                 <p className="hero-sub reveal">
-                  Software engineer — Java backend, distributed systems,
-                  generative AI and mobile. I build systems that last,
-                  and a product to help people last:{" "}
+                  I&apos;m a software engineer working on Java and TypeScript
+                  back-ends, generative AI, automation and mobile. I designed and
+                  shipped three apps on the App Store:{" "}
                   <a
                     href="https://ascelyo.app"
                     target="_blank"
                     rel="noopener noreferrer"
                   >
                     Ascelyo
+                  </a>,{" "}
+                  <a
+                    href="https://apps.apple.com/app/id6791539117"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    Macro Recipe
+                  </a>{" "}
+                  and{" "}
+                  <a
+                    href="https://apps.apple.com/app/id6831064777"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    Aure
                   </a>.
                 </p>
 
@@ -113,8 +128,8 @@ export default function HomeEn() {
                     <div className="meta-label">Pro experience</div>
                   </div>
                   <div className="meta-item">
-                    <div className="meta-value">Ascelyo</div>
-                    <div className="meta-label">Founder · 2026</div>
+                    <div className="meta-value">3 apps</div>
+                    <div className="meta-label">App Store · 2026</div>
                   </div>
                   <div className="meta-item">
                     <div className="meta-value">FR · EN</div>
@@ -138,27 +153,34 @@ export default function HomeEn() {
                   <div className="now-row">
                     <div className="now-row-label">Product</div>
                     <div className="now-row-value">
-                      <span className="accent">Ascelyo</span> — AI life coach (mobile).
+                      <span className="accent">Ascelyo</span>, <span className="accent">Macro Recipe</span> and{" "}
+                      <span className="accent">Aure</span>: three iOS apps.
                     </div>
                   </div>
                   <div className="now-row">
                     <div className="now-row-label">Stack</div>
                     <div className="now-row-value">
-                      NestJS · React Native · OpenAI · Anthropic · Stripe.
+                      NestJS · React Native · Claude · OpenAI · Stripe.
                     </div>
                   </div>
                   <div className="now-row">
-                    <div className="now-row-label">Phase</div>
+                    <div className="now-row-label">Status</div>
                     <div className="now-row-value">
-                      Landing live, app in active development.
+                      All three apps are live on the App Store.
+                    </div>
+                  </div>
+                  <div className="now-row">
+                    <div className="now-row-label">Freelance</div>
+                    <div className="now-row-value">
+                      I take fixed-price projects: AI agents, n8n automations and mobile MVPs.
                     </div>
                   </div>
                 </div>
 
                 <div className="now-cta">
-                  <span>Visit the product</span>
+                  <span>See my apps</span>
                   <a
-                    href="https://ascelyo.app"
+                    href="https://apps.apple.com/developer/id1895006104"
                     target="_blank"
                     rel="noopener noreferrer"
                   >
@@ -202,19 +224,40 @@ export default function HomeEn() {
                   with a multi-protocol middleware (REST · AMQP 1.0 · RPC).
                 </p>
                 <p>
-                  In parallel, I design and build{" "}
+                  In parallel, I design and ship my own apps. Three of them are live
+                  on the App Store:{" "}
                   <a
                     href="https://ascelyo.app"
                     target="_blank"
                     rel="noopener noreferrer"
                   >
                     Ascelyo
-                  </a>{" "}
-                  — an AI life coach (mobile) that turns long-term goals into
-                  daily actions. From backend (NestJS, Prisma) to mobile (React
-                  Native, Expo), through generative AI (OpenAI, Anthropic,
-                  Whisper), multi-provider payments and the editorial landing
-                  page, I carry the product end to end.
+                  </a>, an AI coach that turns a long-term goal
+                  into daily actions;{" "}
+                  <a
+                    href="https://apps.apple.com/app/id6791539117"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    Macro Recipe
+                  </a>, which builds meal plans around your tastes
+                  and nutrition goals; and{" "}
+                  <a
+                    href="https://apps.apple.com/app/id6831064777"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    Aure
+                  </a>, an app built for marriage in Niger and across the
+                  diaspora. I carry them end to end, from back-end (NestJS, PostgreSQL)
+                  to mobile (React Native, Expo), through generative AI (Claude,
+                  OpenAI), payments and design.
+                </p>
+                <p>
+                  I also built automated pipelines that run every day. AI agents
+                  research, write and fact-check articles published in six languages,
+                  and others handle outreach and reply triage. I now offer this
+                  know-how as a freelancer, at a fixed price and remotely.
                 </p>
               </div>
 
@@ -388,8 +431,8 @@ export default function HomeEn() {
                 Stay <span className="italic-accent">in touch</span>.
               </h2>
               <p>
-                To talk about Ascelyo, backend, generative AI — or just to
-                say hi.
+                Write to me about a freelance project, back-end or generative
+                AI, or just to say hi.
               </p>
             </div>
 
@@ -429,12 +472,20 @@ export default function HomeEn() {
                 GitHub
               </a>
               <a
-                href="https://ascelyo.app"
+                href="https://apps.apple.com/developer/id1895006104"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="btn btn-ghost"
               >
-                Ascelyo →
+                My apps →
+              </a>
+              <a
+                href="https://www.codeur.com/-mansourhy1vp"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="btn btn-ghost"
+              >
+                Freelance profile (Codeur) →
               </a>
             </div>
           </div>
